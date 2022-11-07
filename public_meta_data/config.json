@@ -1,6 +1,0 @@
-{
-"root_directory": "insert path to your root directory here",
-"epcn_path": "insert absolute path to your ePCN file here",
-"server": "server name",
-"database":"database name"
-}
