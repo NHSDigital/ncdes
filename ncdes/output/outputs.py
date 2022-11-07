@@ -13,6 +13,17 @@ def save_NCDes_with_geogs_to_csv(NCDes_with_geogs, root_directory):
     )
 
 
+def save_NCDes_by_ruleset_to_csvs(ncdes_with_geogs_and_rulesets, root_directory):
+    dates_table = get_date_for_name(ncdes_with_geogs_and_rulesets)
+    file_name = get_file_name(dates_table)
+    file_folder = get_file_folder(dates_table)
+    for RULESET_ID in ncdes_with_geogs_and_rulesets['Ruleset ID'].unique():
+        ncdes_data_ruleset = ncdes_with_geogs_and_rulesets.loc[ncdes_with_geogs_and_rulesets['Ruleset ID'] == RULESET_ID].drop(columns = "Ruleset ID")
+        ncdes_data_ruleset.to_csv(
+            f"{root_directory}Output\\" + file_folder + r"\\" + file_name +"_" + RULESET_ID + ".csv",
+        index=False,
+        )
+
 def get_date_for_name(NCDes_with_geogs):
     """
     Input:
@@ -65,7 +76,7 @@ def get_file_folder(dates_table):
 
 def archive_input_as_csv(ncdes_raw, root_directory):
     today = (datetime.today()).strftime("%Y_%m_%d")
-    ncdes_raw.to_csv(f"{root_directory}Input\\Archive\\NCDes_" + today + ".csv")
+    ncdes_raw.to_csv(f"{root_directory}Input\\Archive\\NCDes_" + today + ".csv", index=False)
 
 
 def remove_files_from_input_folder(path):

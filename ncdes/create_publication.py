@@ -77,8 +77,14 @@ def main() -> None:
         root_directory = root_directory  
     )
     
-    print("Saving output")
+    print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
+    NCDes_with_geogs_and_rulesets = processing_steps.merge_mapped_data_with_ruleset_id(NCDes_with_geogs, root_directory)
+    
+    print("Saving main output")
     outputs.save_NCDes_with_geogs_to_csv(NCDes_with_geogs, root_directory)
+
+    print("Saving outputs split by ruleset")
+    outputs.save_NCDes_by_ruleset_to_csvs(NCDes_with_geogs_and_rulesets, root_directory)
 
     print("Archiving input")
     outputs.archive_input_as_csv(ncdes_raw, root_directory)
@@ -91,3 +97,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
