@@ -65,18 +65,19 @@ def main() -> None:
     print("Replacing placeholder indicator and measures")
     NCDes_with_geogs = processing_steps.replace_placeholders(NCDes_with_geogs)
 
-    print("Suppressing PCA values")
-    NCDes_with_geogs = processing_steps.suppress_PCA_values(
+    print("Applying suppression")
+    NCDes_with_geogs = processing_steps.suppress_output(
         main_table=NCDes_with_geogs,
+        root_directory=root_directory,
         measure_dict_meas_col_name='MEASURE ID',
-        measure_dict_meas_type_col_name = 'MEASURE_TYPE',
+        measure_dict_meas_type_col_name='MEASURE_TYPE',
+        measure_dict_meas_description_col_name='MEASURE_DESCRIPTION',
         main_table_meas_col_name='MEASURE',
         main_table_value_col_name='VALUE',
         main_table_prac_code_col_name='PRACTICE_CODE',
-        main_table_ind_code_col_name='IND_CODE',
-        root_directory = root_directory  
+        main_table_ind_code_col_name='IND_CODE'
     )
-    
+
     print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
     NCDes_with_geogs_and_rulesets = processing_steps.merge_mapped_data_with_ruleset_id(NCDes_with_geogs, root_directory)
     
