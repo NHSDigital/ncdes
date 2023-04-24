@@ -10,6 +10,8 @@ from .processing import validation_check as check
 
 from .output import outputs
 
+from .utils.adhoc_fix import remove_problem_indicators
+
 
 CORRECT_COLUMN_ORDER_NCDes_with_geogs = [
     "PRACTICE_CODE",
@@ -66,7 +68,7 @@ def main() -> None:
     NCDes_with_geogs = processing_steps.replace_placeholders(NCDes_with_geogs)
 
     print("Applying suppression")
-    NCDes_with_geogs = processing_steps.suppress_output(
+    NCDes_suppressed = processing_steps.suppress_output(
         main_table=NCDes_with_geogs,
         root_directory=root_directory,
         measure_dict_meas_col_name='MEASURE ID',
@@ -78,14 +80,17 @@ def main() -> None:
         main_table_ind_code_col_name='IND_CODE'
     )
 
+    print("Removing bad indicators")
+    NCDes_problem_ind_rem = remove_problem_indicators.remove(NCDes_suppressed, ["NCD015"])
+
     print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
-    NCDes_with_geogs_and_rulesets = processing_steps.merge_mapped_data_with_ruleset_id(NCDes_with_geogs, root_directory)
-    
+    NCDes_with_rulesets = processing_steps.merge_data_with_ruleset_id(NCDes_problem_ind_rem, root_directory)
+
     print("Saving main output")
-    outputs.save_NCDes_with_geogs_to_csv(NCDes_with_geogs, root_directory)
+    outputs.save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory)
 
     print("Saving outputs split by ruleset")
-    outputs.save_NCDes_by_ruleset_to_csvs(NCDes_with_geogs_and_rulesets, root_directory)
+    outputs.save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, root_directory)
 
     print("Archiving input")
     outputs.archive_input_as_csv(ncdes_raw, root_directory)
@@ -98,4 +103,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
