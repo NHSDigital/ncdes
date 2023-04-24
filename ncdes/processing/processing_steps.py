@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# def get_achievment_date(ncdTable):
 import pandas as pd
 from datetime import datetime
 from ..data import data_load
@@ -514,13 +512,13 @@ def suppress_output(
 
 #--------------------------------------------------- Suppression logic end -----------------------------------------------------------------#
 
-def merge_mapped_data_with_ruleset_id(ncdes_with_geogs, root_directory):
+def merge_data_with_ruleset_id(NCDes_problem_ind_rem, root_directory):
 
     # Load in measure dictionary
     indicator_dictionary = data_load.load_indicator_and_measure_data_dictionaries(root_directory)[0]
     # Join ruleset ID onto data
-    ncdes_with_geogs_and_rulesets = pd.merge(
-        ncdes_with_geogs, 
+    ncdes_with_rulesets = pd.merge(
+        NCDes_problem_ind_rem, 
         indicator_dictionary, 
         left_on = "IND_CODE", 
         right_on = "Indicator ID", 
@@ -529,4 +527,4 @@ def merge_mapped_data_with_ruleset_id(ncdes_with_geogs, root_directory):
             columns = ["Indicator Description","Payment or Management Information (MI)","Indicator ID"]
             )
     
-    return ncdes_with_geogs_and_rulesets
+    return ncdes_with_rulesets
