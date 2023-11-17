@@ -1,9 +1,13 @@
-﻿MEASURE ID,MEASURE_DESCRIPTION,MEASURE_TYPE
+
+MEASURE ID,MEASURE_DESCRIPTION,MEASURE_TYPE
+
 Management Information,Management information count for indicator,
 Denominator,Denominator count for indicator,
 Numerator,Numerator count for indicator,
 ABPDEC12M,Patients who chose not to undertake ambulatory blood pressure monitoring or home blood pressure monitoring in the 12 months up to and including the payment period end date.,PCA
-ABPDEC24M,"Patients whose first “high” blood pressure reading from 1 April 2020 to the day before the quality of service start date, was in the 6 months up to the quality of service start date and chose not to undertake ambulatory blood pressure monitoring or home blood pressure monitoring in the 24 months up to and including the payment period end date.",PCA
+
+ABPDEC24M,"Patients whose first �high� blood pressure reading from 1 April 2020 to the day before the quality of service start date, was in the 6 months up to the quality of service start date and chose not to undertake ambulatory blood pressure monitoring or home blood pressure monitoring in the 24 months up to and including the payment period end date.",PCA
+
 ACNOPQSNSD,Patients with no non-steroidal anti-inflammatory drug prescription in the 3 months prior to the quality service start date and an oral anticoagulant prescription in the 3 months prior to the quality service start date,Exclusion
 AGEUM50F55,Male patients under 50 years old and female patients under 55 years old.,Exclusion
 ANTICOAG3M,Patients who have not had an oral anticoagulant prescription code recorded in the 3 months up to and including the achievement date.,Exclusion
@@ -13,7 +17,9 @@ ASTB3M_DAT,Patients who have not had an asthma diagnosis code recorded at least 
 ASTRES_DAT,Patients who do not have an 'active' (unresolved and have received asthma-related drug treatment in the 12 months up to and including the achievement date) diagnosis of asthma .,Exclusion
 ASTRESLAT,Patients who have an asthma resolve code recorded up to and including the achievement date and the asthma resolve code is after their latest asthma code recorded at least 3 months before the achievement date.,Exclusion
 BPDEC1,Patient chose not to have their blood pressure recorded in the 5 years leading up to and including the payment period end date,PCA
-BPLAT_2,Patients who did not have a latest blood pressure reading from the 1 April 2020 to the quality service start date which was “high” (i.e. with systolic value >= 140 or diastolic value >= 90) nor have a “high” blood pressure reading from 6 months before the quality service start date up to and including the achievement date.,Exclusion
+
+BPLAT_2,Patients who did not have a latest blood pressure reading from the 1 April 2020 to the quality service start date which was �high� (i.e. with systolic value >= 140 or diastolic value >= 90) nor have a �high� blood pressure reading from 6 months before the quality service start date up to and including the achievement date.,Exclusion
+
 BPLAT6M,Patients who had a high blood pressure reading in the 6 months up to and including the payment period end date and either (i) their latest blood pressure reading from 1 April 2020 and prior to the quality service start date was not high or (ii) they did not have a blood pressure reading from 1 April 2020 and prior to the quality service start date.,PCA
 BTHPALDIZC,"Patient with no breathlessness, palpitation, syncope/dizziness or chest discomfort between quality service start date up to and including achievement date",Exclusion
 C19CON_DAT,Patients who have a persisting COVID-19 vaccination contraindication,PCA
@@ -43,8 +49,10 @@ HFB3M_DAT,Patients who have not had a heart failure diagnosis code recorded at l
 HFRESLAT,Patients who have a heart failure resolve code recorded up to and including the achievement date and the heart failure resolve code is on or after their latest heart failure code recorded at least 3 months before the achievement date.,Exclusion
 HLTHAPDEC,Patient chose not to receive a learning disability health action plan in the 12 months leading up to and including the payment period end date.,PCA
 HLTHCHKDEC,Patient chose not to receive a learning disability health check in the 12 months leading up to and including the PPED,PCA
-HOMECONF18,"Patient is less than 18 years of age at the quality service end date, and doesn’t currently live in a nursing home or residential home and doesn’t have an acute confusion diagnosis. ",Exclusion
-HOMETMP_18,"Patient is less than 18 years of age at the quality service end date, and doesn’t currently live in a nursing home, residential home and isn't a temporary resident. ",Exclusion
+
+HOMECONF18,"Patient is less than 18 years of age at the quality service end date, and doesn�t currently live in a nursing home or residential home and doesn�t have an acute confusion diagnosis. ",Exclusion
+HOMETMP_18,"Patient is less than 18 years of age at the quality service end date, and doesn�t currently live in a nursing home, residential home and isn't a temporary resident. ",Exclusion
+
 HYPLATUNR,Patients who have an unresolved diagnosis of hypertension,Exclusion
 L12MNODOAC,Patients with no direct-acting oral anti-coagulant (DOAC) prescription in the 12 months from the quality service start date up to and including the achievement date,Exclusion
 LATNURSPER,"Patients whose latest housing status was not recorded as a permanent resident in a residential or nursing home, up to and including the achievement date.",Exclusion
@@ -52,7 +60,9 @@ LD_DAT,Patient does not have a diagnosis of learning disabilities up to and incl
 LIPIDTHER,"Patient's who received a lipid lowering therapy prescription in the 6 months leading up to and including the quality service start date where lipid lowering therapy includes: Stains, ezetimibe, bempedoic acid, inclisiran, PCSK9 inhibitors, and icosapent ethyl",Exclusion
 MEDRVWDEC,Patient chose not to receive a structured medication review in the 12 months leading up to and including the payment period end date.,PCA
 MH_MHREM,"Patient does not have an unresolved diagnosis of psychosis, schizophrenia or bipolar affective disorder.",Exclusion
-MILDINTAST,Patients who have a diagnosis of mild asthma which has not been superseded by a more severe asthma diagnosis and have an ‘inhaled corticosteroid not indicated’ code recorded in the 12 months leading up to and including the payment period end date and also have have been prescribed less than 3 SABA prescriptions in the 12 months up to and including the achievement date if 18 years and over or have been prescribed less than 4 SABA prescriptions in the 12 months up to and including the achievement date if under 18 years.,PCA
+
+MILDINTAST,Patients who have a diagnosis of mild asthma which has not been superseded by a more severe asthma diagnosis and have an �inhaled corticosteroid not indicated� code recorded in the 12 months leading up to and including the payment period end date and also have have been prescribed less than 3 SABA prescriptions in the 12 months up to and including the achievement date if 18 years and over or have been prescribed less than 4 SABA prescriptions in the 12 months up to and including the achievement date if under 18 years.,PCA
+
 N_AT_RISK,"Patient does not have at least one of the following conditions in their record: CRD, Unresolved Asthma, CHD, CKD, Diabetes, unresolved perstisting immunosuppression diagnosis, expiring immunosuppression diagnosis, immunosuppressive procedure, immunosuppressive drug treatment, CLD, CND, High BMI aged 16 years or over, BMI value of 40 or more, LD, splenic dysfunction or care home residency.",Exclusion
 NATRISKU18,"Patient is less than 65 years at the quality service end date OR patient is less than 18 years or greater than 65 years at the quality service end date AND does not have at least one of the following conditions: CRD, Unresolved Asthma, CHD, CKD, Diabetes, unresolved perstisting immunosuppression diagnosis, expiring immunosuppression diagnosis, immunosuppressive procedure, immunosuppressive drug treatment, CLD, CND, High BMI aged 16 years or over, BMI value of 40 or more, LD, splenic dysfunction or care home residency. ",Exclusion
 NOACELOOP,Patient not on long-term prescription for either angiotensin converting enzyme (ACE) inhibitor or loop diuretic medication,Exclusion
@@ -86,7 +96,9 @@ PAT_AGEU75,Patient age is less than 75 years at the quality service end date.,Ex
 PAT_ETHWNS,Patient from white ethnic grouping or has no ethnicity stated,Exclusion
 PCSPDEC,"Patient chose not to receive a personalised care and support plan, in the 12 months leading up to and including the payment period end date.",PCA
 PEPULCB3M,Patients who have not had a upper gastrointestinal (GI) bleed code or a peptic ulceration code recorded at least 3 months before the achievement date.,Exclusion
-PRELAT6M,"Patients whose first “high” blood pressure reading from 1 April 2020 to the day before the quality of service start date, was in the 6 months up to the quality of service start date and received clinically appropriate follow-up prior to the quality service start date.",Exclusion
+
+PRELAT6M,"Patients whose first �high� blood pressure reading from 1 April 2020 to the day before the quality of service start date, was in the 6 months up to the quality of service start date and received clinically appropriate follow-up prior to the quality service start date.",Exclusion
+
 QRISKVAL10,"Patients whose latest QRISK2 or QRISK3 score was under 10%, recorded at any point leading up to the achievement date.",Exclusion
 QRISKVAL20,"Patients whose latest QRISK2 or QRISK3 score was 20% or under, recorded at any point leading up to the achievement date.",Exclusion
 REGL3M_DAT,Patients registered within 3 months of end of payment period,PCA
@@ -101,3 +113,6 @@ TXSTAT_DAT,Patients who have an expiring statin contraindication recorded in the
 UNRESAFIB,Patients with unresolved atrial fibrillation,Exclusion
 XFLU_DAT,Persisting Flu vaccine contraindications recorded up to and including the achievement date.,PCA
 XSTAT_DAT,Patients who have a persisting statin contraindication.,PCA
+
+Num Patients in Set,Copy of denominator which is sometimes provided by CQRS and needs removing,Exclusion
+
