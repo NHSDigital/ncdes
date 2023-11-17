@@ -52,7 +52,19 @@ root
 |
 |---Output
 |   |---Automated Checks
+|   |   |---Missing Indicators History.csv
+|   |   |---Missing Measures History.csv
+|   |   |---Unexpected Indicators History.csv
+|   |   |---Unexpected Measures History.csv
 |   |---NCD_yy_yy
+|   |---Opt Out Tracking
+|   |   |---Archive
+|   |   |   |---NCD_Opt_Out_Tracking_month.xlsx
+|   |   |---NCD_Opt_Out_Tracking.xlsx
+| 
+|---templates
+|   |---CONTROL_FILE_NCDes.csv
+|   |---template NCDES LDHC Ethnicity Recording MMM YYYY.xlsx
 |
 |---ePCN.xlsx
 ```

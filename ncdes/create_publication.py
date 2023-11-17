@@ -10,7 +10,7 @@ from .processing import validation_check as check
 
 from .output import outputs
 
-from .utils.adhoc_fix import remove_problem_indicators
+from .utils.adhoc_fix import remove_problem_indicators, remove_problem_measures, remove_problem_indicator_measure_pairs
 
 
 CORRECT_COLUMN_ORDER_NCDes_with_geogs = [
@@ -80,17 +80,33 @@ def main() -> None:
         main_table_ind_code_col_name='IND_CODE'
     )
 
-    print("Removing bad indicators")
-    NCDes_problem_ind_rem = remove_problem_indicators.remove(NCDes_suppressed, ["NCD015"])
+    print("Removing problem indicators")
+    NCDes_problem_ind_rem = remove_problem_indicators.remove(NCDes_suppressed, ["NCD015", "NCD026"])
+    print("Removing problem measures")
+    NCDes_problem_meas_rem = remove_problem_measures.remove(NCDes_problem_ind_rem, ["Num Patients in Set"])
+    print("Removing problem indicator measure combos")
+    NCDes_problem_meas_rem = remove_problem_indicator_measure_pairs.remove(NCDes_problem_ind_rem, [("NCDMI198", "Numerator")])
 
     print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
-    NCDes_with_rulesets = processing_steps.merge_data_with_ruleset_id(NCDes_problem_ind_rem, root_directory)
+    NCDes_with_rulesets = processing_steps.merge_data_with_ruleset_id(NCDes_problem_meas_rem, root_directory)
 
     print("Saving main output")
-    outputs.save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory)
+    outputs.save_NCDes_main_to_csv(NCDes_problem_meas_rem, root_directory)
+
+    print("Zipping main output")
+    outputs.save_NCDes_main_to_zip(NCDes_problem_meas_rem, root_directory)
+
+    print("Saving excel output")
+    outputs.save_NCDes_main_to_excel(NCDes_problem_meas_rem, root_directory, server=config["server"], database=config["database"])
+
+    print("Saving trend monitor")
+    outputs.save_trendmonitor(NCDes_problem_meas_rem, root_directory)
 
     print("Saving outputs split by ruleset")
     outputs.save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, root_directory)
+
+    print("Zipping outputs split by ruleset")
+    outputs.save_NCDes_by_ruleset_to_zip(NCDes_with_rulesets, root_directory)
 
     print("Archiving input")
     outputs.archive_input_as_csv(ncdes_raw, root_directory)
