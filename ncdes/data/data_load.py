@@ -99,7 +99,7 @@ def load_indicator_and_measure_data_dictionaries(root):
         Measure and Indicator dictionary in pandas dataframe
     """
 
-    indicator_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24_phase2\\indicator dictionary.csv")
-    measure_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24_phase2\\measure dictionary.csv")
+    indicator_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\indicator dictionary.csv")
+    measure_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\measure dictionary.csv")
     return indicator_dictionary, measure_dictionary
 

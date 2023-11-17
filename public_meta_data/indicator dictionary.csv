@@ -1,4 +1,4 @@
-﻿Indicator ID,Indicator Description,Ruleset ID,Payment or Management Information (MI)
+Indicator ID,Indicator Description,Ruleset ID,Payment or Management Information (MI)
 NCD001,Percentage of registered patients referred to a social prescribing service.,Personalised Care,MI
 NCD003,Percentage of at-risk patients aged 18 to 64 years inclusive who received a seasonal influenza vaccination between 1 September and 31 March.,Vaccination & Immunisation,Payment
 NCD004,Percentage of patients aged two or three years on 31 August of the relevant financial year who received a seasonal influenza vaccination between 1 September and 31 March.,Vaccination & Immunisation,Payment
@@ -117,4 +117,4 @@ NCDMI189,"Percentage of permanent care home residents aged 18 years or over, who
 NCDMI198,Mean number of patient contacts as part of weekly care home round per care home resident aged 18 years and over.,Enhanced Health in Care Homes,MI
 NCDMI199,"Percentage of patients aged 65 years or over, who received a seasonal influenza vaccination between 1 September and 31 March.",Vaccination & Immunisation,MI
 NCDMI200,Percentage of registered patients with a recording of ethnicity.,Tackling Health Inequalities,MI
-NCDMI205,"Percentage of patients on the QOF Coronary Heart Disease, Peripheral Arterial Disease, or Stroke/TIA Register, who have a recording of non-HDL cholesterol in the preceding 12 months that is lower than 2.5 mmol/L, or where non-HDL cholesterol is not recorded then  a recording of LDL cholesterol in the preceding 12 months that is lower than 1.8 mmol/L.",Cardiovascular Disease Prevention,MI
+NCDMI205,"Percentage of patients on the QOF Coronary Heart Disease, Peripheral Arterial Disease, or Stroke/TIA Register, who have a recording of non-HDL cholesterol in the preceding 12 months that is lower than 2.5 mmol/L, or where non-HDL cholesterol is not recorded then� a recording of LDL cholesterol in the preceding 12 months that is lower than 1.8 mmol/L.",Cardiovascular Disease Prevention,MI

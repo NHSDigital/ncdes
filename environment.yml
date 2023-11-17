@@ -1,6 +1,8 @@
 name: ncdes
 
 dependencies:
- - python #=3.7.6
- - pandas #=1.0.1
- - pyodbc #=4.0.0
+ - python == 3.9.13
+ - pandas == 1.4.4
+ - numpy == 1.21.5
+ - openpyxl == 3.0.10
+ - pyodbc == 5.0.1
