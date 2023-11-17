@@ -25,6 +25,7 @@ def check_and_create_folder(folder_path):
         os.makedirs(folder_path)
 
 
+
 def save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory):
     dates_table = get_date_for_name(NCDes_problem_ind_rem)
     file_name = get_file_name(dates_table)
@@ -68,6 +69,7 @@ def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, root_directory):
     dates_table = get_date_for_name(NCDes_with_rulesets)
     file_name = get_file_name(dates_table)
     file_folder = get_file_folder(dates_table)
+
     data_month = get_data_month(NCDes_with_rulesets) 
     #to csv
     for RULESET_ID in NCDes_with_rulesets['Ruleset ID'].unique():
@@ -99,6 +101,7 @@ def get_date_for_name(NCDes_with_geogs):
     Outputs:
         An object that has all the correct date data we need to create the filename
     """
+
 
     date = pd.to_datetime(NCDes_with_geogs["ACH_DATE"].iloc[0], infer_datetime_format=True)
 
@@ -142,6 +145,7 @@ def get_file_folder(dates_table):
     return file_folder
 
 def archive_input_as_csv(ncdes_raw, root_directory):
+
     today = (datetime2.today()).strftime("%Y_%m_%d")
     ncdes_raw.to_csv(f"{root_directory}Input\\Archive\\NCDes_" + today + ".csv", index=False)
 

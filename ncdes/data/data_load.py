@@ -101,5 +101,6 @@ def load_indicator_and_measure_data_dictionaries(root):
 
     indicator_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\indicator dictionary.csv")
     measure_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\measure dictionary.csv")
+
     return indicator_dictionary, measure_dictionary
 
