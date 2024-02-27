@@ -21,5 +21,10 @@ def remove(NCDes_suppressed: pd.DataFrame, bad_indicator_measure_list: List[Tupl
     """    
     for indicator, measure in bad_indicator_measure_list:
         NCDes_suppressed = NCDes_suppressed[(NCDes_suppressed.IND_CODE != indicator) | (NCDes_suppressed.MEASURE != measure)]
-    print(f"Removed measure indicator combos(s): {bad_indicator_measure_list}")
+
+    if len(bad_indicator_measure_list) == 0:
+        print("No measure indicators combos removed.")
+    else:    
+        print(f"Removed measure indicator combos(s): {bad_indicator_measure_list}")
+    
     return NCDes_suppressed

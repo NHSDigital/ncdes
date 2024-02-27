@@ -17,7 +17,7 @@ def set_border(ws, df, end_col):
             cell.border = Border(top=thin, left=thin, right=thin, bottom=thin)
 
 
-def main_to_excel(NCDes_main_df: pd.DataFrame, root_directory :str, server, database, service_year="NCD_23_24") -> None:
+def main_to_excel(NCDes_main_df: pd.DataFrame, root_directory :str, server, database, service_year) -> None:
     """
     Converts LDHC_output_df into an excel file.
     root_directory = directory of root

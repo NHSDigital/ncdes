@@ -21,7 +21,8 @@ def clean_ncdes(ncdes_raw):
         }
     )
 
-    ncdes_raw = ncdes_raw.drop(columns={"APPROVED_STATUS"})
+    if "APPROVED_STATUS" in ncdes_raw.columns:
+        ncdes_raw = ncdes_raw.drop(columns={"APPROVED_STATUS"})
 
     ncdes_raw.ACH_DATE = pd.to_datetime(
         ncdes_raw.ACH_DATE, format="%Y%m%d"
@@ -508,7 +509,9 @@ def suppress_output(
     )
     # Print how many rows are being suppressed
     total_suppressed = len(fully_suppressed_df[fully_suppressed_df.VALUE == '*'])
-    print(f"Suppressed {total_suppressed} rows")
+    total_rows = len(fully_suppressed_df)
+    perc_suppressed = round(total_suppressed/total_rows * 100, 2)
+    print(f"Suppressed {total_suppressed} rows out of {total_rows} ({perc_suppressed}%)")
     
     return fully_suppressed_df    
 

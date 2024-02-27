@@ -1,0 +1,32 @@
+NCDes new CQRS data update.
+
+Changelog V1.1
+------------------------------------------------------------------
+Updated metadata files
+updated certain print statements
+updated readme 
+updated measure mappings function
+updated environment.yml
+added run_ncdes.bat file to automate running
+
+Changelog V1.0
+------------------------------------------------------------------
+Updated nine files:
+create_publication.py - added lines of code to run excel job and print statement saying its running
+environment.yml - added pyodbc to required packages
+data_load.py - updated measure and indicator mappings line
+outputs.py - added code to open output folder once process has finished running
+processing_steps.py - changed suppressed output message to list % of rows suppressed
+remove_problem_indicators.py - fixed print outputs
+remove_problem_measures.py - fixed print outputs
+remove_problem_indicator_measure_pairs.py - fixed print outputs
+outputcsvtoinputexcel.py - fixed print outputs
+
+Added two files:
+data/amender.py - amends new data source to pipeline
+data/practice_maps.py - produces distinct pratice codes and practice pmaps
+
+Added three files in root_directory:
+input/CQRS_files/NCD_CQRS_Metadata_Mapping.csv - COntains a mapping table to fix field names
+input/CQRS_files/NCD_proposed_metadata.csv - Contains a table to produce indicator and measure mappings
+output/CQRS_omitted_tracker.csv - Contains omitted practices for certain rules (does not count PCN codes)

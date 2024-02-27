@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import json
-
+from ..data.amender import *
 
 def load_json_config_file(path):
     with open(path) as f:
@@ -17,7 +17,7 @@ def load_csvs_in_directory_as_concat_dataframe(directory):
     """
     phase_file_names = os.listdir(directory)
 
-    print(f"loading in files {phase_file_names}")
+    print(f"Loading in files {phase_file_names}")
 
     holder = []
     for phase in phase_file_names:
@@ -26,7 +26,7 @@ def load_csvs_in_directory_as_concat_dataframe(directory):
 
     output_df = pd.concat(holder, ignore_index=True)
 
-    print("data loaded")
+    print("Data loaded")
 
     return output_df
 
@@ -99,8 +99,8 @@ def load_indicator_and_measure_data_dictionaries(root):
         Measure and Indicator dictionary in pandas dataframe
     """
 
-    indicator_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\indicator dictionary.csv")
-    measure_dictionary = pd.read_csv(f"{root}Input\\Data dictionary 23_24\\measure dictionary.csv")
-
+    #Indicator mappings made from metadata
+    indicator_dictionary, measure_dictionary = measure_and_indicator_mappings(root)
+    
     return indicator_dictionary, measure_dictionary
 
