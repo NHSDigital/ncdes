@@ -11,7 +11,10 @@ from .processing import validation_check as check
 from .output import outputs
 
 from .utils.adhoc_fix import remove_problem_indicators, remove_problem_measures, remove_problem_indicator_measure_pairs
+import warnings
 
+warnings.simplefilter(action="ignore", category=UserWarning)
+pd.options.mode.chained_assignment = None
 
 CORRECT_COLUMN_ORDER_NCDes_with_geogs = [
     "PRACTICE_CODE",
@@ -28,12 +31,12 @@ def main() -> None:
     print("\n"*3,"Loading config file")
     config = data_load.load_json_config_file(".\\config.json")
 
-    print("Establish SQL connection")
+    print("Establishing SQL connection")
     connection = sql_connection.connect(server=config["server"], database=config["database"])
 
     root_directory = config["root_directory"]
 
-    print("Loading in NCDes data")
+    print("Loading NCDes data")
     ncdes_raw = data_load.load_csvs_in_directory_as_concat_dataframe(f"{root_directory}\\Input\\Current")
 
     print("Cleaning NCDes data")
@@ -42,7 +45,7 @@ def main() -> None:
 
     geo_ccg_sql_str, geo_reg_sql_str, stp_sql_str, prac_sql_str = data_load.get_sql_query_strings(reporting_period)
 
-    print("Loading in SQL mapping data")
+    print("Loading SQL mapping data")
     geo_ccg_df = pd.read_sql(sql=geo_ccg_sql_str, con=connection)
     geo_reg_df = pd.read_sql(sql=geo_reg_sql_str, con=connection)
     stp_df = pd.read_sql(sql=stp_sql_str, con=connection)
@@ -51,14 +54,14 @@ def main() -> None:
     print("Formatting SQL mapping data")
     geo_ccg_df, geo_reg_df, stp_df = processing_steps.sql_df_cols_to_upper_case(geo_ccg_df, geo_reg_df, stp_df)
 
-    print("Loading in epcn data")
+    print("Loading ePCN data")
     raw_epcn = data_load.load_epcn_excel_table(epcn_path=config["epcn_path"])
     epcn_df = processing_steps.epcn_transform(raw_epcn)
 
-    print("Creating super mapping table")
+    print("Creating mapping table")
     mapping_table = processing_steps.create_mapping_table(geo_ccg_df, geo_reg_df, stp_df, prac_df, epcn_df)
 
-    print("Merging NCDes data with supermapping data")
+    print("Merging NCDes data with mapping data")
     NCDes_with_geogs = processing_steps.merge_tables_fill_Na_reorder_cols(mapping_df=mapping_table, ncdes_df_cleaned=ncdes_clean, CORRECT_COLUMN_ORDER_NCDes_with_geogs=CORRECT_COLUMN_ORDER_NCDes_with_geogs)
     
     print("Starting validation checks")
@@ -86,7 +89,8 @@ def main() -> None:
     NCDes_problem_meas_rem = remove_problem_measures.remove(NCDes_problem_ind_rem, ["Num Patients in Set"])
     print("Removing problem indicator measure combos")
     NCDes_problem_meas_rem = remove_problem_indicator_measure_pairs.remove(NCDes_problem_ind_rem, [("NCDMI198", "Numerator")])
-
+    NCDes_problem_meas_rem = remove_problem_indicator_measure_pairs.remove(NCDes_problem_ind_rem, [("NCD012", "Denominator")])
+    
     print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
     NCDes_with_rulesets = processing_steps.merge_data_with_ruleset_id(NCDes_problem_meas_rem, root_directory)
 

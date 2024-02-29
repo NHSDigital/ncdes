@@ -1,0 +1,40 @@
+LDHC Regional excel report discovery update.
+
+Changelog v1.2
+------------------------------------------------------------------
+On title page, the date on row 9 is bold
+Changed notes on title page to introduction and changed introduction
+Lead analyst row 30 on title page is now bold
+On the Sub ICB, ICB and Region tabs, the MMM YYYY Publication text from row 3 is removed
+On the sub ICB and ICB pages, the table lines now stop after the data stops.
+
+
+Changelog V1.1
+------------------------------------------------------------------
+Automated CSV and Zip processes. Code now zips and allocates both CSV and Zip files to right location.
+Automated Year folder creation. Detects year and creates folder if necessary.
+Changed trend monitor path to root/Output/Opt Out Tracking.
+Automated Archiving of trend monitor.
+Cleaned up NCDes ethinicity report. Changed font, fixed formatting errors.
+Fixed date error in NCdes ethnicty report.
+Updated code so it gets practice details from SQL database.
+Updated code to find practices not in our SQL database, and tag them as "Unknown" in report.
+Fixed Data mismatch in ethinicity report.
+
+
+Changelog V1.0
+------------------------------------------------------------------
+Updated two file:
+create_publication.py - added lines of code to run excel job and print statement saying its running
+output/outputs.py - added function to run excel job
+
+Added four files:
+Changelog.txt - to report changes made
+output/fonts.py - contains various fonts for excel
+output/outputcsvtoinputexcel.py - converts the NCDes output dataframe to a dataframe for the excel job
+output/outputexcel.py - prints excel file out
+
+Added three files in root_directory:
+templates/template_AHC_practice_YYYY_MMM.xlsx : A template file to write over
+templates/CONTROL_FILE_NCDes : Contains information for title page
+templates/practice_mapping : A csv which contains Sub_ICB, ICB and region mapping for each practice.

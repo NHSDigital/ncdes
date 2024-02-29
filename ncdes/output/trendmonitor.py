@@ -107,7 +107,7 @@ def write_trend_monitor(NCDes_main_df: pd.DataFrame, root_directory :str, data_m
     override = check_if_copy(excel_df, month)
     
     if override == 0:
-        print("Done no changes to trend monitor.")
+        print("Done - No changes to trend monitor.")
     #Else override, THIS WILL ONLY OVERRIDE LAST ROW, ASSUMING DATA IS NEWEST
     elif override == 1:
         row_num, col_num = excel_df.shape

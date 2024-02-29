@@ -1,4 +1,4 @@
-> Warning: This is the README for the publically accessible version of the NCDes package. If you are an analyst please don't use the below instructions to run the publication process.
+> #Warning: This branch contains retired code which was used for the NCDES data source emailed to the PCD team each month. This pipeline is no longer in use as the data source has now been replaced with directly sourcing data from the CQRS self-serve tool. The 'main' branch now uses the CQRS self-serve data source. This branch should only be used if data is emailed to us and should be treated with caution as it may not be up to date if subsequent updates have been pushed to main.
 
 <p>&nbsp;</p>
 
@@ -46,7 +46,7 @@ root
 |   |---Current
 |   |   |---ncdes_synthetic_data.csv
 |   |---Archive
-|   |---Data dictionary yy_yy
+|   |---Data_dictionary_current
 |       |---indicator dictionary.csv
 |       |---measure dictionary.csv
 |
@@ -56,7 +56,7 @@ root
 |   |   |---Missing Measures History.csv
 |   |   |---Unexpected Indicators History.csv
 |   |   |---Unexpected Measures History.csv
-|   |---NCD_yy_yy
+|   |
 |   |---Opt Out Tracking
 |   |   |---Archive
 |   |   |   |---NCD_Opt_Out_Tracking_month.xlsx
@@ -74,21 +74,19 @@ root
 ## Instructions for publication production
 After the above set up steps have been completed you can follow the below instructions to create the publication. Please note that you will not be able to run the code as this requires access to a private server. The data on the private server contains reference data that is used for mapping purposes. The reference tables used contain data from the [epraccur file](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data) and the [ONS code history database](https://www.ons.gov.uk/methodology/geography/geographicalproducts/namescodesandlookups/codehistorydatabasechd)
 
-1) Move the 'config.json' from the 'public_meta_data' folder into the package at the same level as this 'README'.
+1) In the config file edit the root directory value so that it matches the root of the directory that you set up. Make use of escape characters and end path with a double "\\\\" e.g. "\\\\\\\example\\\root\\\directory\\\\".
 
-2) In the config file edit the root directory value so that it matches the root of the directory that you set up. Make use of escape characters and end path with a double "\\\\" e.g. "\\\\\\\example\\\root\\\directory\\\\".
-
-3) Download the epcn excel file from this [webpage](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data). Move it to the location specified in the above diagram. Copy the absolute path of this file and use it as the "epcn_path" in the config.json.
+2) Download the epcn excel file from this [webpage](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data). Move it to the location specified in the above diagram. Copy the absolute path of this file and use it as the "epcn_path" in the config.json.
 
 3) Move the 'ncdes_synthetic_data.csv' from the 'public_meta_data' folder into your '{root_directory}\Input\Current' folder.
 
-4) Next you will need to move the indicator dictionary.csv and measure dictionary.csv into the Data dictionary yy_yy folder. To ensure you have the most up to date files download the latest data dictionary, this can be found on the relevant publication page. As an example the 22/23 service's data dictionary can be found [Here](https://files.digital.nhs.uk/1A/E5649B/NCDes_Data_Dictionary_22_23_v2.0.xlsx). You will then need to split the indicator and measure sheets into two individual csv files and name them 'indicator dictionary.csv' and 'measure dictionary.csv' respectively. An example of these files is given in the public_meta_data folder. Remember to move these files to the 'Data dictionary yy_yy' folder in your file tree. 
+4) Next you will need to move the indicator dictionary.csv and measure dictionary.csv into the Data_dictionary_current folder. To ensure you have the most up to date files download the latest data dictionary, this can be found on the relevant publication page. As an example the 22/23 service's data dictionary can be found [Here](https://files.digital.nhs.uk/1A/E5649B/NCDes_Data_Dictionary_22_23_v2.0.xlsx). You will then need to split the indicator and measure sheets into two individual csv files and name them 'indicator dictionary.csv' and 'measure dictionary.csv' respectively. An example of these files is given in the public_meta_data folder.
 
 5) Run the 'create_publication.py' file by typing the below command into your terminal
     ```
     python -m ncdes.create_publication
     ```
-The output of the job can then be found in the '{root_directory}\Output\NCD_yy_yy' folder.  
+The output of the job can then be found in the '{root_directory}\Output\YY_YY' folder.  
 
 > WARNING: Please note that python uses the '\\' character as an escape character. To ensure your inserted paths work insert an additional '\\' each time it appears in your defined path. E.g.  'C:\Python25\Test scripts' becomes 'C:\\\Python25\\\Test scripts'  
 

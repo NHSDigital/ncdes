@@ -156,7 +156,7 @@ def save_check_results(path, type_of_check, df_check_results, ncd_table_col_name
     else:
         new_file = df_check_results
     # Overwrite existing file
-    print(f"overwriting previous {type_of_check} {ncd_table_col_name_str} archive file")
+    print(f"Overwriting previous {type_of_check} {ncd_table_col_name_str} archive file")
     new_file.to_csv(path, index=False)
 
     return
