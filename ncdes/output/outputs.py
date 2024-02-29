@@ -25,7 +25,6 @@ def check_and_create_folder(folder_path):
         os.makedirs(folder_path)
 
 
-
 def save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory):
     dates_table = get_date_for_name(NCDes_problem_ind_rem)
     file_name = get_file_name(dates_table)
@@ -36,11 +35,11 @@ def save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory):
 
     #check if month folder exists, if not create one
     data_month = get_data_month(NCDes_problem_ind_rem)
-    print(f"data month is {data_month}")
+    print(f"Data month is {data_month}")
     check_and_create_folder(f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}")
 
     #to csv
-    print("converting main df to csv")
+    print("Converting main df to csv (takes a while)")
     NCDes_problem_ind_rem.to_csv(f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}" + r"\\" + file_name + ".csv",
                                      index=False)
     
@@ -53,13 +52,15 @@ def save_NCDes_main_to_zip(NCDes_problem_ind_rem, root_directory):
     #to zip
     with zipfile.ZipFile(f'{root_directory}Output\\{file_folder}\\Zip_archive\\{data_month}\\{file_name}.zip','w') as zipMe:
             filenamecsv = f"{file_name}.csv"
-            print(f"filename is {filenamecsv}")
+            print(f"File name is {filenamecsv}")
             file = f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}\\" + filenamecsv
             zipMe.write(file, arcname=filenamecsv, compress_type=zipfile.ZIP_DEFLATED)
     
 
 def save_NCDes_main_to_excel(NCDes_problem_ind_rem, root_directory, server, database):
-    main_to_excel(NCDes_problem_ind_rem, root_directory, server, database)
+    dates_table = get_date_for_name(NCDes_problem_ind_rem)
+    file_folder = get_file_folder(dates_table) 
+    main_to_excel(NCDes_problem_ind_rem, root_directory, server, database, file_folder)
 
 def save_trendmonitor(NCDes_problem_ind_rem, root_directory):
     data_month = get_data_month(NCDes_problem_ind_rem)   
@@ -69,7 +70,6 @@ def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, root_directory):
     dates_table = get_date_for_name(NCDes_with_rulesets)
     file_name = get_file_name(dates_table)
     file_folder = get_file_folder(dates_table)
-
     data_month = get_data_month(NCDes_with_rulesets) 
     #to csv
     for RULESET_ID in NCDes_with_rulesets['Ruleset ID'].unique():
@@ -102,8 +102,7 @@ def get_date_for_name(NCDes_with_geogs):
         An object that has all the correct date data we need to create the filename
     """
 
-
-    date = pd.to_datetime(NCDes_with_geogs["ACH_DATE"].iloc[0], infer_datetime_format=True)
+    date = pd.to_datetime(NCDes_with_geogs["ACH_DATE"].iloc[0])
 
     dates_table = NCDes_with_geogs[["ACH_DATE"]].drop_duplicates()
 
@@ -137,15 +136,14 @@ def get_file_folder(dates_table):
     year = dates_table["Year"].iloc[0]
 
     if int(month_num) >= 4:
-        file_folder = r"NCD_" + year + "_" + str(int(year) + 1)
+        file_folder = year + "_" + str(int(year) + 1)
 
     elif int(month_num) < 4:
-        file_folder = r"NCD_" + str(int(year) - 1) + "_" + year
+        file_folder = str(int(year) - 1) + "_" + year
 
     return file_folder
 
 def archive_input_as_csv(ncdes_raw, root_directory):
-
     today = (datetime2.today()).strftime("%Y_%m_%d")
     ncdes_raw.to_csv(f"{root_directory}Input\\Archive\\NCDes_" + today + ".csv", index=False)
 

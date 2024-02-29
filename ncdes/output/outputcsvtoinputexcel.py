@@ -148,8 +148,8 @@ def add_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
         result_series.append(num)
           
     #append the summary, add England as first value, and move to top row  
-    result_series = pd.Series(result_series, index = df.columns)
-    df2 = df.append(result_series, ignore_index=True)
+    df2 = df.copy()
+    df2.loc[len(df2)] = result_series
     df2 = pd.concat([df2.iloc[-1:], df2.iloc[:-1]], ignore_index=True)
 
     return df2
