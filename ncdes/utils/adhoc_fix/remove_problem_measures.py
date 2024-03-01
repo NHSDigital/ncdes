@@ -19,6 +19,15 @@ def remove(df: pd.DataFrame, bad_measure_list: list) -> pd.DataFrame:
         pd.DataFrame: input df with bad indicators removed
     """    
     NCDes_bad_meas_removed = df[~df["MEASURE"].isin(bad_measure_list)]
-    print(NCDes_bad_meas_removed.query("MEASURE == 'Num Patients in Set'"))
-    print(f"Removed measure(s): {bad_measure_list}")
+    ncdes_query = NCDes_bad_meas_removed.query("MEASURE == 'Num Patients in Set'")
+    if len(ncdes_query) == 0:
+        print("No num patients in Set found.")
+    else:    
+        print(ncdes_query)
+
+    if len(bad_measure_list) == 0:
+        print("No measures removed.")
+    else:    
+        print(f"Removed measure(s): {bad_measure_list}")
+    
     return NCDes_bad_meas_removed

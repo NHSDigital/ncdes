@@ -22,5 +22,10 @@ def remove(NCDes_suppressed: pd.DataFrame, bad_indicator_list: list) -> pd.DataF
         pd.DataFrame: input df with bad indicators removed
     """    
     NCDes_bad_inds_removed = NCDes_suppressed[~NCDes_suppressed["IND_CODE"].isin(bad_indicator_list)]
-    print(f"Removed indicator(s): {bad_indicator_list}")
+
+    if len(NCDes_bad_inds_removed) == 0:
+        print("No indicators removed.")
+    else:
+        print(f"Removed indicator(s): {bad_indicator_list}")
+        
     return NCDes_bad_inds_removed

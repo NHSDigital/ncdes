@@ -148,8 +148,8 @@ def add_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
         result_series.append(num)
           
     #append the summary, add England as first value, and move to top row  
-    result_series = pd.Series(result_series, index = df.columns)
-    df2 = df.append(result_series, ignore_index=True)
+    df2 = df.copy()
+    df2.loc[len(df2)] = result_series
     df2 = pd.concat([df2.iloc[-1:], df2.iloc[:-1]], ignore_index=True)
 
     return df2
@@ -175,7 +175,10 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
     all_pracs = prac_df["PRACTICE_CODE"].to_list()
     
     unknown_pracs = [prac for prac in prac_in_data if prac not in all_pracs]
-    print(f"All missing practice's codes are {unknown_pracs}")
+    if len(unknown_pracs) != 0:
+        print(f"All missing practice's codes are {unknown_pracs}")
+    else:
+        print(f"They are no missing practice codes.")
 
     #make an unknown column
     if len(unknown_pracs) != 0:

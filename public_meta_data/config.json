@@ -3,4 +3,6 @@
 "epcn_path": "insert absolute path to your ePCN file here",
 "server": "server name",
 "database":"database name"
+"map_server":"server name for mapping data",
+"map_database": "database name for mapping data"
 }

@@ -5,4 +5,5 @@ dependencies:
  - pandas == 1.4.4
  - numpy == 1.21.5
  - openpyxl == 3.0.10
- - pyodbc == 5.0.1
+ - pyodbc == 4.0.34
+ 
