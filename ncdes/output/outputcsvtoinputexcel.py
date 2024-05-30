@@ -40,20 +40,20 @@ def pivot_indicator(df : pd.DataFrame, dfbase: pd.DataFrame) -> pd.DataFrame:
     dfpivoted = dfpivoted.drop_duplicates()
     return dfpivoted                
 
-#Add NCDMI082 data
-def add_NCDMI082_data(input_df, df_base):
+#Add HI01 data
+def add_HI01_data(input_df, df_base):
     """
-    Add the NCDMI082 numerator column on data
+    Add the HI01 numerator column on data
     Parameters
     input_df : the orginal csv dataframe
-    df_base : dataframe you want to attach NCDMI082 data to
+    df_base : dataframe you want to attach HI01 data to
     Returns
     df : A cleaned and processed dataframe
     """
-    df = input_df[input_df.IND_CODE.isin(["NCDMI182"])]
+    df = input_df[input_df.IND_CODE.isin(["HI01"])]
     df = df[df.MEASURE == "Numerator"]
     df = df.groupby("PRACTICE_CODE")["VALUE"].sum().reset_index()
-    df = df.rename(columns = {"VALUE":"NCDMI182Numerator"})
+    df = df.rename(columns = {"VALUE":"HI01Numerator"})
     
     df = df_base.merge(df, how="left", on="PRACTICE_CODE")
     
@@ -69,7 +69,7 @@ def get_data(input_df : pd.DataFrame) -> pd.DataFrame:
     df : A cleaned and processed dataframe
     """
     #Reduce dataframe to required indicators
-    df = input_df[input_df.IND_CODE.isin(["NCD120"])]
+    df = input_df[input_df.IND_CODE.isin(["HI03"])]
     df = df[df.MEASURE.isin(["Numerator", "Denominator"])]
     
     #Strip out the date for further use. If multiple dates, then print Error
@@ -85,11 +85,11 @@ def get_data(input_df : pd.DataFrame) -> pd.DataFrame:
     #Pivot the table and convert new columns into ints
     df = pivot_indicator(df, df[df.columns[:2]])
     
-    #get NCDMI082 data
-    df = add_NCDMI082_data(input_df, df)
+    #get HI01 data
+    df = add_HI01_data(input_df, df)
 
-    df[["Numerator", "Denominator","NCDMI182Numerator"]] = df[["Numerator", "Denominator","NCDMI182Numerator"]].astype('int')
-    df["No_ethnicity"] = df["NCDMI182Numerator"] - df["Numerator"]
+    df[["Numerator", "Denominator","HI01Numerator"]] = df[["Numerator", "Denominator","HI01Numerator"]].astype('int')
+    df["No_ethnicity"] = df["HI01Numerator"] - df["Numerator"]
     df["No_ethnicity"] = df["No_ethnicity"].astype("int")
     return df, ach_date
 
@@ -104,8 +104,8 @@ def write_perc_col(df: pd.DataFrame, col1 : str, col2: str, new_col :str) -> pd.
     Returns
     df : The processed dataframe
     """
-    df[new_col] = df[col1] / df[col2]# * 100
-    df[new_col] = df[new_col].astype("float") #didnt work
+    df[new_col] = df[col1] / df[col2]
+    df[new_col] = df[new_col].astype("float") 
     df[new_col] = df[new_col].round(4)
     return df
 
@@ -144,7 +144,6 @@ def add_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
     #Get the sums here
     for col in dfvals.columns:
         num = dfvals[col].sum()
-        #formatted_num = format(num, ',')
         result_series.append(num)
           
     #append the summary, add England as first value, and move to top row  
@@ -192,7 +191,7 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
     #Reorder columns.
     col_order = ['PRACTICE_CODE', 'PRACTICE_NAME','Sub ICB Location ODS Code', 'Sub ICB Location Name', 
                 'ICB ODS Code', 'ICB Name', 'Region ODS Code', 'Region Name', 
-                 'Denominator','Numerator',"NCDMI182Numerator","No_ethnicity"]
+                 'Denominator','Numerator',"HI01Numerator","No_ethnicity"]
     output_df = output_df[col_order]
 
     
@@ -209,9 +208,9 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
     region_df = write_perc_col(region_df,'Numerator', 'Denominator', "%")
     
     
-    sub_icb_df = write_perc_col(sub_icb_df, "No_ethnicity", "NCDMI182Numerator", "2%")
-    icb_df = write_perc_col(icb_df, "No_ethnicity", "NCDMI182Numerator", "2%")
-    region_df = write_perc_col(region_df, "No_ethnicity", "NCDMI182Numerator", "2%")
+    sub_icb_df = write_perc_col(sub_icb_df, "No_ethnicity", "HI01Numerator", "2%")
+    icb_df = write_perc_col(icb_df, "No_ethnicity", "HI01Numerator", "2%")
+    region_df = write_perc_col(region_df, "No_ethnicity", "HI01Numerator", "2%")
     
 
     
@@ -227,7 +226,7 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
         df = df.rename(columns={'Denominator':'Denominator - total number of patients on LD Register (minus declines)',
                'Numerator':'Number of patients had health check and health action plan AND have ethnicity recorded',
                '%' : '% Health check, action plan and ethnicity recorded', 
-               "NCDMI182Numerator" : 'Number of patients had health check and health action plan', 
+               "HI01Numerator" : 'Number of patients had health check and health action plan', 
                "No_ethnicity" : 'Number of patients had health check and action plan NO ethnicity recorded',
                '2%' : '% Patients had health Check and action plan NO ethnicity recorded'})
         

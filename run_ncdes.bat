@@ -5,3 +5,6 @@ call conda env create --name ncdes --file environment.yml
 call conda activate ncdes
 python -m ncdes.main
 pause
+
+
+

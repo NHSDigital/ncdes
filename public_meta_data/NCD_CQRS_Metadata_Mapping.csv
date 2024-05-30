@@ -1,470 +1,303 @@
 ﻿SERVICE_YEAR,IND_CODE,FIELD_NAME,SHORT_NAME
-2023-24,NCD001,"Of the denominator, the number referred to a social prescribing service on or after QSSD and up to and including RPED.",Numerator
-2023-24,NCD001,SOCPRESDEC,SOCPRESDEC
-2023-24,NCD001,Total number of Registered Patients,Denominator
-2023-24,NCD003,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCD003,FLUEXPCON,FLUEXPCON
-2023-24,NCD003,FLUINVITE1,FLUINVITE1
-2023-24,NCD003,N_AT_RISK,N_AT_RISK
-2023-24,NCD003,Number of patients aged 18 to 64 years inclusive and in one or more at-risk groups subject to the new national call and recall system,Denominator
-2023-24,NCD003,"Of the denominator, number of patients who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period",Numerator
-2023-24,NCD003,P_AGE18_64,P_AGE18_64
-2023-24,NCD003,XFLU_DAT,XFLU_DAT
-2023-24,NCD004,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCD004,FLUEXPCON,FLUEXPCON
-2023-24,NCD004,FLUINVITE1,FLUINVITE1
-2023-24,NCD004,Number of patients aged 2 to 3 on 31 August of the relevant financial year,Denominator
-2023-24,NCD004,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and the end of the reporting period.",Numerator
-2023-24,NCD004,P_AGE2_4,P_AGE2_4
-2023-24,NCD004,XFLU_DAT,XFLU_DAT
-2023-24,NCD011,ABPDEC12M,ABPDEC12M
-2023-24,NCD011,ABPDEC24M,ABPDEC24M
-2023-24,NCD011,BPLAT_2,BPLAT_2
-2023-24,NCD011,BPLAT6M,BPLAT6M
-2023-24,NCD011,HYPLATUNR,HYPLATUNR
-2023-24,NCD011,"Number of patients aged 18 years or over, not on the QOF Hypertension Register as of 31 March 2023, and who have (i) a last recorded blood pressure reading in the 3 years prior to 1 April 2023 >= 140/90mmHg with the exception of patients whose first blood pressure reading >= 140/90mmHg in this period is on or after 1 October 2022 OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2022.",Denominator
-2023-24,NCD011,"Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)). Clinically appropriate follow-up: 1. Initial BP reading < 140/90 mmHg (only relevant for patients in (i)) OR 2. Initial BP reading >=140/90 mmHg AND a. Subsequent change of medication AND subsequent blood pressure reading of <140/90 mmHg OR b. Subsequent occurrence of Ambulatory Blood Pressure Monitoring OR c. Subsequent occurrence of Home Blood Pressure Monitoring OR d. ([Referrals listed in below table] recorded on same day as initial reading AND addition to QOF Hypertension Register) OR e. (Subsequent commencement of Antihypertensive therapy OR Patient declined antihypertensive treatment (ANTIHYPDEC_COD code cluster)) AND addition to QOF Hypertension Register",Numerator
-2023-24,NCD011,PALCARDAT2,PALCARDAT2
-2023-24,NCD011,PAT_AGEU18,PAT_AGEU18
-2023-24,NCD011,PRELAT6M,PRELAT6M
-2023-24,NCD012,"Number of care home beds eligible to receive the Network Contract DES Enhanced Health in Care Homes service, as reflected in the calculation of the care home bed premium. Denominator will be sourced from manual submission by PCNs/ICBs via CQRS.",Denominator
-2023-24,NCD012,The number of patients aged 18 years or over and recorded as living in a care home (including a residential home or nursing home) at the end of the reporting period. (NB: Temporary care home residents should be included in this indicator numerator.),Numerator
-2023-24,NCD014,Number of prescriptions for non-salbutamol inhalers issued to patients aged 12 years or over by the end of the reporting period.,Denominator
-2023-24,NCD014,"Of the denominator, the number of prescriptions that are for metered dose inhalers.",Numerator
-2023-24,NCD018,CARHOMDEC1,CARHOMDEC1
-2023-24,NCD018,HOMETMP_18,HOMETMP_18
-2023-24,NCD018,"Number of care home residents aged 18 years or over, including both permanent and temporary care home residents",Denominator
-2023-24,NCD018,"Of the denominator, the number who had a personalised care and support plan agreed or reviewed by the end of the reporting period.",Numerator
-2023-24,NCD018,PCSPDEC,PCSPDEC
-2023-24,NCD026,Number of appointments provided by the general practice that were mapped to one of the following eight national categories: - General Consultation Acute - General Consultation Routine - Unplanned Clinical Activity - Walk in - Triage - Home Visit - Care Home Visit - Care Related Encounter but does not fit into any other category.,Denominator
-2023-24,NCD026,"Of the denominator, the number of appointments for which the time from booking to appointment was two weeks or less.",Numerator
-2023-24,NCD102,FAMHYPRDEC,FAMHYPRDEC
-2023-24,NCD102,NOCHOL2930,NOCHOL2930
-2023-24,NCD102,Number of patients aged 29 years or under with a total cholesterol greater than 7.5mmol/L OR aged 30 years or over with a total cholesterol greater than 9.0mmol/L.,Denominator
-2023-24,NCD102,"Of the denominator, the number i) diagnosed with secondary hyperlipidaemia or ii) clinically assessed for familial hypercholesterolaemia,  or iii) referred for assessment for familial hypercholesterolaemia or iv) genetically diagnosed with familial hypercholesterolaemia.",Numerator
-2023-24,NCD102,PALCARDAT2,PALCARDAT2
-2023-24,NCD107,NOPQSNSDAC,NOPQSNSDAC
-2023-24,NCD107,Number of patients aged 18 years or over concurrently prescribed a non-steroidal anti-inflammatory drug (NSAID) and an oral anticoagulant in the last three months of the previous financial year.,Denominator
-2023-24,NCD107,"Of the denominator, the number who, in the three months to the reporting period end date, were either 1.	No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.",Numerator
-2023-24,NCD107,PAT_AGEU18,PAT_AGEU18
-2023-24,NCD108,ACNOPQSNSD,ACNOPQSNSD
-2023-24,NCD108,Number of patients aged 65 years or over prescribed a non-steroidal anti-inflammatory drug (NSAID) without a concurrent oral anticoagulant in the last three months of the previous financial year,Denominator
-2023-24,NCD108,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.",Numerator
-2023-24,NCD108,PAT_AGEU65,PAT_AGEU65
-2023-24,NCD109,NOPQSACSAL,NOPQSACSAL
-2023-24,NCD109,Number of patients aged 18 years or over concurrently prescribed an oral anticoagulant and an anti-platelet in the last three months of the previous financial year.,Denominator
-2023-24,NCD109,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to an anti-platelet.",Numerator
-2023-24,NCD109,PAT_AGEU18,PAT_AGEU18
-2023-24,NCD110,NOPQSSAL,NOPQSSAL
-2023-24,NCD110,Number of patients aged 18 years or over prescribed both aspirin (irrespective of dose/strength) and another anti-platelet in the last three months of the previous financial year.,Denominator
-2023-24,NCD110,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed aspirin and/or no longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to both aspirin and another anti-platelet.",Numerator
-2023-24,NCD110,PAT_AGEU18,PAT_AGEU18
-2023-24,NCD111,DOAC3MDAT1,DOAC3MDAT1
-2023-24,NCD111,DOAC9MDAT1,DOAC9MDAT1
-2023-24,NCD111,L12MNODOAC,L12MNODOAC
-2023-24,NCD111,Number of patients prescribed a direct-acting oral anticoagulant (DOAC) on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
-2023-24,NCD111,"Of the denominator, the number who received a renal function test and have a recording of weight and Creatinine Clearance Rate (CCR), along with a recording that their DOAC dose was either confirmed (not changed) or changed",Numerator
-2023-24,NCD112,FAECIMMDEC,FAECIMMDEC
-2023-24,NCD112,FITNIDAT,FITNIDAT
-2023-24,NCD112,GICANREF,GICANREF
-2023-24,NCD112,Number of lower gastrointestinal two week wait (fast track) referrals for suspected cancer.,Denominator
-2023-24,NCD112,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test, with the result* recorded either in the twenty-one days leading up to the referral, or in the fourteen days after the referral (inclusive). *Recorded using the event date rather than the record date",Numerator
-2023-24,NCD113,Number of referrals to the Community Pharmacist Consultation Service to patients in the denominator.,Numerator
-2023-24,NCD113,Total number of Registered Patients,Denominator
-2023-24,NCD117,AGEUM50F55,AGEUM50F55
-2023-24,NCD117,CVDDIAG,CVDDIAG
-2023-24,NCD117,DECTESTQR,DECTESTQR
-2023-24,NCD117,DIBFRISTAT,DIBFRISTAT
-2023-24,NCD117,LIPIDTHER,LIPIDTHER
-2023-24,NCD117,"Number of men aged 50 years or over and women aged 55 years or over, without established cardiovascular disease and not on lipid lowering therapy*. *lipid lower therapy means people who have received a prescription for any of the below medications  in the 6 months upto and including the QSSD statins, ezetimibe, bempedoic acid, inclisiran, PCSK9i, or icosapent ethyl. [NOTE: this list includes lipid lowering therapies used for secondary prevention, so is a longer list than that used for CVD-08 which only uses therapies used for primary prevention]",Denominator
-2023-24,NCD117,"Of the denominator, the number who have a QRISK score recorded on their GP record in the preceding five years and who have a recording of cholesterol levels, blood pressure and smoking status in the 12 months preceding recording of the most recent QRISK score",Numerator
-2023-24,NCD117,PALCARE,PALCARE
-2023-24,NCD120,HLTHAPDEC,HLTHAPDEC
-2023-24,NCD120,HLTHCHKDEC,HLTHCHKDEC
-2023-24,NCD120,LD_DAT,LD_DAT
-2023-24,NCD120,Number of patients on the OQF learning disability register aged 14 or over,Denominator
-2023-24,NCD120,"Of the denominator, the number who received an annual Learning Disability Health Check, have a Health Action Plan and have a recording of ethnicity on their GP record by the end of the reporting period.",Numerator
-2023-24,NCD120,PAT_AGEU14,PAT_AGEU14
-2023-24,NCD121,CHOLMX_DAT,CHOLMX_DAT
-2023-24,NCD121,CVDDIAG,CVDDIAG
-2023-24,NCD121,DIABUNRES,DIABUNRES
-2023-24,NCD121,Number of patients aged 25 to 84 years inclusive without established cardiovascular disease and with a last recorded  CVD risk score (QRISK2 or 3) > 20%.,Denominator
-2023-24,NCD121,"Of the denominator,the number who were prescribed statins, or where a statin is declined or clinically unsuitable, another lipid-lowering therapy in the six months to the end of the reporting period. Other lipid lowering therapies are ezetimibe and bempedoic acid, and no others. Clinically unsuitable is defined as (no ordering between these options - evaluate all simultaneously): Patients who have a persisting statin contraindication anywhere in the patient record. OR Patients who have an expiring statin contraindication in the 12 months to PPED OR413174003 Statin not tolerated (situation). Statin declined should be expiring in the 12 months to PPED",Numerator
-2023-24,NCD121,P_AGE25_84,P_AGE25_84
-2023-24,NCD121,PALCARDAT2,PALCARDAT2
-2023-24,NCD121,QRISKVAL20,QRISKVAL20
-2023-24,NCD121,STATLLTDEC,STATLLTDEC
-2023-24,NCD123,FAECIMMDEC,FAECIMMDEC
-2023-24,NCD123,FITNIDAT,FITNIDAT
-2023-24,NCD123,GICANREF,GICANREF
-2023-24,NCD123,Number of lower gastrointestinal two week wait (fast track) referrals for suspected cancer.,Denominator
-2023-24,NCD123,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test (FIT), with the result recorded in the twenty-one days leading up to the referral.",Numerator
-2023-24,NCDMI001,"Of the denominator, the number of patients who had a Personalised Care and Support Plan agreed by the end of the reporting period",Numerator
-2023-24,NCDMI001,Total number of Registered Patients,Denominator
-2023-24,NCDMI002,"Of the denominator, the number of patients who had a Personalised Care and Support Plan reviewed by the end of the reporting period",Numerator
-2023-24,NCDMI002,Total number of Registered Patients,Denominator
-2023-24,NCDMI003,"Of the denominator, the number of patients whose care was discussed as part of a shared decision-making process by the end of the reporting period",Numerator
-2023-24,NCDMI003,Total number of Registered Patients,Denominator
-2023-24,NCDMI010,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI010,HOMECONF18,HOMECONF18
-2023-24,NCDMI010,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents) who were recorded as experiencing acute confusion on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
-2023-24,NCDMI010,"Of the denominator, the number who received a delirium assessment after the recording of acute confusion and up to the end of the reporting period.",Numerator
-2023-24,NCDMI023,"Of the denominator, the number of patients who were placed on an urgent referral pathway for suspected cancer by the end of the reporting period",Numerator
-2023-24,NCDMI023,Total number of Registered Patients,Denominator
-2023-24,NCDMI024,Number of patients who were placed on an urgent referral pathway for suspected cancer by the end of the reporting period,Denominator
-2023-24,NCDMI024,"Of the denominator, the number of patients for whom safety netting was recorded by the end of the reporting period",Numerator
-2023-24,NCDMI025,CARHOME_18,CARHOME_18
-2023-24,NCDMI025,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCDMI025,FLUEXPCON,FLUEXPCON
-2023-24,NCDMI025,FLUINVITE1,FLUINVITE1
-2023-24,NCDMI025,Number of patients aged 18 years or over in long stay residential or homes,Denominator
-2023-24,NCDMI025,"Of the denominator, the number of patients who received a seasonal influenza vaccination on or after 1 September and up to and including the end of the reporting period.",Numerator
-2023-24,NCDMI025,XFLU_DAT,XFLU_DAT
-2023-24,NCDMI026,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCDMI026,FLUEXPCON,FLUEXPCON
-2023-24,NCDMI026,FLUINVITE1,FLUINVITE1
-2023-24,NCDMI026,LD_DAT,LD_DAT
-2023-24,NCDMI026,Number of patients on the QOF Learning Disability register aged 18 years or over,Denominator
-2023-24,NCDMI026,"Of the denominator, the number of patients who received a seasonal influenza vaccination on or after 1 September and up to and including the end of the reporting period.",Numerator
-2023-24,NCDMI026,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI026,XFLU_DAT,XFLU_DAT
-2023-24,NCDMI027,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCDMI027,FLUEXPCON,FLUEXPCON
-2023-24,NCDMI027,FLUINVITE1,FLUINVITE1
-2023-24,NCDMI027,MH_MHREM,MH_MHREM
-2023-24,NCDMI027,NATRISKU18,NATRISKU18
-2023-24,NCDMI027,"Number of patients on the QOF Mental Health register for schizophrenia, bipolar affective disorder and other psychoses (MH1) aged 65 years or over, or aged 18 to 64 years inclusive and in a clinical at-risk group.",Denominator
-2023-24,NCDMI027,"Of the denominator, the number of patients who received a seasonal influenza vaccination on or after 1 September and up to and including the end of the reporting period.",Numerator
-2023-24,NCDMI027,XFLU_DAT,XFLU_DAT
-2023-24,NCDMI028,HLTHCHKDEC,HLTHCHKDEC
-2023-24,NCDMI028,LD_DAT,LD_DAT
-2023-24,NCDMI028,Number of patients aged 14 years or over on the QOF Learning Disability register,Denominator
-2023-24,NCDMI028,"Of the denominator, the number of patients who received a Learning Disability Annual Health Check by the end of the reporting period",Numerator
-2023-24,NCDMI028,PAT_AGEU14,PAT_AGEU14
-2023-24,NCDMI060,"Of the denominator, the number of patients recorded as having declined to provide their ethnicity in response to an explicit opportunity at the end of the reporting period.",Numerator
-2023-24,NCDMI060,Total number of registered patients.,Denominator
-2023-24,NCDMI061,CHOLMX_DAT,CHOLMX_DAT
-2023-24,NCDMI061,CVDPAL_DAT,CVDPAL_DAT
-2023-24,NCDMI061,Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) >= 10%.,Denominator
-2023-24,NCDMI061,"Of the denominator, the number who received a prescription for statins in the 6 months up to and including the end of the reporting period.",Numerator
-2023-24,NCDMI061,P_AGE25_84,P_AGE25_84
-2023-24,NCDMI061,QRISKVAL10,QRISKVAL10
-2023-24,NCDMI061,STATDECAW,STATDECAW
-2023-24,NCDMI061,STATINTOL,STATINTOL
-2023-24,NCDMI061,TXSTAT_DAT,TXSTAT_DAT
-2023-24,NCDMI061,XSTAT_DAT,XSTAT_DAT
-2023-24,NCDMI063,"Of the denominator, the number of patients referred to a social prescribing service at any point in time up to the end of the reporting period, minus number of patients discharged from a social prescribing service (as captured by the social prescribing case closed code) at any point in time thereafter and up to the end of the reporting period.",Numerator
-2023-24,NCDMI063,Total number of Registered Patients,Denominator
-2023-24,NCDMI064,Number of patients with a long-term condition recorded.,Denominator
-2023-24,NCDMI064,"Of the denominator, the number of patients who had a shared decision-making conversation by the end of the reporting period.",Numerator
-2023-24,NCDMI064,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI068,Number of Structured Medication Reviews delivered to patients in the denominator by the end of the reporting period,Numerator
-2023-24,NCDMI068,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI068,STRMEDRVDC,STRMEDRVDC
-2023-24,NCDMI068,Total number of registered patients.,Denominator
-2023-24,NCDMI074,"Of the denominator, the number of patients prescribed opioids (irrespective of morphine equivalent dose) in the reporting period.",Numerator
-2023-24,NCDMI074,Total number of registered patients.,Denominator
-2023-24,NCDMI075,"Of the denominator, the number of patients who were prescribed oral or injected antimicrobials by the end of the reporting period.",Numerator
-2023-24,NCDMI075,Total number of registered patients.,Denominator
-2023-24,NCDMI076,"Of the denominator, the number of patients who were prescribed benzodiazepines by the end of the reporting period.",Numerator
-2023-24,NCDMI076,Total number of registered patients.,Denominator
-2023-24,NCDMI089,Number of salbutamol inhaler prescriptions by the end of the reporting period.,Denominator
-2023-24,NCDMI089,"Of the denominator, the number that were lower carbon.",Numerator
-2023-24,NCDMI101,NOBP_DAT,NOBP_DAT
-2023-24,NCDMI101,Number of patients aged 65 years or over who received a blood pressure check in general practice on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
-2023-24,NCDMI101,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI101,PAT_AGEU65,PAT_AGEU65
-2023-24,NCDMI101,UNRESAFIB,UNRESAFIB
-2023-24,NCDMI102,BTHPALDIZC,BTHPALDIZC
-2023-24,NCDMI102,"Number of patients aged 18 years or over who were recorded on or after the Quality Service Start Date and up to and including the reporting period end date as experiencing breathlessness, palpitations, syncope, dizziness, or chest discomfort.",Denominator
-2023-24,NCDMI102,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI102,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI102,UNRESAFIB,UNRESAFIB
-2023-24,NCDMI103,NOIRREGPLS,NOIRREGPLS
-2023-24,NCDMI103,Number of patients aged 65 years or over who were identified as having an irregular pulse.,Denominator
-2023-24,NCDMI103,"Of the denominator, the number who received an electrocardiogram or were referred for an electrocardiogram.",Numerator
-2023-24,NCDMI103,PAT_AGEU65,PAT_AGEU65
-2023-24,NCDMI103,UNRESAFIB,UNRESAFIB
-2023-24,NCDMI105,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and without a subsequent referral to a social prescribing service, up to the end of the reporting period).",Denominator
-2023-24,NCDMI105,"Of the denominator, the number of Social Prescribing Link Worker (or synonym) consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI106,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period, and without a subsequent referral to a social prescribing service).",Denominator
-2023-24,NCDMI106,"Of the denominator, the number of General Practitioner consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI107,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).",Denominator
-2023-24,NCDMI107,"Of the denominator, the number who had at least one consultation with a Social Prescribing Link Worker (or synonym) on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI108,"Of the denominator, the number of General Practitioner consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI108,Total number of registered patients.,Denominator
-2023-24,NCDMI109,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).",Denominator
-2023-24,NCDMI109,"Of the denominator, the total number of consultations on or after the Quality Service Start Date and up to and including the reporting period end date, irrespective of the HCP type of the staff member delivering the consultation.",Numerator
-2023-24,NCDMI110,"Of the denominator, the number of consultations on or after the Quality Service Start Date and up to and including the reporting period end date, irrespective of the HCP type of the staff member delivering the consultation.",Numerator
-2023-24,NCDMI110,Total number of Registered Patients.,Denominator
-2023-24,NCDMI112,Number of care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home).,Denominator
-2023-24,NCDMI112,NURSHOME,NURSHOME
-2023-24,NCDMI112,"Of the denominator, the number on the QOF Dementia Register.",Numerator
-2023-24,NCDMI112,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI113,LATNURSPER,LATNURSPER
-2023-24,NCDMI113,Number of permanent care home residents aged 18 years or over.,Denominator
-2023-24,NCDMI113,"Of the denominator, the number with a recording of a preferred place of death.",Numerator
-2023-24,NCDMI113,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI114,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI114,Number of care home residents aged 18 years or over.,Denominator
-2023-24,NCDMI114,Number of meetings by multidisciplinary team held in relation to patients in the denominator.,Numerator
-2023-24,NCDMI114,NURSHOME,NURSHOME
-2023-24,NCDMI114,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI116,NONSAID3M,NONSAID3M
-2023-24,NCDMI116,Number of patients aged 65 years or over prescribed an oral NSAID.,Denominator
-2023-24,NCDMI116,"Of the denominator, the number not concurrently prescribed a gastro-protective.",Numerator
-2023-24,NCDMI116,PAT_AGEU65,PAT_AGEU65
-2023-24,NCDMI117,NONSAID3M,NONSAID3M
-2023-24,NCDMI117,Number of patients aged 18 years or over with a history of peptic ulceration prescribed an oral NSAID.,Denominator
-2023-24,NCDMI117,"Of the denominator, the number not concurrently prescribed a gastro-protective.",Numerator
-2023-24,NCDMI117,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI117,PEPULCB3M,PEPULCB3M
-2023-24,NCDMI118,NOANTIPLT,NOANTIPLT
-2023-24,NCDMI118,Number of patients aged 18 years or over with a history of peptic ulceration and prescribed an anti-platelet.,Denominator
-2023-24,NCDMI118,"Of the denominator, the number not concurrently prescribed a gastro-protective.",Numerator
-2023-24,NCDMI118,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI118,PEPULCB3M,PEPULCB3M
-2023-24,NCDMI119,ANTICOAG3M,ANTICOAG3M
-2023-24,NCDMI119,Number of patients aged 18 years or over prescribed an oral anticoagulant.,Denominator
-2023-24,NCDMI119,"Of the denominator, the number concurrently prescribed an oral NSAID.",Numerator
-2023-24,NCDMI119,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI120,ANTICOAG3M,ANTICOAG3M
-2023-24,NCDMI120,NOCOAGPLAT,NOCOAGPLAT
-2023-24,NCDMI120,Number of patients aged 18 years or over prescribed an oral anticoagulant and an anti-platelet within 28 days of each other at any point up to the end of the reporting period.,Denominator
-2023-24,NCDMI120,"Of the denominator, the number who were not concurrently prescribed a gastro-protective, where concurrency is defined as the prescription of a gastro-protective within 3 months of the latest element of their latest oral anticoagulant/anti-platelet prescription combination.",Numerator
-2023-24,NCDMI120,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI121,ASPIRIN3M,ASPIRIN3M
-2023-24,NCDMI121,NOASPLAT3M,NOASPLAT3M
-2023-24,NCDMI121,Number of patients aged 18 years or over prescribed aspirin (irrespective of dose/strength) and another anti-platelet within 28 days of each other at any point up to the end of the reporting period.,Denominator
-2023-24,NCDMI121,"Of the denominator, the number who were not concurrently prescribed a gastro-protective, where concurrency is defined as the prescription of a gastro-protective within 3 months of the latest element of their latest aspirin/anti-platelet prescription combination.",Numerator
-2023-24,NCDMI121,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI122,HFB3M_DAT,HFB3M_DAT
-2023-24,NCDMI122,HFRESLAT,HFRESLAT
-2023-24,NCDMI122,Number of patients aged 18 years or over with a current diagnosis of heart failure.,Denominator
-2023-24,NCDMI122,"Of the denominator, the number prescribed an oral NSAID.",Numerator
-2023-24,NCDMI122,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI123,EGFRB3ML45,EGFRB3ML45
-2023-24,NCDMI123,Number of patients aged 18 years or over with a latest recorded eGFR less than 45.,Denominator
-2023-24,NCDMI123,"Of the denominator, the number prescribed an oral NSAID.",Numerator
-2023-24,NCDMI123,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI124,ASTB3M_DAT,ASTB3M_DAT
-2023-24,NCDMI124,ASTRESLAT,ASTRESLAT
-2023-24,NCDMI124,Number of patients aged 18 years or over on the QOF Asthma Register.,Denominator
-2023-24,NCDMI124,"Of the denominator, the number prescribed a non-selective beta-blocker.",Numerator
-2023-24,NCDMI124,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI125,"Of the denominator, the number under the care of Anticipatory Care service.",Numerator
-2023-24,NCDMI125,Total number of registered patients.,Denominator
-2023-24,NCDMI126,"Of the denominator, the number who declined an offer of Anticipatory Care.",Numerator
-2023-24,NCDMI126,Total number of registered patients.,Denominator
-2023-24,NCDMI127,"Of the denominator, the number discharged from Anticipatory Care service.",Numerator
-2023-24,NCDMI127,Total number of registered patients.,Denominator
-2023-24,NCDMI129,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCDMI129,FLUEXPCON,FLUEXPCON
-2023-24,NCDMI129,FLUINVITE1,FLUINVITE1
-2023-24,NCDMI129,N_AT_RISK,N_AT_RISK
-2023-24,NCDMI129,"Number of patients aged 18 to 64 years inclusive, and recorded as being from an ethnic minority, and in one or more of the following at-risk groups subject to the new national call and recall system:
-Chronic respiratory disease.
-Chronic heart disease.
-Chronic kidney disease.
-Chronic liver disease.
-Chronic neurological disease.
-Learning disabilities
-Diabetes.
-Immunosuppression.
-Asplenia or dysfunction of the spleen.
-Morbidly obese.
-People in long stay residential or homes.",Denominator
-2023-24,NCDMI129,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and 31 March between the Quality Service Start Date and the end of the reporting period.",Numerator
-2023-24,NCDMI129,P_AGE18_64,P_AGE18_64
-2023-24,NCDMI129,PAT_ETHWNS,PAT_ETHWNS
-2023-24,NCDMI129,XFLU_DAT,XFLU_DAT
-2023-24,NCDMI130,C19CON_DAT,C19CON_DAT
-2023-24,NCDMI130,C19DEC_DAT,C19DEC_DAT
-2023-24,NCDMI130,Number of registered patients aged 16 or over.,Denominator
-2023-24,NCDMI130,"Of the denominator, the number that have received a second dose of a Covid 19 vaccine.",Numerator
-2023-24,NCDMI130,PAT_AGEU16,PAT_AGEU16
-2023-24,NCDMI131,C19CON_DAT,C19CON_DAT
-2023-24,NCDMI131,C19DEC_DAT,C19DEC_DAT
-2023-24,NCDMI131,Number of registered patients aged 16 years or over and recorded as being from an ethnic minority.,Denominator
-2023-24,NCDMI131,"Of the denominator, the number that have received a second dose of a Covid 19 vaccination.",Numerator
-2023-24,NCDMI131,PAT_AGEU16,PAT_AGEU16
-2023-24,NCDMI131,PAT_ETHWNS,PAT_ETHWNS
-2023-24,NCDMI132,ABPDEC12M,ABPDEC12M
-2023-24,NCDMI132,ABPDEC24M,ABPDEC24M
-2023-24,NCDMI132,BPLAT_2,BPLAT_2
-2023-24,NCDMI132,BPLAT6M,BPLAT6M
-2023-24,NCDMI132,HYPLATUNR,HYPLATUNR
-2023-24,NCDMI132,"Number of patients aged 18 years or over, recorded as being from an ethnic minority, not on the QOF Hypertension Register as of 31 March 2023, and who have (i) a last recorded blood pressure reading in the 3years prior to 1 April 2023>= 140/90mmHg with the exception of patients whose first blood pressure (BP) reading >= 140/90mmHg in this period is on or after 1 October 2022OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2022",Denominator
-2023-24,NCDMI132,"Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)).",Numerator
-2023-24,NCDMI132,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI132,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI132,PAT_ETHWNS,PAT_ETHWNS
-2023-24,NCDMI132,PRELAT6M,PRELAT6M
-2023-24,NCDMI133,BPDEC1,BPDEC1
-2023-24,NCDMI133,Number of patients aged 45 years or over and recorded as being from an ethnic minority.,Denominator
-2023-24,NCDMI133,"Of the denominator, the number with a record of blood pressure in the preceding 5 years.",Numerator
-2023-24,NCDMI133,PAT_AGEU45,PAT_AGEU45
-2023-24,NCDMI133,PAT_ETHWNS,PAT_ETHWNS
-2023-24,NCDMI133,REGL3M_DAT,REGL3M_DAT
-2023-24,NCDMI134,MH_MHREM,MH_MHREM
-2023-24,NCDMI134,"Of the denominator, the number who received all six elements of the Physical Health Check for people with Severe Mental Illness.",Numerator
-2023-24,NCDMI134,SMOKORDEC,SMOKORDEC
-2023-24,NCDMI134,"Total number of registered patients with a diagnosis of schizophrenia, bipolar affective disorder and other psychoses.",Denominator
-2023-24,NCDMI135,MH_MHREM,MH_MHREM
-2023-24,NCDMI135,"Of the denominator, the number who received all six elements of the Physical Health Check for people with Severe Mental Illness.",Numerator
-2023-24,NCDMI135,PAT_ETHWNS,PAT_ETHWNS
-2023-24,NCDMI135,SMOKORDEC,SMOKORDEC
-2023-24,NCDMI135,"Total number of registered patients with a diagnosis of schizophrenia, bipolar affective disorder and other psychoses and recorded as being from an ethnic minority.",Denominator
-2023-24,NCDMI136,Number of registered patients with a Type 1 Opt Out.,Management Information
-2023-24,NCDMI137,Number of patients recorded as having a diagnosis of autism.,Management Information
-2023-24,NCDMI138,The number of encounters with patients in the denominator by a Clinical Pharmacist by the end of the reporting period.,Numerator
-2023-24,NCDMI138,Total number of Registered Patients.,Denominator
-2023-24,NCDMI139,"Of the denominator, the number who had at least one encounter with a Clinical Pharmacist by the end of the reporting period.",Numerator
-2023-24,NCDMI139,Total number of Registered Patients.,Denominator
-2023-24,NCDMI140,The number of encounters with patients in the denominator by a First Contact Physiotherapist by the end of the reporting period.,Numerator
-2023-24,NCDMI140,Total number of Registered Patients.,Denominator
-2023-24,NCDMI141,"Of the denominator, the number who had at least one encounter with a First Contact Physiotherapist by the end of the reporting period.",Numerator
-2023-24,NCDMI141,Total number of Registered Patients.,Denominator
-2023-24,NCDMI142,Number of encounters with patients in the denominator by a Physician Associate by the end of the reporting period.,Numerator
-2023-24,NCDMI142,Total number of Registered Patients.,Denominator
-2023-24,NCDMI143,"Of the denominator, the number who had at least one encounter with a Physician Associate by the end of the reporting period.",Numerator
-2023-24,NCDMI143,Total number of Registered Patients.,Denominator
-2023-24,NCDMI144,The number of encounters with patients in the denominator by a Dietitian by the end of the reporting period.,Numerator
-2023-24,NCDMI144,Total number of Registered Patients.,Denominator
-2023-24,NCDMI145,"Of the denominator, the number who had at least one encounter with a Dietitian by the end of the reporting period.",Numerator
-2023-24,NCDMI145,Total number of Registered Patients.,Denominator
-2023-24,NCDMI146,The number of encounters with patients in the denominator by a Podiatrist by the end of the reporting period.,Numerator
-2023-24,NCDMI146,Total number of Registered Patients.,Denominator
-2023-24,NCDMI147,"Of the denominator, the number who had at least one encounter with a Podiatrist the end of the reporting period.",Numerator
-2023-24,NCDMI147,Total number of Registered Patients.,Denominator
-2023-24,NCDMI148,The number of encounters with patients in the denominator by a Pharmacy Technician by the end of the reporting period.,Numerator
-2023-24,NCDMI148,Total number of Registered Patients.,Denominator
-2023-24,NCDMI149,"Of the denominator, the number who had at least one encounter with a Pharmacy Technician by the end of the reporting period.",Numerator
-2023-24,NCDMI149,Total number of Registered Patients.,Denominator
-2023-24,NCDMI150,The number of encounters with patients in the denominator by an Occupational Therapist by the end of the reporting period.,Numerator
-2023-24,NCDMI150,Total number of Registered Patients.,Denominator
-2023-24,NCDMI151,"Of the denominator, the number seen who had at least one encounter with an Occupational Therapist by the end of the reporting period.",Numerator
-2023-24,NCDMI151,Total number of Registered Patients.,Denominator
-2023-24,NCDMI152,The number of encounters with patients in the denominator by a Social Prescribing Link Worker by the end of the reporting period.,Numerator
-2023-24,NCDMI152,Total number of Registered Patients.,Denominator
-2023-24,NCDMI153,"Of the denominator, the number who had at least one encounter with a Social Prescribing Link Worker by the end of the reporting period.",Numerator
-2023-24,NCDMI153,Total number of Registered Patients.,Denominator
-2023-24,NCDMI154,The number of encounters with patients in the denominator by a Health and Wellbeing Coach by the end of the reporting period.,Numerator
-2023-24,NCDMI154,Total number of Registered Patients.,Denominator
-2023-24,NCDMI155,"Of the denominator, the number who had at least one encounter with a Health and Wellbeing Coach by the end of the reporting period.",Numerator
-2023-24,NCDMI155,Total number of Registered Patients.,Denominator
-2023-24,NCDMI156,The number of encounters with patients in the denominator by a Care Coordinator by the end of the reporting period.,Numerator
-2023-24,NCDMI156,Total number of Registered Patients.,Denominator
-2023-24,NCDMI157,"Of the denominator, the number who had at least one encounter with a Care Coordinator by the end of the reporting period.",Numerator
-2023-24,NCDMI157,Total number of Registered Patients.,Denominator
-2023-24,NCDMI158,The number of encounters with patients in the denominator by a Trainee Nursing Associate by the end of the reporting period.,Numerator
-2023-24,NCDMI158,Total number of Registered Patients.,Denominator
-2023-24,NCDMI159,"Of the denominator, the number who had at least one encounter with a Trainee Nursing Associate by the end of the reporting period.",Numerator
-2023-24,NCDMI159,Total number of Registered Patients.,Denominator
-2023-24,NCDMI160,The number of encounters with patients in the denominator by a Nursing Associate by the end of the reporting period.,Numerator
-2023-24,NCDMI160,Total number of Registered Patients.,Denominator
-2023-24,NCDMI161,"Of the denominator, the number who had at least one encounter with a Nursing Associate by the end of the reporting period.",Numerator
-2023-24,NCDMI161,Total number of Registered Patients.,Denominator
-2023-24,NCDMI162,The number of encounters with patients in the denominator by a Paramedic by the end of the reporting period.,Numerator
-2023-24,NCDMI162,Total number of Registered Patients.,Denominator
-2023-24,NCDMI163,"Of the denominator, the number who had at least one encounter with a Paramedic by the end of the reporting period.",Numerator
-2023-24,NCDMI163,Total number of Registered Patients.,Denominator
-2023-24,NCDMI164,The number of encounters with patients in the denominator by a Mental Health Practitioner by the end of the reporting period.,Numerator
-2023-24,NCDMI164,Total number of Registered Patients.,Denominator
-2023-24,NCDMI165,"Of the denominator, the number who had at least one encounter with a Mental Health Practitioner by the end of the reporting period.",Numerator
-2023-24,NCDMI165,Total number of Registered Patients.,Denominator
-2023-24,NCDMI166,Number of times that patients in the denominator declined a referral to the Community Pharmacist Consultation Service.,Numerator
-2023-24,NCDMI166,Total number of Registered Patients.,Denominator
-2023-24,NCDMI167,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI167,CARHOMNP18,CARHOMNP18
-2023-24,NCDMI167,Number of permanent care home residents aged 18 years or over.,Denominator
-2023-24,NCDMI167,"Of the denominator, the number who received a falls risk assessment on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI170,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI170,LATNURSPER,LATNURSPER
-2023-24,NCDMI170,Number of permanent care home residents aged 18 years or over.,Denominator
-2023-24,NCDMI170,"Of the denominator, the number who received a psychosocial assessment on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
-2023-24,NCDMI170,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI171,NOACELOOP,NOACELOOP
-2023-24,NCDMI171,Number of patients aged 75 years or over with a long-term prescription of angiotensin converting enzyme (ACE) inhibitor or a loop diuretic.,Denominator
-2023-24,NCDMI171,"Of the denominator, the number without a renal function and electrolytes recorded in the last 15 months.",Numerator
-2023-24,NCDMI171,PAT_AGEU75,PAT_AGEU75
-2023-24,NCDMI172,NOMETH3M6M,NOMETH3M6M
-2023-24,NCDMI172,Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.,Denominator
-2023-24,NCDMI172,"Of the denominator, the number without a recorded full blood count (FBC) in the 3 months to the reporting period end date.",Numerator
-2023-24,NCDMI172,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI173,NOMETH3M6M,NOMETH3M6M
-2023-24,NCDMI173,Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.,Denominator
-2023-24,NCDMI173,"Of the denominator, the number without a recorded liver function test (LFT) in the 3 months to the reporting period end date.",Numerator
-2023-24,NCDMI173,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI174,NOLIT3M6M,NOLIT3M6M
-2023-24,NCDMI174,Number of patients aged 18 years or over prescribed lithium for at least 3 months.,Denominator
-2023-24,NCDMI174,"Of the denominator, the number without a recorded lithium concentration check in the 3 months to the reporting period end date.",Numerator
-2023-24,NCDMI174,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI175,NOAMIO12M,NOAMIO12M
-2023-24,NCDMI175,Number of patients aged 18 years or over prescribed amiodarone for at least 6 months.,Denominator
-2023-24,NCDMI175,"Of the denominator, the number without a thyroid function test (TSH) in the 6 months to the reporting period end date.",Numerator
-2023-24,NCDMI175,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI176,CHOLMX_DAT,CHOLMX_DAT
-2023-24,NCDMI176,CVDPAL_DAT,CVDPAL_DAT
-2023-24,NCDMI176,Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) > 20%.,Denominator
-2023-24,NCDMI176,"Of the denominator, the number who were prescribed statins in the six months to the end of the reporting period.",Numerator
-2023-24,NCDMI176,P_AGE25_84,P_AGE25_84
-2023-24,NCDMI176,QRISKVAL20,QRISKVAL20
-2023-24,NCDMI176,STATDECAW,STATDECAW
-2023-24,NCDMI176,STATINTOL,STATINTOL
-2023-24,NCDMI176,TXSTAT_DAT,TXSTAT_DAT
-2023-24,NCDMI176,XSTAT_DAT,XSTAT_DAT
-2023-24,NCDMI177,AST_DAT9M,AST_DAT9M
-2023-24,NCDMI177,ASTRES_DAT,ASTRES_DAT
-2023-24,NCDMI177,MILDINTAST,MILDINTAST
-2023-24,NCDMI177,Number of patients on the QOF Asthma Register at the end of the reporting period.,Denominator
-2023-24,NCDMI177,"Of the denominator, the number who received three or more inhaled corticosteroid (ICS, inclusive of ICS/LABA) prescriptions over the previous 12 months.",Numerator
-2023-24,NCDMI178,ASTRES_DAT,ASTRES_DAT
-2023-24,NCDMI178,EUNRESCOAS,EUNRESCOAS
-2023-24,NCDMI178,Number of patients on the QOF Asthma Register at the end of the reporting period.,Denominator
-2023-24,NCDMI178,"Of the denominator, the number receiving 6 or more Short Acting Beta-2 Agonist (SABA) inhaler prescription items (not quantity) in the previous 12 months.",Numerator
-2023-24,NCDMI180,MEDRVWDEC,MEDRVWDEC
-2023-24,NCDMI180,NOMEDERR1,NOMEDERR1
-2023-24,NCDMI180,"Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
-2023-24,NCDMI180,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI180,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI180,Total number of patients at risk of harm due to medication errors.,Denominator
-2023-24,NCDMI181,"Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
-2023-24,NCDMI181,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI181,SEVFRAIL2,SEVFRAIL2
-2023-24,NCDMI181,STRMEDRVDC,STRMEDRVDC
-2023-24,NCDMI181,Total number of patients recorded on the GP system as living with severe frailty,Denominator
-2023-24,NCDMI182,HLTHAPDEC,HLTHAPDEC
-2023-24,NCDMI182,HLTHCHKDEC,HLTHCHKDEC
-2023-24,NCDMI182,LD_DAT,LD_DAT
-2023-24,NCDMI182,Number of patients on the QOF Learning Disability register aged 14 years or over.,Denominator
-2023-24,NCDMI182,"Of the denominator, the number who received an annual Learning Disability Health Check and a Health Action Plan by the end of the reporting period.",Numerator
-2023-24,NCDMI182,PAT_AGEU14,PAT_AGEU14
-2023-24,NCDMI188,"Of the denominator, the number of patients who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
-2023-24,NCDMI188,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI188,STRMEDRVDC,STRMEDRVDC
-2023-24,NCDMI188,"Total number of patients using potentially addictive medicines, defined as patients falling into either one or both of the following sub-cohorts: 1.Patients with 2 or more prescriptions over a 3-month* period (both of which must have occurred after the quality service start date) for any of the following four classes of medicine: a.Gabapentinoids. b.Benzodiazepines. c.Z-drugs. d.Any oral or transdermal opioid other than:i.Weak opioids (Codeine, Dihydrocodeine, Meptazinol).ii.Heroin substitutes (including Methadone, Buprenorphine). 2.Patients with a single prescription for an oral or transdermal opioid with > 120 mg morphine equivalent",Denominator
-2023-24,NCDMI189,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI189,CARHOMNP18,CARHOMNP18
-2023-24,NCDMI189,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents).,Denominator
-2023-24,NCDMI189,"Of the denominator, the number of patients who received at least one Structured Medication Review by the end of the reporting period",Numerator
-2023-24,NCDMI189,PALCARDAT2,PALCARDAT2
-2023-24,NCDMI189,STRMEDRVDC,STRMEDRVDC
-2023-24,NCDMI198,CARHOMDEC1,CARHOMDEC1
-2023-24,NCDMI198,'Number of general practice appointments categorised as 'patient contact as part of weekly care home round'. This numerator to be sourced from GPAD.',Numerator
-2023-24,NCDMI198,Number of patients aged 18 years or over recorded as living in a care home (GPES).,Denominator
-2023-24,NCDMI198,NURSHOME,NURSHOME
-2023-24,NCDMI198,PAT_AGEU18,PAT_AGEU18
-2023-24,NCDMI199,FLUDEC_DAT,FLUDEC_DAT
-2023-24,NCDMI199,FLUEXPCON,FLUEXPCON
-2023-24,NCDMI199,FLUINVITE1,FLUINVITE1
-2023-24,NCDMI199,Number of patients aged 65 years or over.,Denominator
-2023-24,NCDMI199,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period.",Numerator
-2023-24,NCDMI199,PAT_AGEU65,PAT_AGEU65
-2023-24,NCDMI199,XFLU_DAT,XFLU_DAT
-2023-24,NCDMI200,"Of the denominator, the number with a recording of ethnicity on their patient record at the end of the reporting period.",Numerator
-2023-24,NCDMI200,Total number of registered patients.,Denominator
-2023-24,NCDMI205,CHOLDEC,CHOLDEC
-2023-24,NCDMI205,NOCVDDIAG,NOCVDDIAG
-2023-24,NCDMI205,"Number of patients on the QOF Coronary Heart Disease, Peripheral Arterial Disease, or Stroke/TIA Register",Denominator
-2023-24,NCDMI205,"Of the denominator, the number who have a recording of non-HDL cholesterol in the preceding 12 months that is lower than 2.5 mmol/L or where non-HDL cholesterol is not recorded then a recording of LDL cholesterol in the preceding 12 months that is lower than 1.8 mmol/L. NB the numerator should not include people with no recorded non-HDL or LDL cholesterol in the preceding 12 months",Numerator
+2024-25,ACC09,Total number of Registered Patients,Denominator
+2024-25,ACC09,Number of referrals to the Community Pharmacist Consultation Service to patients in the denominator.,Numerator
+2024-25,ACC15,Total number of Registered Patients.,Denominator
+2024-25,ACC15,Number of times that patients in the denominator declined a referral to the Community Pharmacist Consultation Service.,Numerator
+2024-25,CAN01,Number of lower gastrointestinal urgent referrals for suspected cancer.,Denominator
+2024-25,CAN01,FAECIMMDEC,FAECIMMDEC
+2024-25,CAN01,FITNIDAT,FITNIDAT
+2024-25,CAN01,GICANREF,GICANREF
+2024-25,CAN01,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test, with the result* recorded either in the twenty-one days leading up to the referral, or in the fourteen days after the referral (inclusive).",Numerator
+2024-25,CAN02,Number of lower gastrointestinal urgent referrals for suspected cancer.?,Denominator
+2024-25,CAN02,FAECIMMDEC,FAECIMMDEC
+2024-25,CAN02,FITNIDAT,FITNIDAT
+2024-25,CAN02,GICANREF,GICANREF
+2024-25,CAN02,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test (FIT), with the result recorded in the twenty-one days leading up to the referral.",Numerator
+2024-25,CVD01,ABPDEC12M,ABPDEC12M
+2024-25,CVD01,ABPDEC24M,ABPDEC24M
+2024-25,CVD01,BPLAT_2,BPLAT_2
+2024-25,CVD01,BPLAT6M,BPLAT6M
+2024-25,CVD01,"Number of patients aged 18 years or over, not on the QOF Hypertension Register as of 31 March 2024, and who have (i) a last recorded blood pressure reading in the 4 years prior to 1 April 2024 >= 140/90mmHg with the exception of patients whose first blood pressure reading >= 140/90mmHg in this period is on or after 1 October 2023 OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2023.",Denominator
+2024-25,CVD01,HYPLATUNR,HYPLATUNR
+2024-25,CVD01,"Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)). Clinically appropriate follow-up: 1. Initial BP reading < 140/90 mmHg (only relevant for patients in (i)) OR 2. Initial BP reading >=140/90 mmHg AND a. Subsequent change of medication AND subsequent blood pressure reading of <140/90 mmHg OR b. Subsequent occurrence of Ambulatory Blood Pressure Monitoring OR c. Subsequent occurrence of Home Blood Pressure Monitoring OR d. ([Referrals listed in below table] recorded on same day as initial reading AND addition to QOF Hypertension Register) OR e. (Subsequent commencement of Antihypertensive therapy OR Patient declined antihypertensive treatment (ANTIHYPDEC_COD code cluster)) AND addition to QOF Hypertension Register",Numerator
+2024-25,CVD01,PALCARDAT2,PALCARDAT2
+2024-25,CVD01,PAT_AGEU18,PAT_AGEU18
+2024-25,CVD01,PRELAT6M,PRELAT6M
+2024-25,CVD03,CHOLMX_DAT,CHOLMX_DAT
+2024-25,CVD03,CVDPAL_DAT,CVDPAL_DAT
+2024-25,CVD03,Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) > 20%.,Denominator
+2024-25,CVD03,"Of the denominator, the number who were prescribed statins in the six months to the end of the reporting period.",Numerator
+2024-25,CVD03,P_AGE25_84,P_AGE25_84
+2024-25,CVD03,QRISKVAL20,QRISKVAL20
+2024-25,CVD03,STATDECAW,STATDECAW
+2024-25,CVD03,STATINTOL,STATINTOL
+2024-25,CVD03,TXSTAT_DAT,TXSTAT_DAT
+2024-25,CVD03,XSTAT_DAT,XSTAT_DAT
+2024-25,CVD04,Number of patients aged 29 years or under with a total cholesterol greater than 7.5mmol/L OR aged 30 years or over with a total cholesterol greater than 9.0mmol/L.,Denominator
+2024-25,CVD04,FAMHYPRDEC,FAMHYPRDEC
+2024-25,CVD04,NOCHOL2930,NOCHOL2930
+2024-25,CVD04,"Of the denominator, the number i) diagnosed with secondary hyperlipidaemia or ii) clinically assessed for familial hypercholesterolaemia,  or iii) referred for assessment for familial hypercholesterolaemia or iv) genetically diagnosed with familial hypercholesterolaemia.",Numerator
+2024-25,CVD04,PALCARDAT2,PALCARDAT2
+2024-25,CVD07,AGEUM50F55,AGEUM50F55
+2024-25,CVD07,CVDDIAG,CVDDIAG
+2024-25,CVD07,DECTESTQR,DECTESTQR
+2024-25,CVD07,"Number of men aged 50 years or over and women aged 55 years or over, without established cardiovascular disease and not on lipid lowering therapy. Where 'on lipid lower therapy' means people who have received a prescription for any of the below medications in the 6 months up to and including the QSSD statins, ezetimibe, bempedoic acid, inclisiran, PCSK9i, or icosapent ethyl. [NOTE: this list includes lipid lowering therapies used for secondary prevention, so is a longer list than that used for CVD-08 which only uses therapies used for primary prevention].",Denominator
+2024-25,CVD07,DIBFRISTAT,DIBFRISTAT
+2024-25,CVD07,LIPIDTHER,LIPIDTHER
+2024-25,CVD07,"Of the denominator, the number who have a QRISK score recorded on their GP record in the preceding five years and who have a recording of cholesterol levels, blood pressure and smoking status in the 12 months preceding recording of the most recent QRISK score",Numerator
+2024-25,CVD07,PALCARE,PALCARE
+2024-25,CVD08,CHOLMX_DAT,CHOLMX_DAT
+2024-25,CVD08,CVDDIAG,CVDDIAG
+2024-25,CVD08,Number of patients aged 25 to 84 years inclusive without established cardiovascular disease and with a last recorded  CVD risk score (QRISK2 or 3) > 20%.,Denominator
+2024-25,CVD08,DIABUNRES,DIABUNRES
+2024-25,CVD08,"Of the denominator,the number who were prescribed statins, or where a statin is declined or clinically unsuitable, another lipid-lowering therapy in the six months to the end of the reporting period. Other lipid lowering therapies are ezetimibe and bempedoic acid, and no others. Clinically unsuitable is defined as (no ordering between these options - evaluate all simultaneously): Patients who have a persisting statin contraindication anywhere in the patient record. OR Patients who have an expiring statin contraindication in the 12 months to PPED OR413174003 Statin not tolerated (situation). Statin declined should be expiring in the 12 months to PPED",Numerator
+2024-25,CVD08,P_AGE25_84,P_AGE25_84
+2024-25,CVD08,PALCARDAT2,PALCARDAT2
+2024-25,CVD08,QRISKVAL20,QRISKVAL20
+2024-25,CVD08,STATLLTDEC,STATLLTDEC
+2024-25,CVD10,Number of patients aged 65 years or over who received a blood pressure check in general practice on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
+2024-25,CVD10,NOBP_DAT,NOBP_DAT
+2024-25,CVD10,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,CVD10,PAT_AGEU65,PAT_AGEU65
+2024-25,CVD10,UNRESAFIB,UNRESAFIB
+2024-25,CVD11,BTHPALDIZC,BTHPALDIZC
+2024-25,CVD11,"Number of patients aged 18 years or over who were recorded on or after the Quality Service Start Date and up to and including the reporting period end date as experiencing breathlessness, palpitations, syncope, dizziness, or chest discomfort.",Denominator
+2024-25,CVD11,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,CVD11,PAT_AGEU18,PAT_AGEU18
+2024-25,CVD11,UNRESAFIB,UNRESAFIB
+2024-25,CVD13,CHOLMX_DAT,CHOLMX_DAT
+2024-25,CVD13,CVDPAL_DAT,CVDPAL_DAT
+2024-25,CVD13,Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) >= 10%.,Denominator
+2024-25,CVD13,"Of the denominator, the number who received a prescription for statins in the 6 months up to and including the end of the reporting period.",Numerator
+2024-25,CVD13,P_AGE25_84,P_AGE25_84
+2024-25,CVD13,QRISKVAL10,QRISKVAL10
+2024-25,CVD13,STATDECAW,STATDECAW
+2024-25,CVD13,STATINTOL,STATINTOL
+2024-25,CVD13,TXSTAT_DAT,TXSTAT_DAT
+2024-25,CVD13,XSTAT_DAT,XSTAT_DAT
+2024-25,CVD14,Number of patients aged 65 years or over who were identified as having an irregular pulse.,Denominator
+2024-25,CVD14,NOIRREGPLS,NOIRREGPLS
+2024-25,CVD14,"Of the denominator, the number who received an electrocardiogram or were referred for an electrocardiogram.",Numerator
+2024-25,CVD14,PAT_AGEU65,PAT_AGEU65
+2024-25,CVD14,UNRESAFIB,UNRESAFIB
+2024-25,EHCH01,"Number of care home beds eligible to receive the Network Contract DES Enhanced Health in Care Homes service, as reflected in the calculation of the care home bed premium. Denominator will be sourced from manual submission by PCNs/ICBs via CQRS.",Denominator
+2024-25,EHCH01,The number of patients aged 18 years or over and recorded as living in a care home (including a residential home or nursing home) at the end of the reporting period. (NB: Temporary care home residents should be included in this indicator numerator.),Numerator
+2024-25,EHCH02,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH02,"Number of care home residents aged 18 years or over, including both permanent and temporary care home residents",Denominator
+2024-25,EHCH02,HOMETMP_18,HOMETMP_18
+2024-25,EHCH02,"Of the denominator, the number who had a personalised care and support plan agreed or reviewed by the end of the reporting period.",Numerator
+2024-25,EHCH02,PCSPDEC,PCSPDEC
+2024-25,EHCH04,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH04,Number of patients aged 18 years or over recorded as living in a care home (GPES).,Denominator
+2024-25,EHCH04,Number of general practice appointments categorised as 'patient contact as part of weekly care home round'. This numerator to be sourced from GPAD.,Numerator
+2024-25,EHCH04,NURSHOME,NURSHOME
+2024-25,EHCH04,PAT_AGEU18,PAT_AGEU18
+2024-25,EHCH05,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH05,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents) who were recorded as experiencing acute confusion on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
+2024-25,EHCH05,HOMECONF18,HOMECONF18
+2024-25,EHCH05,"Of the denominator, the number who received a delirium assessment after the recording of acute confusion and up to the end of the reporting period.",Numerator
+2024-25,EHCH14,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH14,CARHOMNP18,CARHOMNP18
+2024-25,EHCH14,Number of permanent care home residents aged 18 years or over.,Denominator
+2024-25,EHCH14,"Of the denominator, the number who received a falls risk assessment on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,EHCH24,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH24,Number of permanent care home residents aged 18 years or over.,Denominator
+2024-25,EHCH24,LATNURSPER,LATNURSPER
+2024-25,EHCH24,"Of the denominator, the number who received a psychosocial assessment on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,EHCH24,PAT_AGEU18,PAT_AGEU18
+2024-25,EHCH27,Number of care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home).,Denominator
+2024-25,EHCH27,"Of the denominator, the number on the QOF Dementia Register.",Numerator
+2024-25,EHCH27,NURSHOME,NURSHOME
+2024-25,EHCH27,PAT_AGEU18,PAT_AGEU18
+2024-25,EHCH28,Number of permanent care home residents aged 18 years or over.,Denominator
+2024-25,EHCH28,LATNURSPER,LATNURSPER
+2024-25,EHCH28,"Of the denominator, the number with a recording of a preferred place of death.",Numerator
+2024-25,EHCH28,PAT_AGEU18,PAT_AGEU18
+2024-25,EHCH29,CARHOMDEC1,CARHOMDEC1
+2024-25,EHCH29,Number of care home residents aged 18 years or over.,Denominator
+2024-25,EHCH29,Number of meetings by multidisciplinary team held in relation to patients in the denominator.,Numerator
+2024-25,EHCH29,NURSHOME,NURSHOME
+2024-25,EHCH29,PAT_AGEU18,PAT_AGEU18
+2024-25,ES01,Number of prescriptions for non-salbutamol inhalers issued to patients aged 12 years or over by the end of the reporting period.,Denominator
+2024-25,ES01,"Of the denominator, the number of prescriptions that are for metered dose inhalers.",Numerator
+2024-25,HI01,Number of patients on the QOF Learning Disability register aged 14 years or over.,Denominator
+2024-25,HI01,HLTHAPDEC,HLTHAPDEC
+2024-25,HI01,HLTHCHKDEC,HLTHCHKDEC
+2024-25,HI01,LD_DAT,LD_DAT
+2024-25,HI01,"Of the denominator, the number who received an annual Learning Disability Health Check and a Health Action Plan by the end of the reporting period.",Numerator
+2024-25,HI01,PAT_AGEU14,PAT_AGEU14
+2024-25,HI02,Total number of registered patients.,Denominator
+2024-25,HI02,"Of the denominator, the number with a recording of ethnicity on their patient record at the end of the reporting period.",Numerator
+2024-25,HI03,Number of patients on the OQF learning disability register aged 14 or over,Denominator
+2024-25,HI03,HLTHAPDEC,HLTHAPDEC
+2024-25,HI03,HLTHCHKDEC,HLTHCHKDEC
+2024-25,HI03,LD_DAT,LD_DAT
+2024-25,HI03,"Of the denominator, the number who received an annual Learning Disability Health Check, have a Health Action Plan and have a recording of ethnicity on their GP record by the end of the reporting period.",Numerator
+2024-25,HI03,PAT_AGEU14,PAT_AGEU14
+2024-25,HI04,Total number of registered patients.,Denominator
+2024-25,HI04,"Of the denominator, the number of patients recorded as having declined to provide their ethnicity in response to an explicit opportunity at the end of the reporting period.",Numerator
+2024-25,HI08,ABPDEC12M,ABPDEC12M
+2024-25,HI08,ABPDEC24M,ABPDEC24M
+2024-25,HI08,BPLAT_2,BPLAT_2
+2024-25,HI08,BPLAT6M,BPLAT6M
+2024-25,HI08,"Number of patients aged 18 years or over, recorded as being from an ethnic minority, not on the QOF Hypertension Register as of 31 March 2024, and who have (i) a last recorded blood pressure reading in the 4 years prior to 1 April 2024 >= 140/90mmHg with the exception of patients whose first blood pressure (BP) reading >= 140/90mmHg in this period is on or after 1 October 2023  OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2023",Denominator
+2024-25,HI08,HYPLATUNR,HYPLATUNR
+2024-25,HI08,"Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)).",Numerator
+2024-25,HI08,PALCARDAT2,PALCARDAT2
+2024-25,HI08,PAT_AGEU18,PAT_AGEU18
+2024-25,HI08,PAT_ETHWNS,PAT_ETHWNS
+2024-25,HI08,PRELAT6M,PRELAT6M
+2024-25,HI09,BPDEC1,BPDEC1
+2024-25,HI09,Number of patients aged 45 years or over and recorded as being from an ethnic minority.,Denominator
+2024-25,HI09,"Of the denominator, the number with a record of blood pressure in the preceding 5 years.",Numerator
+2024-25,HI09,PAT_AGEU45,PAT_AGEU45
+2024-25,HI09,PAT_ETHWNS,PAT_ETHWNS
+2024-25,HI09,REGL3M_DAT,REGL3M_DAT
+2024-25,HI17,"Total number of registered patients with a diagnosis of schizophrenia, bipolar affective disorder and other psychoses and recorded as being from an ethnic minority.",Denominator
+2024-25,HI17,MH_MHREM,MH_MHREM
+2024-25,HI17,"Of the denominator, the number who received all six elements of the Physical Health Check for people with Severe Mental Illness.",Numerator
+2024-25,HI17,PAT_ETHWNS,PAT_ETHWNS
+2024-25,HI17,SMOKORDEC,SMOKORDEC
+2024-25,HI18,Number of registered patients with a Type 1 Opt Out.,MI Count
+2024-25,HI21,Number of patients recorded as having a diagnosis of autism.,MI Count
+2024-25,HI27,Number of patients aged 14 years or over on the QOF Learning Disability register,Denominator
+2024-25,HI27,HLTHCHKDEC,HLTHCHKDEC
+2024-25,HI27,LD_DAT,LD_DAT
+2024-25,HI27,"Of the denominator, the number of patients who received a Learning Disability Annual Health Check by the end of the reporting period",Numerator
+2024-25,HI27,PAT_AGEU14,PAT_AGEU14
+2024-25,PC01,Total number of Registered Patients,Denominator
+2024-25,PC01,"Of the denominator, the number referred to a social prescribing service on or after QSSD and up to and including RPED.",Numerator
+2024-25,PC01,SOCPRESDEC,SOCPRESDEC
+2024-25,PC02,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and without a subsequent referral to a social prescribing service, up to the end of the reporting period).",Denominator
+2024-25,PC02,"Of the denominator, the number of Social Prescribing Link Worker (or synonym) consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,PC03,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period, and without a subsequent referral to a social prescribing service).",Denominator
+2024-25,PC03,"Of the denominator, the number of General Practitioner consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",Numerator
+2024-25,PC14,Total number of Registered Patients,Denominator
+2024-25,PC14,"Of the denominator, the number of patients who had a Personalised Care and Support Plan agreed by the end of the reporting period",Numerator
+2024-25,PC15,Total number of Registered Patients,Denominator
+2024-25,PC15,"Of the denominator, the number of patients who had a Personalised Care and Support Plan reviewed by the end of the reporting period",Numerator
+2024-25,PC17,Total number of Registered Patients,Denominator
+2024-25,PC17,"Of the denominator, the number of patients whose care was discussed as part of a shared decision-making process by the end of the reporting period",Numerator
+2024-25,PC20,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).",Denominator
+2024-25,PC20,"Of the denominator, the total number of consultations on or after the Quality Service Start Date and up to and including the reporting period end date, irrespective of the HCP type of the staff member delivering the consultation.",Numerator
+2024-25,PR001,Total number of registered patients.,Denominator
+2024-25,PR001,"Of the denominator, the number under the care of Proactive Care service.",Numerator
+2024-25,PR002,Total number of registered patients.,Denominator
+2024-25,PR002,"Of the denominator, the number discharged from Proactive Care service.",Numerator
+2024-25,RESP01,AST_DAT9M,AST_DAT9M
+2024-25,RESP01,ASTRES_DAT,ASTRES_DAT
+2024-25,RESP01,Number of patients on the QOF Asthma Register at the end of the reporting period.,Denominator
+2024-25,RESP01,MILDINTAST,MILDINTAST
+2024-25,RESP01,"Of the denominator, the number who received three or more inhaled corticosteroid (ICS, inclusive of ICS/LABA) prescriptions over the previous 12 months.",Numerator
+2024-25,RESP02,ASTRES_DAT,ASTRES_DAT
+2024-25,RESP02,Number of patients on the QOF Asthma Register at the end of the reporting period.,Denominator
+2024-25,RESP02,EUNRESCOAS,EUNRESCOAS
+2024-25,RESP02,"Of the denominator, the number receiving 6 or more Short Acting Beta-2 Agonist (SABA) inhaler prescription items (not quantity) in the previous 12 months.",Numerator
+2024-25,SMR01A,Total number of patients at risk of harm due to medication errors.,Denominator
+2024-25,SMR01A,MEDRVWDEC,MEDRVWDEC
+2024-25,SMR01A,NOMEDERR1,NOMEDERR1
+2024-25,SMR01A,"Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
+2024-25,SMR01A,PALCARDAT2,PALCARDAT2
+2024-25,SMR01A,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR01B,Total number of patients recorded on the GP system as living with severe frailty,Denominator
+2024-25,SMR01B,"Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
+2024-25,SMR01B,PALCARDAT2,PALCARDAT2
+2024-25,SMR01B,SEVFRAIL2,SEVFRAIL2
+2024-25,SMR01B,STRMEDRVDC,STRMEDRVDC
+2024-25,SMR01C,"Total number of patients using potentially addictive medicines, defined as patients falling into either one or both of the following sub-cohorts: 1.Patients with 2 or more prescriptions over a 3-month* period (both of which must have occurred after the quality service start date) for any of the following four classes of medicine: a.Gabapentinoids. b.Benzodiazepines. c.Z-drugs. d.Any oral or transdermal opioid other than:i.Weak opioids (Codeine, Dihydrocodeine, Meptazinol).ii.Heroin substitutes (including Methadone, Buprenorphine). 2.Patients with a single prescription for an oral or transdermal opioid with > 120 mg morphine equivalent",Denominator
+2024-25,SMR01C,"Of the denominator, the number of patients who received a Structured Medication Review on or after QSSD and up to and including RPED.",Numerator
+2024-25,SMR01C,PALCARDAT2,PALCARDAT2
+2024-25,SMR01C,STRMEDRVDC,STRMEDRVDC
+2024-25,SMR01D,CARHOMDEC1,CARHOMDEC1
+2024-25,SMR01D,CARHOMNP18,CARHOMNP18
+2024-25,SMR01D,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents).,Denominator
+2024-25,SMR01D,"Of the denominator, the number of patients who received at least one Structured Medication Review by the end of the reporting period",Numerator
+2024-25,SMR01D,PALCARDAT2,PALCARDAT2
+2024-25,SMR01D,STRMEDRVDC,STRMEDRVDC
+2024-25,SMR02A,Number of patients aged 18 years or over concurrently prescribed a non-steroidal anti-inflammatory drug (NSAID) and an oral anticoagulant in the last three months of the previous financial year.,Denominator
+2024-25,SMR02A,NOPQSNSDAC,NOPQSNSDAC
+2024-25,SMR02A,"Of the denominator, the number who, in the three months to the reporting period end date, were either 1.	No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.",Numerator
+2024-25,SMR02A,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR02B,ACNOPQSNSD,ACNOPQSNSD
+2024-25,SMR02B,Number of patients aged 65 years or over prescribed a non-steroidal anti-inflammatory drug (NSAID) without a concurrent oral anticoagulant in the last three months of the previous financial year,Denominator
+2024-25,SMR02B,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.",Numerator
+2024-25,SMR02B,PAT_AGEU65,PAT_AGEU65
+2024-25,SMR02C,Number of patients aged 18 years or over concurrently prescribed an oral anticoagulant and an anti-platelet in the last three months of the previous financial year.,Denominator
+2024-25,SMR02C,NOPQSACSAL,NOPQSACSAL
+2024-25,SMR02C,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to an anti-platelet.",Numerator
+2024-25,SMR02C,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR02D,Number of patients aged 18 years or over prescribed both aspirin (irrespective of dose/strength) and another anti-platelet in the last three months of the previous financial year.,Denominator
+2024-25,SMR02D,NOPQSSAL,NOPQSSAL
+2024-25,SMR02D,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed aspirin and/or no longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to both aspirin and another anti-platelet.",Numerator
+2024-25,SMR02D,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR03,Number of patients prescribed a direct-acting oral anticoagulant (DOAC) on or after the Quality Service Start Date and up to and including the reporting period end date.,Denominator
+2024-25,SMR03,DOAC3MDAT1,DOAC3MDAT1
+2024-25,SMR03,DOAC9MDAT1,DOAC9MDAT1
+2024-25,SMR03,L12MNODOAC,L12MNODOAC
+2024-25,SMR03,"Of the denominator, the number who received a renal function test and have a recording of weight and Creatinine Clearance Rate (CCR), along with a recording that their DOAC dose was either confirmed (not changed) or changed",Numerator
+2024-25,SMR25,Number of patients aged 18 years or over with a history of peptic ulceration prescribed an oral NSAID.,Denominator
+2024-25,SMR25,NONSAID3M,NONSAID3M
+2024-25,SMR25,"Of the denominator, the number not concurrently prescribed a gastro-protective.",Numerator
+2024-25,SMR25,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR25,PEPULCB3M,PEPULCB3M
+2024-25,SMR26,Number of patients aged 18 years or over with a history of peptic ulceration and prescribed an anti-platelet.,Denominator
+2024-25,SMR26,NOANTIPLT,NOANTIPLT
+2024-25,SMR26,"Of the denominator, the number not concurrently prescribed a gastro-protective.",Numerator
+2024-25,SMR26,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR26,PEPULCB3M,PEPULCB3M
+2024-25,SMR30,Number of patients aged 18 years or over with a current diagnosis of heart failure.,Denominator
+2024-25,SMR30,HFB3M_DAT,HFB3M_DAT
+2024-25,SMR30,HFRESLAT,HFRESLAT
+2024-25,SMR30,"Of the denominator, the number prescribed an oral NSAID.",Numerator
+2024-25,SMR30,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR31,Number of patients aged 18 years or over with a latest recorded eGFR less than 45.,Denominator
+2024-25,SMR31,EGFRB3ML45,EGFRB3ML45
+2024-25,SMR31,"Of the denominator, the number prescribed an oral NSAID.",Numerator
+2024-25,SMR31,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR32,ASTB3M_DAT,ASTB3M_DAT
+2024-25,SMR32,ASTRESLAT,ASTRESLAT
+2024-25,SMR32,Number of patients aged 18 years or over on the QOF Asthma Register.,Denominator
+2024-25,SMR32,"Of the denominator, the number prescribed a non-selective beta-blocker.",Numerator
+2024-25,SMR32,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR33,Number of patients aged 75 years or over with a long-term prescription of angiotensin converting enzyme (ACE) inhibitor or a loop diuretic.,Denominator
+2024-25,SMR33,NOACELOOP,NOACELOOP
+2024-25,SMR33,"Of the denominator, the number without a renal function and electrolytes recorded in the last 15 months.",Numerator
+2024-25,SMR33,PAT_AGEU75,PAT_AGEU75
+2024-25,SMR34,Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.,Denominator
+2024-25,SMR34,NOMETH3M6M,NOMETH3M6M
+2024-25,SMR34,"Of the denominator, the number without a recorded full blood count (FBC) in the 3 months to the reporting period end date.",Numerator
+2024-25,SMR34,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR35,Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.,Denominator
+2024-25,SMR35,NOMETH3M6M,NOMETH3M6M
+2024-25,SMR35,"Of the denominator, the number without a recorded liver function test (LFT) in the 3 months to the reporting period end date.",Numerator
+2024-25,SMR35,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR36,Number of patients aged 18 years or over prescribed lithium for at least 3 months.,Denominator
+2024-25,SMR36,NOLIT3M6M,NOLIT3M6M
+2024-25,SMR36,"Of the denominator, the number without a recorded lithium concentration check in the 3 months to the reporting period end date.",Numerator
+2024-25,SMR36,PAT_AGEU18,PAT_AGEU18
+2024-25,SMR37,Number of patients aged 18 years or over prescribed amiodarone for at least 6 months.,Denominator
+2024-25,SMR37,NOAMIO12M,NOAMIO12M
+2024-25,SMR37,"Of the denominator, the number without a thyroid function test (TSH) in the 6 months to the reporting period end date.",Numerator
+2024-25,SMR37,PAT_AGEU18,PAT_AGEU18
+2024-25,VI01,Number of patients aged 65 years or over.,Denominator
+2024-25,VI01,FLUDEC_DAT,FLUDEC_DAT
+2024-25,VI01,FLUEXPCON,FLUEXPCON
+2024-25,VI01,FLUINVITE1,FLUINVITE1
+2024-25,VI01,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period.",Numerator
+2024-25,VI01,PAT_AGEU65,PAT_AGEU65
+2024-25,VI01,XFLU_DAT,XFLU_DAT
+2024-25,VI02,Number of patients aged 18 to 64 years inclusive and in one or more at-risk groups subject to the new national call and recall system,Denominator
+2024-25,VI02,FLUDEC_DAT,FLUDEC_DAT
+2024-25,VI02,FLUEXPCON,FLUEXPCON
+2024-25,VI02,FLUINVITE1,FLUINVITE1
+2024-25,VI02,N_AT_RISK,N_AT_RISK
+2024-25,VI02,"Of the denominator, number of patients who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period",Numerator
+2024-25,VI02,P_AGE18_64,P_AGE18_64
+2024-25,VI02,XFLU_DAT,XFLU_DAT
+2024-25,VI03,Number of patients aged 2 to 3 years inclusive on 31 August of the relevant financial year.,Denominator
+2024-25,VI03,FLUDEC_DAT,FLUDEC_DAT
+2024-25,VI03,FLUEXPCON,FLUEXPCON
+2024-25,VI03,FLUINVITE1,FLUINVITE1
+2024-25,VI03,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and the end of the reporting period.",Numerator
+2024-25,VI03,P_AGE2_4,P_AGE2_4
+2024-25,VI03,XFLU_DAT,XFLU_DAT

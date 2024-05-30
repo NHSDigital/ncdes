@@ -28,5 +28,5 @@ data/practice_maps.py - produces distinct pratice codes and practice pmaps
 
 Added three files in root_directory:
 input/CQRS_files/NCD_CQRS_Metadata_Mapping.csv - COntains a mapping table to fix field names
-input/CQRS_files/NCD_proposed_metadata.csv - Contains a table to produce indicator and measure mappings
+input/CQRS_files/NCD_metadata.csv - Contains a table to produce indicator and measure mappings
 output/CQRS_omitted_tracker.csv - Contains omitted practices for certain rules (does not count PCN codes)

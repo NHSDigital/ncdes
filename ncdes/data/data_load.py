@@ -1,12 +1,35 @@
 import os
 import pandas as pd
-import json
-from ..data.amender import *
+import tomli
+from datetime import datetime
+from pathlib import PurePath
+#import json
+from ncdes.data.amender import *
 
-def load_json_config_file(path):
-    with open(path) as f:
-        file = json.load(f)
-    return file
+
+
+# def load_json_config_file(path):
+#     with open(path) as f:
+#         file = json.load(f)
+#     return file
+
+
+def get_config(loc:str) -> dict:
+    """
+    Function Actions:
+    - Reads the config toml file containing user inputs.
+    - Returns a dictionary of parameters.
+    """   
+
+    filename = PurePath(loc)
+    assert os.path.isfile(filename), "config.toml file could not be found. Please make sure the toml file is saved in the main repo location and the name is 'config.toml' as expected."
+
+    with open(filename, "rb") as f:
+        config_file = tomli.load(f)
+
+    print('Config file read in.')
+
+    return config_file
 
 
 def load_csvs_in_directory_as_concat_dataframe(directory):
@@ -21,7 +44,7 @@ def load_csvs_in_directory_as_concat_dataframe(directory):
 
     holder = []
     for phase in phase_file_names:
-        df = pd.read_csv(directory + "\\" + phase)
+        df = pd.read_csv(directory + "\\" + phase, quotechar='"', delimiter=',', quoting = csv.QUOTE_ALL)
         holder.append(df)
 
     output_df = pd.concat(holder, ignore_index=True)

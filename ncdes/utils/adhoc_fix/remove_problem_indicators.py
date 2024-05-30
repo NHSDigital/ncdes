@@ -1,31 +1,23 @@
 import pandas as pd
 
-def remove(NCDes_suppressed: pd.DataFrame, bad_indicator_list: list) -> pd.DataFrame:
-    """Removes the rows associated with the indicatorslisted in the indicator list 
+def remove_indicators(NCDes_suppressed: pd.DataFrame, removal_indicator_list: list) -> pd.DataFrame:
+    """
+    Removes the rows associated with the indicators listed in the indicator list 
     from the input dataframe.
 
-    Indicators currently being removed:
-
-    NCD015
-    NCD015 is one of the IIF indicators, CVD-02/NCD015 – “Percentage of registered patients on the QOF Hypertension Register”. 
-    This data comes from QOF and it doesn’t directly feed any indicators but instead is used by CQRS for prevalence adjustments for NCD011 in some way
-    This data needs removing from the publication as it isn't collected as part of NCD and is added in by CQRS which we only get sent when there's extraction delays.
-
-    NCD026
-    its a non GPES indicator referring to the GPAD 2 week wait and needs to be removed
-
     Args:
-        NCDes_suppressed (pd.DataFrame): Suppressed output
-        bad_indicator_list (list): A list of indicators to remove
+    NCDes_suppressed (pd.DataFrame): Suppressed output
+    removal_indicator_list (list): A list of indicators to remove
 
     Returns:
-        pd.DataFrame: input df with bad indicators removed
-    """    
-    NCDes_bad_inds_removed = NCDes_suppressed[~NCDes_suppressed["IND_CODE"].isin(bad_indicator_list)]
+        pd.DataFrame: input df with listed indicators removed
+    """
+    #this returns a df with all rows that DO NOT contain the IND_CODE found in the removal_indicators_list    
+    NCDes_bad_inds_removed = NCDes_suppressed[~NCDes_suppressed["IND_CODE"].isin(removal_indicator_list)]
 
-    if len(NCDes_bad_inds_removed) == 0:
+    if len(NCDes_bad_inds_removed) == len(NCDes_suppressed): #if saying  =0 then saying that all the original df had items of IND_CODE within the removals list...
         print("No indicators removed.")
     else:
-        print(f"Removed indicator(s): {bad_indicator_list}")
+        print(f"Removed indicator(s): {removal_indicator_list}")
         
     return NCDes_bad_inds_removed

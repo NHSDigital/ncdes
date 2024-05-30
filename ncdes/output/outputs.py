@@ -2,9 +2,11 @@ import pandas as pd
 from datetime import datetime as datetime2
 import os
 import zipfile
-from ..output.outputexcel import *
-from ..output.trendmonitor import *
+from ncdes.output.outputexcel import *
+from ncdes.output.trendmonitor import *
+from ncdes.data.data_load import *
 import subprocess
+import shutil
 
 def get_data_month(NCDes_problem_ind_rem):
         ach_date = NCDes_problem_ind_rem["ACH_DATE"].unique()[0]
@@ -20,12 +22,6 @@ def get_data_month_and_year(NCDes_problem_ind_rem):
         data_month_year = date_object.strftime('%B%y')
         return data_month_year
 
-
-def check_and_create_folder(folder_path):
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-
-
 def get_data_month(NCDes_problem_ind_rem):
         ach_date = NCDes_problem_ind_rem["ACH_DATE"].unique()[0]
         ach_date = str(ach_date)
@@ -40,11 +36,23 @@ def get_data_month_and_year(NCDes_problem_ind_rem):
         data_month_year = date_object.strftime('%B%y')
         return data_month_year
 
+def test_run_change_outputs_fldr(test_run, root_directory):
+    if test_run.lower() == "true":
+          output_directory = check_and_create_folder(PurePath(os.getcwd(), 'outputs')) 
+          print(f"Outputting to Test folder: {output_directory}")
+    else:
+          output_directory = root_directory
+          print(f"WARNING: Outputting to root directory: {output_directory}.")
+    
+    return output_directory
 
 def check_and_create_folder(folder_path):
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-
+    try:
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+    except FileExistsError:
+        print(f'{folder_path}: Folder already exists')
+    return folder_path
 
 def save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory):
     dates_table = get_date_for_name(NCDes_problem_ind_rem)
@@ -52,16 +60,16 @@ def save_NCDes_main_to_csv(NCDes_problem_ind_rem, root_directory):
     file_folder = get_file_folder(dates_table)
 
     #check if year folder exists, if not create one 
-    check_and_create_folder(f"{root_directory}Output\\{file_folder}")
+    check_and_create_folder(f"{root_directory}\\Output\\{file_folder}\\CSV_archive")
 
     #check if month folder exists, if not create one
     data_month = get_data_month(NCDes_problem_ind_rem)
     print(f"data month is {data_month}")
-    check_and_create_folder(f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}")
+    check_and_create_folder(f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}")
 
     #to csv
     print("Convert main df to csv (takes a while)")
-    NCDes_problem_ind_rem.to_csv(f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}" + r"\\" + file_name + ".csv",
+    NCDes_problem_ind_rem.to_csv(f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}" + r"\\" + file_name + ".csv",
                                      index=False)
     
 
@@ -71,29 +79,32 @@ def open_outputs(NCDes_problem_ind_rem, root_directory):
     file_name = get_file_name(dates_table)
     file_folder = get_file_folder(dates_table)
     data_month = get_data_month(NCDes_problem_ind_rem)   
-    outputs_path = f"{root_directory}Output\\{file_folder}\\Zip_archive\\{data_month}"
+    outputs_path = f"{root_directory}\\Output\\{file_folder}\\Zip_archive\\{data_month}"
     subprocess.Popen(["explorer", os.path.realpath(f'{outputs_path}')])
-
 
     
 def save_NCDes_main_to_zip(NCDes_problem_ind_rem, root_directory):
     dates_table = get_date_for_name(NCDes_problem_ind_rem)
     file_name = get_file_name(dates_table)
     file_folder = get_file_folder(dates_table)
-    data_month = get_data_month(NCDes_problem_ind_rem)   
-    check_and_create_folder(f"{root_directory}Output\\{file_folder}\\Zip_archive\\{data_month}")
+    data_month = get_data_month(NCDes_problem_ind_rem)  
+
+    #check if year folder exists, if not create one 
+    check_and_create_folder(f"{root_directory}\\Output\\{file_folder}\\Zip_archive\\{data_month}")
+    
     #to zip
-    with zipfile.ZipFile(f'{root_directory}Output\\{file_folder}\\Zip_archive\\{data_month}\\{file_name}.zip','w') as zipMe:
+    with zipfile.ZipFile(f'{root_directory}\\Output\\{file_folder}\\Zip_archive\\{data_month}\\{file_name}.zip','w') as zipMe:
             filenamecsv = f"{file_name}.csv"
             print(f"File name is {filenamecsv}")
-            file = f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}\\" + filenamecsv
+            file = f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}\\" + filenamecsv
             zipMe.write(file, arcname=filenamecsv, compress_type=zipfile.ZIP_DEFLATED)
     
 
-def save_NCDes_main_to_excel(NCDes_problem_ind_rem, root_directory, server, database):
+def save_NCDes_main_to_excel(NCDes_problem_ind_rem, root_directory, server, database, test_run):
     dates_table = get_date_for_name(NCDes_problem_ind_rem)
     file_folder = get_file_folder(dates_table) 
-    main_to_excel(NCDes_problem_ind_rem, root_directory, server, database, file_folder)
+    output_directory = test_run_change_outputs_fldr(test_run, root_directory)
+    main_to_excel(NCDes_problem_ind_rem, output_directory, root_directory, server, database, file_folder)
 
 def save_trendmonitor(NCDes_problem_ind_rem, root_directory):
     data_month = get_data_month(NCDes_problem_ind_rem)   
@@ -103,12 +114,16 @@ def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, root_directory):
     dates_table = get_date_for_name(NCDes_with_rulesets)
     file_name = get_file_name(dates_table)
     file_folder = get_file_folder(dates_table)
-    data_month = get_data_month(NCDes_with_rulesets) 
+    data_month = get_data_month(NCDes_with_rulesets)
+
+    #check if year folder exists, if not create one 
+    check_and_create_folder(f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}\\")
+
     #to csv
     for RULESET_ID in NCDes_with_rulesets['Ruleset ID'].unique():
         ncdes_data_ruleset = NCDes_with_rulesets.loc[NCDes_with_rulesets['Ruleset ID'] == RULESET_ID].drop(columns = "Ruleset ID")
         ncdes_data_ruleset.to_csv(
-            f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}\\{file_name}_{RULESET_ID}.csv",
+            f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}\\{file_name}_{RULESET_ID}.csv",
         index=False,
         )
 
@@ -119,10 +134,10 @@ def save_NCDes_by_ruleset_to_zip(NCDes_with_rulesets, root_directory):
     data_month = get_data_month(NCDes_with_rulesets) 
     data_month_year = get_data_month_and_year(NCDes_with_rulesets)
     #to zip
-    with zipfile.ZipFile(f'{root_directory}Output\\{file_folder}\\Zip_archive\\{data_month}\\NCDes{data_month_year}_By_Ruleset.zip','w') as zipMe:
+    with zipfile.ZipFile(f'{root_directory}\\Output\\{file_folder}\\Zip_archive\\{data_month}\\NCDes{data_month_year}_By_Ruleset.zip','w') as zipMe:
         for RULESET_ID in NCDes_with_rulesets['Ruleset ID'].unique():
             filenamecsv = f"{file_name}_{RULESET_ID}.csv"
-            file = f"{root_directory}Output\\{file_folder}\\CSV_archive\\{data_month}\\{filenamecsv}"
+            file = f"{root_directory}\\Output\\{file_folder}\\CSV_archive\\{data_month}\\{filenamecsv}"
             zipMe.write(file, arcname=filenamecsv, compress_type=zipfile.ZIP_DEFLATED)
 
 
@@ -177,8 +192,9 @@ def get_file_folder(dates_table):
     return file_folder
 
 def archive_input_as_csv(ncdes_raw, root_directory):
+    check_and_create_folder(f"{root_directory}\\Input\\Archive") 
     today = (datetime2.today()).strftime("%Y_%m_%d")
-    ncdes_raw.to_csv(f"{root_directory}Input\\Archive\\NCDes_" + today + ".csv", index=False)
+    ncdes_raw.to_csv(f"{root_directory}\\Input\\Archive\\NCDes_" + today + ".csv", index=False)
 
 
 def remove_files_from_input_folder(path):

@@ -2,7 +2,7 @@ import pandas as pd
 from typing import List, Tuple
 
 
-def remove(NCDes_suppressed: pd.DataFrame, bad_indicator_measure_list: List[Tuple[str, str]]) -> pd.DataFrame:
+def remove_pairs(NCDes_suppressed: pd.DataFrame, bad_indicator_measure_list: dict) -> pd.DataFrame:
     """Removes the rows associated with the indicator, measure combos listed in the indicator_measure list 
     from the input dataframe.
 
@@ -19,10 +19,10 @@ def remove(NCDes_suppressed: pd.DataFrame, bad_indicator_measure_list: List[Tupl
     Returns:
         pd.DataFrame: Original dataframe with the bad indicator measure combinations removed
     """    
-    for indicator, measure in bad_indicator_measure_list:
+    for indicator, measure in bad_indicator_measure_list.items(): #updated to a dictionary, so multiple runs can be made to the same df if required
         NCDes_suppressed = NCDes_suppressed[(NCDes_suppressed.IND_CODE != indicator) | (NCDes_suppressed.MEASURE != measure)]
 
-    if len(bad_indicator_measure_list) == 0:
+    if len(bad_indicator_measure_list) == 0: 
         print("No measure indicators combos removed.")
     else:    
         print(f"Removed measure indicator combos(s): {bad_indicator_measure_list}")
