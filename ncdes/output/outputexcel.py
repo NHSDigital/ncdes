@@ -17,16 +17,16 @@ def set_border(ws, df, end_col):
             cell.border = Border(top=thin, left=thin, right=thin, bottom=thin)
 
 
-def main_to_excel(NCDes_main_df: pd.DataFrame, root_directory :str, server, database, service_year) -> None:
+def main_to_excel(NCDes_main_df: pd.DataFrame, output_directory, root_directory :str, server, database, service_year) -> None:
     """
-    Converts LDHC_output_df into an excel file.
+    Converts NCDes_main_df into an excel file.
     root_directory = directory of root
     Parameters:
     NCDes_main_df - The NCDes Main datagrame
     service_year (str, optional): The relevant service year of the publication being run in the form
     yy_yy. Defaults to "22_23".
     """
-    sub_icb_df, icb_df, region_df, ach_date = produce_processed_csv(NCDes_main_df,root_directory, server, database)
+    sub_icb_df, icb_df, region_df, ach_date = produce_processed_csv(NCDes_main_df, root_directory, server, database)
 
     Control_File_NCDes = pd.read_csv(f"{root_directory}\\templates\\Control_File_NCDes.csv")
     URL = Control_File_NCDes.at[0, "Friendly URL"]
@@ -55,7 +55,7 @@ def main_to_excel(NCDes_main_df: pd.DataFrame, root_directory :str, server, data
     print(f"MMMYYYY is {MMMYYYY}")
     Datasheetsname = ["Sub ICB", "ICB", "Region"]
 
-    output_folder = f"{root_directory}\\Output\\{service_year}"
+    output_folder = f"{output_directory}\\Output\\{service_year}"
     file_name = f"\\NCDES LDHC Ethnicity Recording - {MMMYYYY}.xlsx"
     output_path = f"{output_folder}{file_name}"
 

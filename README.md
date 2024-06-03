@@ -33,7 +33,7 @@ root
 |   |---Archive
 |   |---CQRS_files
 |       |---NCD_CQRS_Metadata_Mapping.csv
-|       |---NCD_proposed_metadata.csv
+|       |---NCD_metadata.csv
 |
 |---Output
 |   |---Automated Checks

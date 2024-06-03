@@ -4,7 +4,7 @@ from datetime import date
 import pandas as pd
 import os
 
-from ..data import data_load
+from ncdes.data import data_load
 
 
 def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_directory):

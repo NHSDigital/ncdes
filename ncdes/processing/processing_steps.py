@@ -2,7 +2,7 @@
 # def get_achievment_date(ncdTable):
 import pandas as pd
 from datetime import datetime
-from ..data import data_load
+from ncdes.data import data_load
 from collections import Counter
 
 def clean_ncdes(ncdes_raw):
@@ -127,29 +127,6 @@ def merge_tables_fill_Na_reorder_cols(mapping_df, ncdes_df_cleaned, CORRECT_COLU
     return ncdes_with_geogs
 
 
-def replace_placeholders(ncdes_table):
-    """
-    The NCD013 indicator cannot be fully configured in CQRS until the numerator has been sent to them by NHSD. As a result all of GPES inputs
-    (denominator/exclusions/PCAs) are remapped to indicators NCDMI996, NCDMI997, NCDMI998, NCDMI999. As of 04/07/22 there is no plan on CQRS's
-    side to internally re-map the indicators to NCD013 so we instead do it here manually.
-    """
-    # First replace the field name values
-    ncdes_table.loc[ncdes_table.IND_CODE == "NCDMI996", "MEASURE"] = "Denominator"
-    ncdes_table.loc[ncdes_table.IND_CODE == "NCDMI997", "MEASURE"] = "PAT_AGEU18"
-    ncdes_table.loc[ncdes_table.IND_CODE == "NCDMI998", "MEASURE"] = "NURSHOME"
-    ncdes_table.loc[ncdes_table.IND_CODE == "NCDMI999", "MEASURE"] = "CARHOMDEC1"
-
-    # All problem indicators need to then have their IND_CODE remapped to NCD013
-    remap_dict = {
-        "NCDMI996": "NCD013",
-        "NCDMI997": "NCD013",
-        "NCDMI998": "NCD013",
-        "NCDMI999": "NCD013",
-    }
-    ncdes_table = ncdes_table.replace({"IND_CODE": remap_dict})
-
-    return ncdes_table
-
 #--------------------------------------------------- Suppression logic start -----------------------------------------------------------------#
 
 def split_dataframe(
@@ -245,7 +222,7 @@ def suppress_1_PCA(
         unique_identifier_a.append(val)
         unique_identifier_a.append(list(val[0:2]) + ['Denominator'])
     
-    ## Loop through using unqie identifiers and suppress the PCAs and denominators
+    ## Loop through using unique identifiers and suppress the PCAs and denominators
     PCA_1_out = merged_df_1_PCA.copy()
     for ind in unique_identifier_a:
         PCA_1_out.loc[(PCA_1_out[main_table_prac_code_col_name] == ind[0]) & (PCA_1_out[main_table_ind_code_col_name] == ind[1]) & (PCA_1_out[main_table_meas_col_name] == ind[2]) , main_table_value_col_name] = '*'

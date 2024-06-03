@@ -1,0 +1,26 @@
+#NCD publication Parameters 
+
+[Setup]
+test_mode = "false"
+
+[Filepaths]
+root_directory  = "insert path to your root directory here"
+epcn_path       = "insert absolute path to your ePCN file here"
+
+
+[Connections]
+server          = "server name"
+database        = "database name"
+map_server      = "server name for mapping data"
+map_database    = "database name for mapping data"
+
+
+[Indicators]
+removal_indicator_list = []
+
+[Measures]
+bad_measure_list =  []
+
+[Pairs]
+remove_ind_pair.EHCH01 = "Numerator"
+remove_meas_pair.EHCH04 = "Denominator"

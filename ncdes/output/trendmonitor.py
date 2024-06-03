@@ -10,23 +10,22 @@ def clean_func(df: pd.DataFrame):
     Returns:
 
     """
-    df = df[df.IND_CODE.isin(["NCDMI060","NCDMI136"])]
+    df = df[df.IND_CODE.isin(["HI04","HI18"])]
     df["VALUE"] = df["VALUE"].astype("int")
     df = df.drop(["PRACTICE_NAME","QUALITY_SERVICE"], axis=1)
     
     if df.ACH_DATE.nunique() == 1:
         date = df.ACH_DATE.unique()[0]
-        #test -> date = "30/08/2023"
         date_object = datetime2.strptime(date, "%d/%m/%Y")
         month = date_object.strftime('%b %Y')
     else:
         print("Error: More than one date in dataframe")
     
-    list_size_df = df[df.IND_CODE == "NCDMI060"]
+    list_size_df = df[df.IND_CODE == "HI04"]
     list_size_df = list_size_df[list_size_df.MEASURE == "Denominator"]
     list_size = list_size_df["VALUE"].sum()
     
-    opt_out_df = df[df.IND_CODE == "NCDMI136"]
+    opt_out_df = df[df.IND_CODE == "HI18"]
     #All measures here are Management infomation
     opt_out = opt_out_df["VALUE"].sum()
     
