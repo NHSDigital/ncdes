@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 from typing import List, Tuple
 
 
@@ -23,8 +24,8 @@ def remove_pairs(NCDes_suppressed: pd.DataFrame, bad_indicator_measure_list: dic
         NCDes_suppressed = NCDes_suppressed[(NCDes_suppressed.IND_CODE != indicator) | (NCDes_suppressed.MEASURE != measure)]
 
     if len(bad_indicator_measure_list) == 0: 
-        print("No measure indicators combos removed.")
+        logging.info("No measure indicators combos removed.")
     else:    
-        print(f"Removed measure indicator combos(s): {bad_indicator_measure_list}")
+        logging.info(f"Removed measure indicator combos(s): {bad_indicator_measure_list}")
     
     return NCDes_suppressed

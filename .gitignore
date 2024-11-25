@@ -5,6 +5,7 @@
 *.ipynb
 *.xlsx
 *.xls
+Outputs/
 
 
 

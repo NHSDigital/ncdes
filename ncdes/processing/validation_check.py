@@ -3,8 +3,10 @@ from datetime import datetime
 from datetime import date
 import pandas as pd
 import os
+import logging
+from pathlib import PurePath
 
-from ncdes.data import data_load
+from ncdes.data_ingestion import data_load
 
 
 def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_directory):
@@ -13,17 +15,19 @@ def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_direct
         measure_dict,
     ) = data_load.load_indicator_and_measure_data_dictionaries(root_directory)
 
+    Automated_Checks_folderpath = PurePath(root_directory, "Output", "Automated Checks")
+
     get_unexpected(
         NCDes_with_geogs,
         list(indicator_dict["Indicator ID"]),
-        f"{root_directory}Output\\Automated Checks\\Unexpected Indicators History.csv",
+        PurePath(Automated_Checks_folderpath, "Unexpected Indicators History.csv"),
         "IND_CODE",
         root_directory
     )
     get_unexpected(
         NCDes_with_geogs,
         list(measure_dict["MEASURE ID"]),
-        f"{root_directory}Output\\Automated Checks\\Unexpected Measures History.csv",
+        PurePath(Automated_Checks_folderpath, "Unexpected Measures History.csv"),
         "MEASURE",
         root_directory
     )
@@ -32,14 +36,14 @@ def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_direct
         NCDes_with_geogs,
         list(indicator_dict["Indicator ID"]),
         "IND_CODE",
-        f"{root_directory}Output\\Automated Checks\\Missing Indicators History.csv",
+        PurePath(Automated_Checks_folderpath, "Missing Indicators History.csv"),
         root_directory
     )
     get_missing(
         NCDes_with_geogs,
         list(measure_dict["MEASURE ID"]),
         "MEASURE",
-        f"{root_directory}Output\\Automated Checks\\Missing Measures History.csv",
+        PurePath(Automated_Checks_folderpath, "Missing Measures History.csv"),
         root_directory
     )
 
@@ -57,7 +61,7 @@ def get_unexpected(ncd_table, list_expected, check_hist_path, ncd_table_col_name
         This function has no outputs but writes the results to a csv file
 
     """
-    print(f"Checking for unexpected {ncd_table_col_name_str}")
+    logging.info(f"Checking for unexpected {ncd_table_col_name_str}")
 
     # Set up
     unexpected = set()
@@ -69,7 +73,7 @@ def get_unexpected(ncd_table, list_expected, check_hist_path, ncd_table_col_name
 
     # Case where we have unexpected codes
     if len(unexpected) != 0:
-        print("WARNING:", len(unexpected), "UNEXPECTED CODES IN NCD TABLE:", unexpected)
+        logging.warning(f"WARNING:, {len(unexpected)} UNEXPECTED CODES IN NCD TABLE: {unexpected}")
         df_check_results = put_problem_codes_in_df(problem_codes=unexpected)
 
     # Case where we have no unexpected codes
@@ -95,7 +99,7 @@ def get_missing(ncd_table, list_expected, ncd_table_col_name_str, check_hist_pat
     Outputs
     This function has no outputs but writes the results to a csv file
     """
-    print(f"Checking for missing {ncd_table_col_name_str}")
+    logging.info(f"Checking for missing {ncd_table_col_name_str}")
 
     # Set Up
     missing = set()
@@ -107,7 +111,7 @@ def get_missing(ncd_table, list_expected, ncd_table_col_name_str, check_hist_pat
 
     # Case where we have missing codes
     if len(missing) != 0:
-        print("WARNING", len(missing), "CODES ARE MISSING FROM THE INPUT TABLE:", missing)
+        logging.warning(f"WARNING: {len(missing)}, CODES ARE MISSING FROM THE INPUT TABLE: {missing}")
         df_check_results = put_problem_codes_in_df(problem_codes=missing)
 
     # Case where there are no missing codes
@@ -152,11 +156,10 @@ def save_check_results(path, type_of_check, df_check_results, ncd_table_col_name
         # Add the current checks to the history
         check_hist = pd.read_csv(path)
         new_file = pd.concat([df_check_results, check_hist], ignore_index=True)
-        print
     else:
         new_file = df_check_results
     # Overwrite existing file
-    print(f"Overwriting previous {type_of_check} {ncd_table_col_name_str} archive file")
+    logging.info(f"Overwriting previous {type_of_check} {ncd_table_col_name_str} archive file")
     new_file.to_csv(path, index=False)
 
     return
@@ -168,7 +171,7 @@ def do_check_history_files_exist(root_directory):
 
     This is mainly for public use as they will not have access to automated checks history 
     """
-    path_to_check_hist_folder = root_directory + "\\Output\\Automated Checks"
+    path_to_check_hist_folder = PurePath(root_directory , "Output", "Automated Checks")
 
     if len(os.listdir(path_to_check_hist_folder)) < 4:
         return False

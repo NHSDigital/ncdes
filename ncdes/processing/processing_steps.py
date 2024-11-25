@@ -2,7 +2,8 @@
 # def get_achievment_date(ncdTable):
 import pandas as pd
 from datetime import datetime
-from ncdes.data import data_load
+from ncdes.data_ingestion import data_load
+import logging
 from collections import Counter
 
 def clean_ncdes(ncdes_raw):
@@ -224,6 +225,7 @@ def suppress_1_PCA(
     
     ## Loop through using unique identifiers and suppress the PCAs and denominators
     PCA_1_out = merged_df_1_PCA.copy()
+    PCA_1_out[main_table_value_col_name] = PCA_1_out[main_table_value_col_name].astype(str) 
     for ind in unique_identifier_a:
         PCA_1_out.loc[(PCA_1_out[main_table_prac_code_col_name] == ind[0]) & (PCA_1_out[main_table_ind_code_col_name] == ind[1]) & (PCA_1_out[main_table_meas_col_name] == ind[2]) , main_table_value_col_name] = '*'
     
@@ -332,7 +334,8 @@ def suppress_2_plus_PCA(
         measure_dict_meas_type_col_name=measure_dict_meas_type_col_name
     )
 
-    
+    merged_df_2_plus_PCA[main_table_value_col_name] = merged_df_2_plus_PCA[main_table_value_col_name].astype(str) 
+
     merged_df_2_plus_PCA.loc[indexes_to_suppress, main_table_value_col_name] = '*'    
     return merged_df_2_plus_PCA.drop(columns=[measure_dict_meas_col_name, measure_dict_meas_description_col_name, measure_dict_meas_type_col_name])
 
@@ -484,11 +487,11 @@ def suppress_output(
     fully_suppressed_df = exclusions_dropped.drop(
         columns=[measure_dict_meas_col_name, measure_dict_meas_description_col_name,measure_dict_meas_type_col_name]
     )
-    # Print how many rows are being suppressed
+    # logging.info how many rows are being suppressed
     total_suppressed = len(fully_suppressed_df[fully_suppressed_df.VALUE == '*'])
     total_rows = len(fully_suppressed_df)
     perc_suppressed = round(total_suppressed/total_rows * 100, 2)
-    print(f"Suppressed {total_suppressed} rows out of {total_rows} ({perc_suppressed}%)")
+    logging.info(f"Suppressed {total_suppressed} rows out of {total_rows} ({perc_suppressed}%)")
     
     return fully_suppressed_df    
 

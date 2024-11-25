@@ -1,7 +1,11 @@
 #NCD publication Parameters 
+#Please check the confluence page for the standardised values
 
 [Setup]
-test_mode = "false"
+test_mode = "false"    #Must be lower case - "true" = test mode, "false" = live run
+
+[Dates]
+Publication_date = "MMM_YYYY"    #MMM_YYYY
 
 [Filepaths]
 root_directory  = "insert path to your root directory here"
@@ -22,5 +26,7 @@ removal_indicator_list = []
 bad_measure_list =  []
 
 [Pairs]
-remove_ind_pair.EHCH01 = "Numerator"
-remove_meas_pair.EHCH04 = "Denominator"
+remove_ind_pair.EHCH01 = "Denominator"
+remove_meas_pair.EHCH04 = "Numerator"
+
+

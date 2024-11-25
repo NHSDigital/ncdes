@@ -1,303 +1,110 @@
 QUALITY_SERVICE,NAME,ORG_CODE,ACH_DATE,IND_CODE,FIELD_NAME,VALUE,DEFAULT_VALUES_USED,SUBMIT_USER_ID,SUBMIT_DATE,SUBMIT_TIME,LAST_SUBMISSION
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN01","FAECIMMDEC","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN01","GICANREF","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","TXSTAT_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD04","Of the denominator, the number i) diagnosed with secondary hyperlipidaemia or ii) clinically assessed for familial hypercholesterolaemia,  or iii) referred for assessment for familial hypercholesterolaemia or iv) genetically diagnosed with familial hypercholesterolaemia.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD04","PALCARDAT2","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","AGEUM50F55","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","PALCARDAT2","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD11","UNRESAFIB","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","XSTAT_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH02","Number of care home residents aged 18 years or over, including both permanent and temporary care home residents","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH04","Number of patients aged 18 years or over recorded as living in a care home (GPES).","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH28","Of the denominator, the number with a recording of a preferred place of death.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH29","PAT_AGEU18","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","Number of patients on the QOF Learning Disability register aged 14 years or over.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","PAT_AGEU14","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","PAT_AGEU14","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI04","Of the denominator, the number of patients recorded as having declined to provide their ethnicity in response to an explicit opportunity at the end of the reporting period.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","Number of patients aged 18 years or over, recorded as being from an ethnic minority, not on the QOF Hypertension Register as of 31 March 2024, and who have (i) a last recorded blood pressure reading in the 4 years prior to 1 April 2024 >= 140/90mmHg with the exception of patients whose first blood pressure (BP) reading >= 140/90mmHg in this period is on or after 1 October 2023  OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2023","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","BPDEC1","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI27","LD_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC17","Of the denominator, the number of patients whose care was discussed as part of a shared decision-making process by the end of the reporting period","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PR001","Of the denominator, the number under the care of Proactive Care service.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP01","Number of patients on the QOF Asthma Register at the end of the reporting period.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","PALCARDAT2","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","Total number of patients at risk of harm due to medication errors.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01B","Of the denominator, the number who received a Structured Medication Review on or after QSSD and up to and including RPED.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01B","STRMEDRVDC","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02A","NOPQSNSDAC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02B","ACNOPQSNSD","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR25","NONSAID3M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR25","Of the denominator, the number not concurrently prescribed a gastro-protective.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR30","HFB3M_DAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR30","HFRESLAT","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR31","PAT_AGEU18","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR32","PAT_AGEU18","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR33","Number of patients aged 75 years or over with a long-term prescription of angiotensin converting enzyme (ACE) inhibitor or a loop diuretic.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR36","Number of patients aged 18 years or over prescribed lithium for at least 3 months.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR37","Of the denominator, the number without a thyroid function test (TSH) in the 6 months to the reporting period end date.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","FLUDEC_DAT","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","Of the denominator, the number who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","PAT_AGEU65","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","XFLU_DAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ACC09","Total number of Registered Patients","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","HYPLATUNR","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","STATDECAW","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","CVDDIAG","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","QRISKVAL20","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) >= 10%.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","STATINTOL","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD14","NOIRREGPLS","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD14","UNRESAFIB","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH01","The number of patients aged 18 years or over and recorded as living in a care home (including a residential home or nursing home) at the end of the reporting period. (NB: Temporary care home residents should be included in this indicator numerator.)","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH02","Of the denominator, the number who had a personalised care and support plan agreed or reviewed by the end of the reporting period.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH29","Number of meetings by multidisciplinary team held in relation to patients in the denominator.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","HLTHCHKDEC","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","HLTHAPDEC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","ABPDEC12M","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","ABPDEC24M","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC01","Total number of Registered Patients","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC03","Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period, and without a subsequent referral to a social prescribing service).","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC03","Of the denominator, the number of General Practitioner consultations on or after the Quality Service Start Date and up to and including the reporting period end date.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PR001","Total number of registered patients.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01B","PALCARDAT2","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01C","STRMEDRVDC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01C","Total number of patients using potentially addictive medicines, defined as patients falling into either one or both of the following sub-cohorts: 1.Patients with 2 or more prescriptions over a 3-month* period (both of which must have occurred after the quality service start date) for any of the following four classes of medicine: a.Gabapentinoids. b.Benzodiazepines. c.Z-drugs. d.Any oral or transdermal opioid other than:i.Weak opioids (Codeine, Dihydrocodeine, Meptazinol).ii.Heroin substitutes (including Methadone, Buprenorphine). 2.Patients with a single prescription for an oral or transdermal opioid with > 120 mg morphine equivalent","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02B","PAT_AGEU65","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02C","Number of patients aged 18 years or over concurrently prescribed an oral anticoagulant and an anti-platelet in the last three months of the previous financial year.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR26","PEPULCB3M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR30","Number of patients aged 18 years or over with a current diagnosis of heart failure.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR33","PAT_AGEU75","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR34","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR36","NOLIT3M6M","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","Number of patients aged 65 years or over.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","FLUDEC_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","FLUINVITE1","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ACC15","Total number of Registered Patients.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","ABPDEC12M","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","PRELAT6M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","CHOLMX_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","Of the denominator, the number who were prescribed statins in the six months to the end of the reporting period.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","QRISKVAL20","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","Of the denominator, the number who received a prescription for statins in the 6 months up to and including the end of the reporting period.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","QRISKVAL10","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH04","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH28","Number of permanent care home residents aged 18 years or over.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH29","CARHOMDEC1","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH29","NURSHOME","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ES01","Of the denominator, the number of prescriptions that are for metered dose inhalers.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI04","Total number of registered patients.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","HYPLATUNR","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)).","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","REGL3M_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI17","Of the denominator, the number who received all six elements of the Physical Health Check for people with Severe Mental Illness.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI17","Total number of registered patients with a diagnosis of schizophrenia, bipolar affective disorder and other psychoses and recorded as being from an ethnic minority.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI27","Number of patients aged 14 years or over on the QOF Learning Disability register","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI27","Of the denominator, the number of patients who received a Learning Disability Annual Health Check by the end of the reporting period","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC20","Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC20","Of the denominator, the total number of consultations on or after the Quality Service Start Date and up to and including the reporting period end date, irrespective of the HCP type of the staff member delivering the consultation.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PR002","Of the denominator, the number discharged from Proactive Care service.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP01","ASTRES_DAT","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP01","AST_DAT9M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP02","Of the denominator, the number receiving 6 or more Short Acting Beta-2 Agonist (SABA) inhaler prescription items (not quantity) in the previous 12 months.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","NOMEDERR1","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","CARHOMNP18","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR03","DOAC3MDAT1","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR25","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR33","NOACELOOP","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR33","Of the denominator, the number without a renal function and electrolytes recorded in the last 15 months.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR35","Of the denominator, the number without a recorded liver function test (LFT) in the 3 months to the reporting period end date.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","FLUEXPCON","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","Of the denominator, number of patients who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","FLUEXPCON","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","Of the denominator, the number who received a seasonal influenza vaccination between 1 September and the end of the reporting period.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN01","Number of lower gastrointestinal urgent referrals for suspected cancer.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN01","Of the denominator, the number of referrals accompanied by a faecal immunochemical test, with the result* recorded either in the twenty-one days leading up to the referral, or in the fourteen days after the referral (inclusive).","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","ABPDEC24M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","BPLAT_2","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) > 20%.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","Number of men aged 50 years or over and women aged 55 years or over, without established cardiovascular disease and not on lipid lowering therapy. Where 'on lipid lower therapy' means people who have received a prescription for any of the below medications in the 6 months up to and including the QSSD statins, ezetimibe, bempedoic acid, inclisiran, PCSK9i, or icosapent ethyl. [NOTE: this list includes lipid lowering therapies used for secondary prevention, so is a longer list than that used for CVD-08 which only uses therapies used for primary prevention].","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","PALCARE","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","CHOLMX_DAT","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","Of the denominator,the number who were prescribed statins, or where a statin is declined or clinically unsuitable, another lipid-lowering therapy in the six months to the end of the reporting period. Other lipid lowering therapies are ezetimibe and bempedoic acid, and no others. Clinically unsuitable is defined as (no ordering between these options - evaluate all simultaneously): Patients who have a persisting statin contraindication anywhere in the patient record. OR Patients who have an expiring statin contraindication in the 12 months to PPED OR413174003 Statin not tolerated (situation). Statin declined should be expiring in the 12 months to PPED","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD10","Number of patients aged 65 years or over who received a blood pressure check in general practice on or after the Quality Service Start Date and up to and including the reporting period end date.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD10","Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD10","UNRESAFIB","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","TXSTAT_DAT","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH14","Number of permanent care home residents aged 18 years or over.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH27","Number of care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home).","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ES01","Number of prescriptions for non-salbutamol inhalers issued to patients aged 12 years or over by the end of the reporting period.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI02","Of the denominator, the number with a recording of ethnicity on their patient record at the end of the reporting period.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","BPLAT6M","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","Number of patients aged 45 years or over and recorded as being from an ethnic minority.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","Of the denominator, the number with a record of blood pressure in the preceding 5 years.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","PAT_AGEU45","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI17","MH_MHREM","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PR002","Total number of registered patients.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP02","EUNRESCOAS","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01C","Of the denominator, the number of patients who received a Structured Medication Review on or after QSSD and up to and including RPED.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","STRMEDRVDC","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02A","Number of patients aged 18 years or over concurrently prescribed a non-steroidal anti-inflammatory drug (NSAID) and an oral anticoagulant in the last three months of the previous financial year.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02C","NOPQSACSAL","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR25","PEPULCB3M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR31","Of the denominator, the number prescribed an oral NSAID.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR32","ASTB3M_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR37","Number of patients aged 18 years or over prescribed amiodarone for at least 6 months.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","FLUINVITE1","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","FLUDEC_DAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ACC09","Number of referrals to the Community Pharmacist Consultation Service to patients in the denominator.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN02","FITNIDAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN02","Of the denominator, the number of referrals accompanied by a faecal immunochemical test (FIT), with the result recorded in the twenty-one days leading up to the referral.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","XSTAT_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD04","NOCHOL2930","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","DIBFRISTAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","DIABUNRES","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD11","Number of patients aged 18 years or over who were recorded on or after the Quality Service Start Date and up to and including the reporting period end date as experiencing breathlessness, palpitations, syncope, dizziness, or chest discomfort.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","P_AGE25_84","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD14","PAT_AGEU65","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH04","CARHOMDEC1","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH04","NURSHOME","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH05","HOMECONF18","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH24","PAT_AGEU18","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH27","PAT_AGEU18","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI02","Total number of registered patients.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","HLTHCHKDEC","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","PAT_AGEU18","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI17","SMOKORDEC","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI18","Number of registered patients with a Type 1 Opt Out.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI27","PAT_AGEU14","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC14","Of the denominator, the number of patients who had a Personalised Care and Support Plan agreed by the end of the reporting period","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC15","Of the denominator, the number of patients who had a Personalised Care and Support Plan reviewed by the end of the reporting period","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP01","Of the denominator, the number who received three or more inhaled corticosteroid (ICS, inclusive of ICS/LABA) prescriptions over the previous 12 months.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP02","ASTRES_DAT","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01B","Total number of patients recorded on the GP system as living with severe frailty","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents).","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","Of the denominator, the number of patients who received at least one Structured Medication Review by the end of the reporting period","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02D","Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed aspirin and/or no longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to both aspirin and another anti-platelet.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR03","DOAC9MDAT1","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR03","Of the denominator, the number who received a renal function test and have a recording of weight and Creatinine Clearance Rate (CCR), along with a recording that their DOAC dose was either confirmed (not changed) or changed","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR26","NOANTIPLT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR26","Number of patients aged 18 years or over with a history of peptic ulceration and prescribed an anti-platelet.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR26","Of the denominator, the number not concurrently prescribed a gastro-protective.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR30","Of the denominator, the number prescribed an oral NSAID.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR32","ASTRESLAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR34","NOMETH3M6M","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR36","PAT_AGEU18","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR37","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN01","FITNIDAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN02","FAECIMMDEC","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN02","Number of lower gastrointestinal urgent referrals for suspected cancer. ","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","Number of patients aged 18 years or over, not on the QOF Hypertension Register as of 31 March 2024, and who have (i) a last recorded blood pressure reading in the 4 years prior to 1 April 2024 >= 140/90mmHg with the exception of patients whose first blood pressure reading >= 140/90mmHg in this period is on or after 1 October 2023 OR (ii) a blood pressure reading >= 140/90mmHg on or after 1 October 2023.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","STATINTOL","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","Number of patients aged 25 to 84 years inclusive without established cardiovascular disease and with a last recorded  CVD risk score (QRISK2 or 3) > 20%.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","CVDPAL_DAT","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD14","Of the denominator, the number who received an electrocardiogram or were referred for an electrocardiogram.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH01","Number of care home beds eligible to receive the Network Contract DES Enhanced Health in Care Homes service, as reflected in the calculation of the care home bed premium. Denominator will be sourced from manual submission by PCNs/ICBs via CQRS.","0","None","AUTOMATED","04/03/2024","11:45:40","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH02","CARHOMDEC1","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH02","HOMETMP_18","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH04","Number of general practice appointments categorised as 'patient contact as part of weekly care home round'. This numerator to be sourced from GPAD.","0","All","cro-calc-request-processor","04/03/2024","11:45:40","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH14","Of the denominator, the number who received a falls risk assessment on or after the Quality Service Start Date and up to and including the reporting period end date.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH24","LATNURSPER","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH27","Of the denominator, the number on the QOF Dementia Register.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH28","PAT_AGEU18","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","HLTHAPDEC","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","Of the denominator, the number who received an annual Learning Disability Health Check and a Health Action Plan by the end of the reporting period.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","Number of patients on the OQF learning disability register aged 14 or over","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","PAT_ETHWNS","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI09","PAT_ETHWNS","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI17","PAT_ETHWNS","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI21","Number of patients recorded as having a diagnosis of autism.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC02","Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and without a subsequent referral to a social prescribing service, up to the end of the reporting period).","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP01","MILDINTAST","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"RESP02","Number of patients on the QOF Asthma Register at the end of the reporting period.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02A","Of the denominator, the number who, in the three months to the reporting period end date, were either 1.	No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02A","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02B","Number of patients aged 65 years or over prescribed a non-steroidal anti-inflammatory drug (NSAID) without a concurrent oral anticoagulant in the last three months of the previous financial year","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02C","Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to an anti-platelet.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02D","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR03","L12MNODOAC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR03","Number of patients prescribed a direct-acting oral anticoagulant (DOAC) on or after the Quality Service Start Date and up to and including the reporting period end date.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR25","Number of patients aged 18 years or over with a history of peptic ulceration prescribed an oral NSAID.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR26","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR30","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR32","Of the denominator, the number prescribed a non-selective beta-blocker.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR34","Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR35","PAT_AGEU18","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","Number of patients aged 18 to 64 years inclusive and in one or more at-risk groups subject to the new national call and recall system","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","PALCARDAT2","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD04","FAMHYPRDEC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","DECTESTQR","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","Of the denominator, the number who have a QRISK score recorded on their GP record in the preceding five years and who have a recording of cholesterol levels, blood pressure and smoking status in the 12 months preceding recording of the most recent QRISK score","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD10","NOBP_DAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD10","PAT_AGEU65","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD11","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH02","PCSPDEC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH05","Of the denominator, the number who received a delirium assessment after the recording of acute confusion and up to the end of the reporting period.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH24","Number of permanent care home residents aged 18 years or over.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH24","Of the denominator, the number who received a psychosocial assessment on or after the Quality Service Start Date and up to and including the reporting period end date.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","LD_DAT","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI03","Of the denominator, the number who received an annual Learning Disability Health Check, have a Health Action Plan and have a recording of ethnicity on their GP record by the end of the reporting period.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","PALCARDAT2","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","PRELAT6M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC02","Of the denominator, the number of Social Prescribing Link Worker (or synonym) consultations on or after the Quality Service Start Date and up to and including the reporting period end date.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC14","Total number of Registered Patients","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01B","SEVFRAIL2","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01C","PALCARDAT2","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02B","Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an NSAID OR 2. Prescribed a gastro-protective in addition to an NSAID.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02C","PAT_AGEU18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR31","Number of patients aged 18 years or over with a latest recorded eGFR less than 45.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR32","Number of patients aged 18 years or over on the QOF Asthma Register.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR36","Of the denominator, the number without a recorded lithium concentration check in the 3 months to the reporting period end date.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","FLUEXPCON","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI01","XFLU_DAT","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","FLUINVITE1","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","P_AGE18_64","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","Number of patients aged 2 to 3 years inclusive on 31 August of the relevant financial year.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI03","P_AGE2_4","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"ACC15","Number of times that patients in the denominator declined a referral to the Community Pharmacist Consultation Service.","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CAN02","GICANREF","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","BPLAT6M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","Of the denominator, the number for whom there is evidence of clinically appropriate follow-up* to confirm or exclude a diagnosis of hypertension (by 31 March for (i) and within 6 months for (ii)). Clinically appropriate follow-up: 1. Initial BP reading < 140/90 mmHg (only relevant for patients in (i)) OR 2. Initial BP reading >=140/90 mmHg AND a. Subsequent change of medication AND subsequent blood pressure reading of <140/90 mmHg OR b. Subsequent occurrence of Ambulatory Blood Pressure Monitoring OR c. Subsequent occurrence of Home Blood Pressure Monitoring OR d. ([Referrals listed in below table] recorded on same day as initial reading AND addition to QOF Hypertension Register) OR e. (Subsequent commencement of Antihypertensive therapy OR Patient declined antihypertensive treatment (ANTIHYPDEC_COD code cluster)) AND addition to QOF Hypertension Register","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD01","PAT_AGEU18","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","CVDPAL_DAT","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD03","P_AGE25_84","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD04","Number of patients aged 29 years or under with a total cholesterol greater than 7.5mmol/L OR aged 30 years or over with a total cholesterol greater than 9.0mmol/L.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD07","LIPIDTHER","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","CVDDIAG","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","P_AGE25_84","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD08","STATLLTDEC","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD11","BTHPALDIZC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD11","Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","CHOLMX_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD13","STATDECAW","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"CVD14","Number of patients aged 65 years or over who were identified as having an irregular pulse.","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH05","CARHOMDEC1","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH05","Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents) who were recorded as experiencing acute confusion on or after the Quality Service Start Date and up to and including the reporting period end date.","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH14","CARHOMDEC1","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH14","CARHOMNP18","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH24","CARHOMDEC1","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH27","NURSHOME","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH28","LATNURSPER","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"EHCH29","Number of care home residents aged 18 years or over.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI01","LD_DAT","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI08","BPLAT_2","4","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"HI27","HLTHCHKDEC","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC01","Of the denominator, the number referred to a social prescribing service on or after QSSD and up to and including RPED.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC01","SOCPRESDEC","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC15","Total number of Registered Patients","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"PC17","Total number of Registered Patients","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01A","MEDRVWDEC","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","CARHOMDEC1","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR01D","PALCARDAT2","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02D","NOPQSSAL","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR02D","Number of patients aged 18 years or over prescribed both aspirin (irrespective of dose/strength) and another anti-platelet in the last three months of the previous financial year.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR31","EGFRB3ML45","3","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR34","Of the denominator, the number without a recorded full blood count (FBC) in the 3 months to the reporting period end date.","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR35","NOMETH3M6M","2","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR35","Number of patients aged 18 years or over prescribed methotrexate for at least 3 months.","5","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"SMR37","NOAMIO12M","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","N_AT_RISK","1","None","cro-processor","04/03/2024","11:45:39","Y"
-"NCD2425","Network Contract DES 2024/25","V81998",20250331,"VI02","XFLU_DAT","5","None","cro-processor","04/03/2024","11:45:39","Y"
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CAN04,FAECIMMDEC,14,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD07,AGEUM50F55,2254,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD07,"Number of men aged 50 years or over and women aged 55 years or over, without established cardiovascular disease and not on lipid lowering therapy. Where 'on lipid lower therapy' means people who have received a prescription for any of the below medications in the 6 months up to and including the QSSD statins, ezetimibe, bempedoic acid, inclisiran, PCSK9i, or icosapent ethyl. [NOTE: this list includes lipid lowering therapies used for secondary prevention, so is a longer list than that used for CVD-08 which only uses therapies used for primary prevention].",6210,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD08,CHOLMX_DAT,13342,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD10,NOBP_DAT,9612,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD11,PAT_AGEU18,14108,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,CVD14,"Of the denominator, the number who received an electrocardiogram or were referred for an electrocardiogram.",7166,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,EHCH04,CARHOMDEC1,12532,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,EHCH05,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents) who were recorded as experiencing acute confusion on or after the Quality Service Start Date and up to and including the reporting period end date.,11004,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,EHCH27,NURSHOME,6304,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,EHCH28,"Of the denominator, the number with a recording of a preferred place of death.",5991,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,HI01,PAT_AGEU14,963,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,HI17,PAT_ETHWNS,5962,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,HI21,Number of patients recorded as having a diagnosis of autism.,10107,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,PC02,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and without a subsequent referral to a social prescribing service, up to the end of the reporting period).",10984,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,PC20,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).",17838,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,PC20,"Of the denominator, the total number of consultations on or after the Quality Service Start Date and up to and including the reporting period end date, irrespective of the HCP type of the staff member delivering the consultation.",922,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR01A,NOMEDERR1,3409,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR01C,STRMEDRVDC,6022,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR01C,"Total number of patients using potentially addictive medicines, defined as patients falling into either one or both of the following sub-cohorts: 1.Patients with 2 or more prescriptions over a 3-month* period (both of which must have occurred after the quality service start date) for any of the following four classes of medicine: a.Gabapentinoids. b.Benzodiazepines. c.Z-drugs. d.Any oral or transdermal opioid other than:i.Weak opioids (Codeine, Dihydrocodeine, Meptazinol).ii.Heroin substitutes (including Methadone, Buprenorphine). 2.Patients with a single prescription for an oral or transdermal opioid with > 120 mg morphine equivalent",18833,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR02D,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed aspirin and/or no longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to both aspirin and another anti-platelet.",5874,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR26,"Of the denominator, the number not concurrently prescribed a gastro-protective.",1670,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR31,Number of patients aged 18 years or over with a latest recorded eGFR less than 45.,9509,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR32,Number of patients aged 18 years or over on the QOF Asthma Register.,13720,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR32,"Of the denominator, the number prescribed a non-selective beta-blocker.",15578,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,SMR35,NOMETH3M6M,18248,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,VI01,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period.",1114,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,VI03,FLUINVITE1,8171,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81001,20240930,VI03,Number of patients aged 2 to 3 years inclusive on 31 August of the relevant financial year.,1739,None,cro-processor,05/10/2024,19:36:07,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CAN04,FAECIMMDEC,2919,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD01,BPLAT_2,8200,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD07,AGEUM50F55,3896,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD07,DECTESTQR,1210,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD07,PALCARE,160,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD10,UNRESAFIB,13602,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD11,"Number of patients aged 18 years or over who were recorded on or after the Quality Service Start Date and up to and including the reporting period end date as experiencing breathlessness, palpitations, syncope, dizziness, or chest discomfort.",5686,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD11,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",15012,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD13,CHOLMX_DAT,19505,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD13,P_AGE25_84,18039,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,CVD13,XSTAT_DAT,1202,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,EHCH02,PCSPDEC,12560,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,EHCH24,PAT_AGEU18,5672,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,EHCH27,"Of the denominator, the number on the QOF Dementia Register.",7382,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,HI04,Total number of registered patients.,14879,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,HI09,PAT_AGEU45,16559,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,PC01,Total number of Registered Patients,14673,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR01A,NOMEDERR1,17498,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR01B,SEVFRAIL2,7324,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR01B,Total number of patients recorded on the GP system as living with severe frailty,325,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR01D,Number of permanent care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home and not subsequently recorded as being temporary care home residents).,772,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR01D,STRMEDRVDC,10127,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR02C,"Of the denominator, the number who, in the three months to the reporting period end date, were either: 1. No longer prescribed an anti-platelet OR 2. Prescribed a gastro-protective in addition to an anti-platelet.",15350,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR02C,PAT_AGEU18,8001,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR03,Number of patients prescribed a direct-acting oral anticoagulant (DOAC) on or after the Quality Service Start Date and up to and including the reporting period end date.,1411,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR33,"Of the denominator, the number without a renal function and electrolytes recorded in the last 15 months.",7807,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR33,PAT_AGEU75,10431,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,SMR37,"Of the denominator, the number without a thyroid function test (TSH) in the 6 months to the reporting period end date.",13123,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,VI02,FLUEXPCON,14297,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,VI02,"Of the denominator, number of patients who received a seasonal influenza vaccination between 1 September and 31 March and by the end of the reporting period",9905,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,VI03,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and the end of the reporting period.",1764,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81002,20240930,VI03,P_AGE2_4,6906,None,cro-processor,05/10/2024,19:36:09,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,ACC15,Total number of Registered Patients.,6535,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CAN03,"Of the denominator, those where at least one urgent suspected cancer referral was accompanied by a faecal immunochemical test result, with the result recorded in the 21 days leading up to the referral. or in the fourteen days after the referral (inclusive).",12641,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CAN03,The number of patients who have had a lower gastrointestinal urgent suspected cancer referral in the reporting year,8461,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CAN04,GICANREF,7310,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD01,BPLAT_2,9011,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD01,PAT_AGEU18,6582,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD03,CHOLMX_DAT,6537,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD03,Number of patients aged 25 to 84 years inclusive with CVD score (QRISK2 or 3) > 20%.,4977,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD04,Number of patients aged 29 years or under with a total cholesterol greater than 7.5mmol/L OR aged 30 years or over with a total cholesterol greater than 9.0mmol/L.,6990,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD04,PALCARDAT2,4005,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD07,AGEUM50F55,9320,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD08,Number of patients aged 25 to 84 years inclusive without established cardiovascular disease and with a last recorded  CVD risk score (QRISK2 or 3) > 20%.,18897,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD08,STATLLTDEC,18643,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD10,PAT_AGEU65,19238,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD11,"Of the denominator, the number for whom a pulse check was recorded on or after the Quality Service Start Date and up to and including the reporting period end date.",13405,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD13,CVDPAL_DAT,17891,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD13,STATDECAW,644,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD14,"Of the denominator, the number who received an electrocardiogram or were referred for an electrocardiogram.",6079,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,CVD14,PAT_AGEU65,2502,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH01,"Number of care home beds eligible to receive the Network Contract DES Enhanced Health in Care Homes service, as reflected in the calculation of the care home bed premium. Denominator will be sourced from manual submission by PCNs/ICBs via CQRS.",11723,None,AUTOMATED,05/10/2024,19:54:34,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH01,The number of patients aged 18 years or over and recorded as living in a care home (including a residential home or nursing home) at the end of the reporting period. (NB: Temporary care home residents should be included in this indicator numerator.),18500,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH02,CARHOMDEC1,1166,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH04,NURSHOME,15963,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH04,Number of general practice appointments categorised as 'patient contact as part of weekly care home round'. This numerator to be sourced from GPAD.,19912,None,AUTOMATED,05/10/2024,19:54:34,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH05,"Of the denominator, the number who received a delirium assessment after the recording of acute confusion and up to the end of the reporting period.",7834,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH14,Number of permanent care home residents aged 18 years or over.,6497,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH24,PAT_AGEU18,4984,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH27,Number of care home residents aged 18 years or over (patients recorded as living in a residential home or nursing home).,8345,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH28,Number of permanent care home residents aged 18 years or over.,908,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,EHCH29,PAT_AGEU18,17954,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI01,LD_DAT,5313,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI01,"Of the denominator, the number who received an annual Learning Disability Health Check and a Health Action Plan by the end of the reporting period.",18723,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI03,HLTHAPDEC,13478,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI03,LD_DAT,8113,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI08,PALCARDAT2,9695,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI08,PAT_ETHWNS,16662,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI08,PRELAT6M,527,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,HI09,PAT_ETHWNS,7247,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,PC03,"Of the denominator, the number of General Practitioner consultations on or after the Quality Service Start Date and up to and including the reporting period end date.",3055,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,PC15,Total number of Registered Patients,2785,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,PC20,"Number of patients currently being seen by a social prescribing service (total number of patients referred to social prescribing at any point in time up to the end of the reporting period, minus (of that number), the total number of patients with social prescribing case closed recorded at any point in time thereafter and up to the end of the reporting period. and without a subsequent referral to a social prescribing service).",9858,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,RESP02,EUNRESCOAS,6311,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,SMR02B,PAT_AGEU65,13193,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,SMR26,NOANTIPLT,10201,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,SMR37,NOAMIO12M,9323,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,VI03,Number of patients aged 2 to 3 years inclusive on 31 August of the relevant financial year.,2830,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,VI03,"Of the denominator, the number who received a seasonal influenza vaccination between 1 September and the end of the reporting period.",1989,None,cro-processor,05/10/2024,19:38:08,Y
+NCD2425,Network Contract DES 2024/25,A81004,20240930,VI03,P_AGE2_4,16186,None,cro-processor,05/10/2024,19:38:08,Y

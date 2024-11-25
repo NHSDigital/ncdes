@@ -1,10 +1,10 @@
-> Warning: This is the README for the publically accessible version of the NCDes package. If you are an analyst please don't use the below instructions to run the publication process.
+> Warning: This is the README for the publically accessible version of the NCDes package. If you are an internal analyst please don't use the below instructions to run the publication process.
 
 <p>&nbsp;</p>
 
-Repository owner: Primary Care Domain Analytical Team
+Repository owner: General Practice Data, Extracts, Specifications and Analysis (GPDESA) Team
 
-Email: primarycare.domain@nhs.net
+Email: gpses@nhs.net
 
 To contact us raise an issue on Github or via email and we will respond promptly.
 
@@ -61,7 +61,7 @@ root
 ## Instructions for publication production
 After the above set up steps have been completed you can follow the below instructions to create the publication. Please note that you will not be able to run the code as this requires access to a private server. The data on the private server contains reference data that is used for mapping purposes. The reference tables used contain data from the [epraccur file](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data) and the [ONS code history database](https://www.ons.gov.uk/methodology/geography/geographicalproducts/namescodesandlookups/codehistorydatabasechd)
 
-1) In the config file edit the root directory value so that it matches the root of the directory that you set up. Make use of escape characters and end path with a double "\\\\" e.g. "\\\\\\\example\\\root\\\directory\\\\".
+1) Review the config file and edit the paramaters as necessary e.g. edit the root directory value so that it matches the root of the directory that you set up. Make use of escape characters and end path with a double "\\\\" e.g. "\\\\\\\example\\\root\\\directory\\\\".
 
 2) Download the epcn excel file from this [webpage](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data). Move it to the location specified in the above diagram. Copy the absolute path of this file and use it as the "epcn_path" in the config.json.
 
@@ -80,7 +80,7 @@ There are a number of acronyms used in the text. They are set out in full and ex
 
  CQRS: Calculating Quality Reporting Service. The Calculating Quality Reporting Service (CQRS) is an approvals, reporting and payments calculation system for GP practices. More information on CQRS can be found [here](https://welcome.cqrs.nhs.uk/).
 
-NCDes: Network Contract Directed Enhanced Services. This is explained in detail on this [page](https://digital.nhs.uk/data-and-information/publications/statistical/mi-network-contract-des/2022-23).
+NCDes: Network Contract Directed Enhanced Services. This is explained in detail on this [page](https://digital.nhs.uk/data-and-information/publications/statistical/mi-network-contract-des).
 
 PCN: Primary care networks. Groups of GP practices working closely together - along with other healthcare staff and organisations - providing integrated services to the local population.
 

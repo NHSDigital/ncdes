@@ -3,16 +3,16 @@
 2024-25,ACC09,Number of referrals to the Community Pharmacist Consultation Service to patients in the denominator.,Numerator
 2024-25,ACC15,Total number of Registered Patients.,Denominator
 2024-25,ACC15,Number of times that patients in the denominator declined a referral to the Community Pharmacist Consultation Service.,Numerator
-2024-25,CAN01,Number of lower gastrointestinal urgent referrals for suspected cancer.,Denominator
-2024-25,CAN01,FAECIMMDEC,FAECIMMDEC
-2024-25,CAN01,FITNIDAT,FITNIDAT
-2024-25,CAN01,GICANREF,GICANREF
-2024-25,CAN01,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test, with the result* recorded either in the twenty-one days leading up to the referral, or in the fourteen days after the referral (inclusive).",Numerator
-2024-25,CAN02,Number of lower gastrointestinal urgent referrals for suspected cancer.?,Denominator
-2024-25,CAN02,FAECIMMDEC,FAECIMMDEC
-2024-25,CAN02,FITNIDAT,FITNIDAT
-2024-25,CAN02,GICANREF,GICANREF
-2024-25,CAN02,"Of the denominator, the number of referrals accompanied by a faecal immunochemical test (FIT), with the result recorded in the twenty-one days leading up to the referral.",Numerator
+2024-25,CAN03,"Of the denominator, those where at least one urgent suspected cancer referral was accompanied by a faecal immunochemical test result, with the result recorded in the 21 days leading up to the referral. or in the fourteen days after the referral (inclusive).",Numerator
+2024-25,CAN03,The number of patients who have had a lower gastrointestinal urgent suspected cancer referral in the reporting year,Denominator
+2024-25,CAN03,FAECIMMDEC,FAECIMMDEC
+2024-25,CAN03,FITNIDAT,FITNIDAT
+2024-25,CAN03,GICANREF,GICANREF
+2024-25,CAN04,The number of patients who have had a lower gastrointestinal urgent suspected cancer referral in the reporting year,Denominator
+2024-25,CAN04,FAECIMMDEC,FAECIMMDEC
+2024-25,CAN04,"Of the denominator, those where at least one urgent suspected cancer referral was accompanied by a faecal immunochemical test result, with the result recorded in the 21 days leading up to the referral.",Numerator
+2024-25,CAN04,FITNIDAT,FITNIDAT
+2024-25,CAN04,GICANREF,GICANREF
 2024-25,CVD01,ABPDEC12M,ABPDEC12M
 2024-25,CVD01,ABPDEC24M,ABPDEC24M
 2024-25,CVD01,BPLAT_2,BPLAT_2
