@@ -1,5 +1,14 @@
 NCDes new CQRS data update.
 
+Changelog V1.2
+------------------------------------------------------------------
+Updated metadata files
+Updates made to the run_ncdes.bat file for .venv creation and update. 
+Replacement of the enviroment.yml file with a requirements.txt file.
+measure_and_indicator_mappings() function updated to account for removal of CAN02 and replaced with CAN04, in line with the 24-25 Mid year changes.
+Addition of git project supporting documents added to the "supporting_docs" folder.
+
+
 Changelog V1.1
 ------------------------------------------------------------------
 Updated metadata files
@@ -30,3 +39,4 @@ Added three files in root_directory:
 input/CQRS_files/NCD_CQRS_Metadata_Mapping.csv - COntains a mapping table to fix field names
 input/CQRS_files/NCD_metadata.csv - Contains a table to produce indicator and measure mappings
 output/CQRS_omitted_tracker.csv - Contains omitted practices for certain rules (does not count PCN codes)
+

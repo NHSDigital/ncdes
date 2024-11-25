@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 
 def remove_measures(df: pd.DataFrame, bad_measure_list: list) -> pd.DataFrame:
     """Removes the rows associated with the measures listed in the measure list 
@@ -21,8 +22,8 @@ def remove_measures(df: pd.DataFrame, bad_measure_list: list) -> pd.DataFrame:
     NCDes_bad_meas_removed = df[~df["MEASURE"].isin(bad_measure_list)]
 
     if len(bad_measure_list) == 0:
-        print("No measures removed.")
+        logging.info("No measures removed.")
     else:    
-        print(f"Removed measure(s): {bad_measure_list}")
+        logging.info(f"Removed measure(s): {bad_measure_list}")
     
     return NCDes_bad_meas_removed

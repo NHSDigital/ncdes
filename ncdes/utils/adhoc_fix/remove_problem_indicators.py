@@ -1,5 +1,5 @@
 import pandas as pd
-
+import logging
 def remove_indicators(NCDes_suppressed: pd.DataFrame, removal_indicator_list: list) -> pd.DataFrame:
     """
     Removes the rows associated with the indicators listed in the indicator list 
@@ -16,8 +16,8 @@ def remove_indicators(NCDes_suppressed: pd.DataFrame, removal_indicator_list: li
     NCDes_bad_inds_removed = NCDes_suppressed[~NCDes_suppressed["IND_CODE"].isin(removal_indicator_list)]
 
     if len(NCDes_bad_inds_removed) == len(NCDes_suppressed): #if saying  =0 then saying that all the original df had items of IND_CODE within the removals list...
-        print("No indicators removed.")
+        logging.info("No indicators removed.")
     else:
-        print(f"Removed indicator(s): {removal_indicator_list}")
+        logging.info(f"Removed indicator(s): {removal_indicator_list}")
         
     return NCDes_bad_inds_removed

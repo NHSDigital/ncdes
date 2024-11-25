@@ -1,5 +1,6 @@
 import pandas as pd
-from ..output.practice_map_from_sql import *
+import logging
+from ..data_export.practice_map_from_sql import *
 
 def pivot_indicator(df : pd.DataFrame, dfbase: pd.DataFrame) -> pd.DataFrame:
     """This recursive function pivots all the indicators given and measures as columns rather
@@ -72,12 +73,12 @@ def get_data(input_df : pd.DataFrame) -> pd.DataFrame:
     df = input_df[input_df.IND_CODE.isin(["HI03"])]
     df = df[df.MEASURE.isin(["Numerator", "Denominator"])]
     
-    #Strip out the date for further use. If multiple dates, then print Error
+    #Strip out the date for further use. If multiple dates, then logging.info Error
     if len(df["ACH_DATE"].unique()) == 1:
         ach_date = df["ACH_DATE"].unique()[0]
         ach_date = str(ach_date)
     else:
-        print("ERROR: Multiple different values in ACH_DATE")
+        logging.error("ERROR: Multiple different values in ACH_DATE")
       
     #Drop unneccesary columns
     df = df.drop(["ACH_DATE", "QUALITY_SERVICE"], axis=1)
@@ -88,43 +89,43 @@ def get_data(input_df : pd.DataFrame) -> pd.DataFrame:
     #get HI01 data
     df = add_HI01_data(input_df, df)
 
-    df[["Numerator", "Denominator","HI01Numerator"]] = df[["Numerator", "Denominator","HI01Numerator"]].astype('int')
+    df[["Numerator", "Denominator","HI01Numerator"]] = df[["Numerator", "Denominator","HI01Numerator"]].astype(float)
     df["No_ethnicity"] = df["HI01Numerator"] - df["Numerator"]
-    df["No_ethnicity"] = df["No_ethnicity"].astype("int")
+    df["No_ethnicity"] = df["No_ethnicity"].astype(float)
     return df, ach_date
 
 def write_perc_col(df: pd.DataFrame, col1 : str, col2: str, new_col :str) -> pd.DataFrame:
     """
-    Write a percentage column by dividing two columns
+    Write a percentage column by dividing two columns.
     Parameters
-    df : The dataframe to write over
-    col1 : Name of column to divide (numerator)
-    col2 : Name of column to divide (denominator)
-    new_col : Name of new column 
+        df : The dataframe to write over
+        col1 : Name of column to divide (numerator)
+        col2 : Name of column to divide (denominator)
+        new_col : Name of new column 
     Returns
-    df : The processed dataframe
+        df : The processed dataframe
     """
     df[new_col] = df[col1] / df[col2]
-    df[new_col] = df[new_col].astype("float") 
+    df[new_col] = df[new_col].astype(float) 
     df[new_col] = df[new_col].round(4)
     return df
 
 def geog_agg(df:pd.DataFrame,dropcol:list, groupcol : list) -> pd.DataFrame:
     """
-    Write a percentage column by dividing two columns
+    Aggregates values in a column by supplied 'groupcol' column list, drops columns in supplied 'dropcol' list
     Parameters
-    df : The dataframe to geographically aggregate
-    dropcol: Cols to drop when aggregating
-    groupcol : Cols to keep when aggregating
+        df : The dataframe to geographically aggregate
+        dropcol: Cols to drop when aggregating
+        groupcol : Cols to keep when aggregating
     Returns
-    df_agg : The aggregrated dataframe
+        df_agg : The aggregrated dataframe
     """
     df = df.drop(dropcol, axis=1)
     df2 = df.groupby(groupcol).sum().reset_index()
     return df2
 
 
-def add_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
+def add_sum_total_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
     """This section is to add a total/average column at the top of the dataframe
     Parameters:
        df: dataframe that needs summary added
@@ -132,16 +133,16 @@ def add_summary(df:pd.DataFrame, num_prac_cols : int) -> pd.DataFrame:
     Returns:
         df: the orginal dataframe with summary"""
 
-    #lets try it a different way
+    #filter df to return only columns up to and past 'Region Name' column
     dfbase = df[df.columns[:num_prac_cols]]
     dfvals = df[df.columns[num_prac_cols:]]
     
-    #Fill in blank values for practice row
+    #create a new row at the top of the table. Fill in blank values for geography columns
     result_series = ['ENGLAND']
     for i in range(num_prac_cols-1):
         result_series.append('')
     
-    #Get the sums here
+    #Get the sum totals for columns here
     for col in dfvals.columns:
         num = dfvals[col].sum()
         result_series.append(num)
@@ -175,9 +176,9 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
     
     unknown_pracs = [prac for prac in prac_in_data if prac not in all_pracs]
     if len(unknown_pracs) != 0:
-        print(f"All missing practice's codes are {unknown_pracs}")
+        logging.warning(f"Practice(s) appearing in NCD data but not in reference data are {str(unknown_pracs)} - please see troubleshooting guidance.")
     else:
-        print(f"They are no missing practice codes.")
+        logging.info(f"There are no missing practice codes.")
 
     #make an unknown column
     if len(unknown_pracs) != 0:
@@ -194,19 +195,21 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
                  'Denominator','Numerator',"HI01Numerator","No_ethnicity"]
     output_df = output_df[col_order]
 
-    
+    #apply groub by to aggregate data - subgroup for different ascending geography regions
     sub_icb_df = geog_agg(output_df, ['PRACTICE_CODE', 'PRACTICE_NAME'], ['Sub ICB Location ODS Code', 'Sub ICB Location Name','ICB ODS Code', 'ICB Name', 'Region ODS Code', 'Region Name'])
-    icb_df = geog_agg(output_df, ['Sub ICB Location ODS Code', 'Sub ICB Location Name'],['ICB ODS Code', 'ICB Name', 'Region ODS Code', 'Region Name'])
-    region_df = geog_agg(output_df, ['ICB ODS Code', 'ICB Name'], ['Region ODS Code', 'Region Name'])
+    icb_df = geog_agg(output_df, ['PRACTICE_CODE', 'PRACTICE_NAME','Sub ICB Location ODS Code', 'Sub ICB Location Name'],['ICB ODS Code', 'ICB Name', 'Region ODS Code', 'Region Name'])
+    region_df = geog_agg(output_df, ['PRACTICE_CODE', 'PRACTICE_NAME', 'Sub ICB Location ODS Code', 'Sub ICB Location Name', 'ICB ODS Code', 'ICB Name'], ['Region ODS Code', 'Region Name'])
     
-    sub_icb_df = add_summary(sub_icb_df, 6)
-    icb_df = add_summary(icb_df, 4)
-    region_df = add_summary(region_df, 2)
+
+    sub_icb_df = add_sum_total_summary(sub_icb_df, 6)
+    icb_df = add_sum_total_summary(icb_df, 4)
+    region_df = add_sum_total_summary(region_df, 2)
+
     
     sub_icb_df = write_perc_col(sub_icb_df,'Numerator', 'Denominator', "%")
     icb_df = write_perc_col(icb_df,'Numerator', 'Denominator', "%")
     region_df = write_perc_col(region_df,'Numerator', 'Denominator', "%")
-    
+
     
     sub_icb_df = write_perc_col(sub_icb_df, "No_ethnicity", "HI01Numerator", "2%")
     icb_df = write_perc_col(icb_df, "No_ethnicity", "HI01Numerator", "2%")
@@ -236,5 +239,6 @@ def produce_processed_csv(NCDes_main_df : pd.DataFrame, root_directory, server, 
     sub_icb_df = rename_cols(sub_icb_df)
     icb_df = rename_cols(icb_df)
     region_df = rename_cols(region_df)
+
     
     return sub_icb_df, icb_df, region_df, ach_date

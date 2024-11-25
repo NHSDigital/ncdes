@@ -1,5 +1,6 @@
 import pyodbc as dbc
 import pandas as pd
+import logging
 
 def connect(server, database, driver='SQL SERVER', trusted_connection=True):
     """
@@ -12,7 +13,7 @@ def connect(server, database, driver='SQL SERVER', trusted_connection=True):
         returns connection variable
     
     """
-    print('Connecting via trusted connection')
+    logging.info('Connecting via trusted connection')
     connection = dbc.connect('DRIVER='+driver+'; SERVER='+server+'; DATABASE='+database+';TRUSTED_CONNECTION='+str(trusted_connection))
     
     return connection

@@ -1,17 +1,19 @@
 from datetime import datetime
 import pandas as pd
 import os
+from pathlib import PurePath
+import logging
 
-from ncdes.data import sql_connection
-from ncdes.data.data_load import *
-from ncdes.data import amender
+from ncdes.utils import sql_connection
+from ncdes.data_ingestion.data_load import *
+from ncdes.data_ingestion import amender
 from ncdes.processing import processing_steps
 from ncdes.processing import validation_check as check
 
-from ncdes.output import outputs
+from ncdes.data_export import outputs
 
 from ncdes.utils.adhoc_fix import remove_problem_indicators, remove_problem_measures, remove_problem_indicator_measure_pairs
-from ncdes.utils.setup import check_saved_changes
+from ncdes.utils.setup import check_saved_changes, log_setup
 import warnings
 
 warnings.simplefilter(action="ignore", category=UserWarning)
@@ -36,57 +38,69 @@ def main() -> None:
     #check that all changes made are saved and have indeed been updated ready to run - important for test runs
     check_saved_changes()
 
+    #load config parameters
     print("\n"*3,"Loading config file")
     config = get_config('config.toml')
     config_conn = config['Connections']
     config_fp = config['Filepaths']
-    
-    test_run = config['Setup']['test_mode']
-    print("\n"*3,f"Test mode established as: {test_run}")
-
-    print("Establishing SQL connection")
-    connection = sql_connection.connect(server=config_conn["server"], database=config_conn["database"])
     root_directory = config_fp["root_directory"]
+    test_run = config['Setup']['test_mode']
+    pub_date = config['Dates']['Publication_date']
+
 
     output_directory = outputs.test_run_change_outputs_fldr(test_run, root_directory)
-    print(f"Selecting output folder: {output_directory}")
+    log_output_directory = PurePath(output_directory, "Logs")
+    # set test or live outputs folder and create directory where this does not already exist
+    if not os.path.exists(str(log_output_directory)):
+            os.makedirs(str(log_output_directory))
 
-    print("Loading NCDes data")
-    ncdes_raw = load_csvs_in_directory_as_concat_dataframe(f"{root_directory}\\Input\\Current")
+    # logger setup
+    log_setup(log_output_directory, pub_date)
+
+    #input logger messages around this run
+    logging.info(f"Test mode established as: {test_run} \n\n\n")
+    logging.info(f'Outputs will be written to the following folder: {output_directory}.')
+
+    logging.info("Establishing SQL connection")
+    connection = sql_connection.connect(server=config_conn["server"], database=config_conn["database"])
+
+    logging.info("Loading NCDes data")
+    ncdes_raw_filepath = PurePath(root_directory, 'Input', 'Current')
+    ncdes_raw = load_csvs_in_directory_as_concat_dataframe(ncdes_raw_filepath)
     ncdes_raw_archive = ncdes_raw.copy(deep=True)
 
-    print("Amending CQRS data")
+    logging.info("Amending CQRS data")
     ncdes_raw = amender.update_dataframe(ncdes_raw, config)
 
-    print("Cleaning NCDes data")
+    logging.info("Cleaning NCDes data")
     ncdes_clean = processing_steps.clean_ncdes(ncdes_raw)
     reporting_period = processing_steps.get_formatted_reporting_end_date_from_ncdes_data(ncdes_clean)
 
     geo_ccg_sql_str, geo_reg_sql_str, stp_sql_str, prac_sql_str = get_sql_query_strings(reporting_period)
 
-    print("Loading SQL mapping data")
+    logging.info("Loading SQL mapping data")
     geo_ccg_df = pd.read_sql(sql=geo_ccg_sql_str, con=connection)
     geo_reg_df = pd.read_sql(sql=geo_reg_sql_str, con=connection)
     stp_df = pd.read_sql(sql=stp_sql_str, con=connection)
     prac_df = pd.read_sql(sql=prac_sql_str, con=connection)
 
-    print("Formatting SQL mapping data")
+    logging.info("Formatting SQL mapping data")
     geo_ccg_df, geo_reg_df, stp_df = processing_steps.sql_df_cols_to_upper_case(geo_ccg_df, geo_reg_df, stp_df)
 
-    print("Loading ePCN data")
+    logging.info("Loading ePCN data")
     raw_epcn = load_epcn_excel_table(epcn_path=config_fp["epcn_path"])
     epcn_df = processing_steps.epcn_transform(raw_epcn)
 
-    print("Creating mapping table")
+    logging.info("Creating mapping table")
     mapping_table = processing_steps.create_mapping_table(geo_ccg_df, geo_reg_df, stp_df, prac_df, epcn_df)
 
-    print("Merging NCDes data with mapping data")
+    logging.info("Merging NCDes data with mapping data")
     NCDes_with_geogs = processing_steps.merge_tables_fill_Na_reorder_cols(mapping_df=mapping_table, ncdes_df_cleaned=ncdes_clean, CORRECT_COLUMN_ORDER_NCDes_with_geogs=CORRECT_COLUMN_ORDER_NCDes_with_geogs)
     
-    print("Starting validation checks")
+    logging.info("Starting validation checks")
     check.run_all_column_has_expected_values_validations(NCDes_with_geogs, root_directory)
 
-    print("Applying suppression")
+    logging.info("Applying suppression")
     NCDes_suppressed = processing_steps.suppress_output(
         main_table=NCDes_with_geogs,
         root_directory=root_directory,
@@ -99,47 +113,47 @@ def main() -> None:
         main_table_ind_code_col_name='IND_CODE'
     )
 
-    print("Removing problem indicators:")
-    print(str(config["Indicators"]["removal_indicator_list"]))
+    #logging.info(f"Removing problem indicators: {str(config["Indicators"]["removal_indicator_list"])}")
+    logging.info("Removing problem indicators")
     NCDes_problem_ind_rem = remove_problem_indicators.remove_indicators(NCDes_suppressed,  removal_indicator_list=config["Indicators"]["removal_indicator_list"])
-    print("Removing problem measures")
+    logging.info("Removing problem measures")
     NCDes_problem_meas_rem = remove_problem_measures.remove_measures(NCDes_problem_ind_rem, bad_measure_list=config["Measures"]["bad_measure_list"])
 
-    print("Removing problem indicator-measure combinations if required")
+    logging.info("Removing problem indicator-measure combinations if required")
     NCDes_problem_meas_rem = remove_problem_indicator_measure_pairs.remove_pairs(NCDes_problem_ind_rem, bad_indicator_measure_list=config["Pairs"]['remove_ind_pair'])
     NCDes_problem_meas_rem = remove_problem_indicator_measure_pairs.remove_pairs(NCDes_problem_meas_rem, bad_indicator_measure_list=config["Pairs"]['remove_meas_pair'])
     
-    print("Joining ruleset ID to copy of output data for ruleset-specific outputs")
+    logging.info("Joining ruleset ID to copy of output data for ruleset-specific outputs")
     NCDes_with_rulesets = processing_steps.merge_data_with_ruleset_id(NCDes_problem_meas_rem, root_directory)
     
-    print("Saving main output")
+    logging.info("Saving main output")
     outputs.save_NCDes_main_to_csv(NCDes_problem_meas_rem, output_directory)
 
-    print("Zipping main output")
+    logging.info("Zipping main output")
     outputs.save_NCDes_main_to_zip(NCDes_problem_meas_rem, output_directory)
 
-    print("Saving outputs split by ruleset")
+    logging.info("Saving outputs split by ruleset")
     outputs.save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, output_directory)
 
-    print("Zipping outputs split by ruleset")
+    logging.info("Zipping outputs split by ruleset")
     outputs.save_NCDes_by_ruleset_to_zip(NCDes_with_rulesets, output_directory)
     
-    print("Saving trend monitor")
-    if test_run == True:
-        print("Test mode: skipping trend monitor")
+    logging.info("Trend monitor updates")
+    if test_run.lower() == "true":
+        logging.info("Test mode: skipping trend monitor")
     else:
         outputs.save_trendmonitor(NCDes_problem_meas_rem, root_directory)
 
-    print("Saving excel output")
+    logging.info("Saving LDHC excel output")
     outputs.save_NCDes_main_to_excel(NCDes_problem_meas_rem, root_directory, server=config_conn["server"], database=config_conn["database"], test_run=test_run)
 
-    print("Archiving input")
-    outputs.archive_input_as_csv(ncdes_raw_archive, output_directory)
+    logging.info("Archiving input")
+    outputs.archive_input(output_directory)
 
-    print("Deleting input files from input folder")
-    outputs.remove_files_from_input_folder(path=f"{root_directory}Input\\Current\\")
+    logging.info("Deleting input files from input folder")
+    outputs.remove_files_from_input_folder(ncdes_raw_filepath)
 
-    print("Job complete")
+    logging.info("Job complete")
     outputs.open_outputs(NCDes_problem_meas_rem, output_directory)
 
 

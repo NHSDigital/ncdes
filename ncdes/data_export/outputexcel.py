@@ -1,9 +1,13 @@
 import pandas as pd
 import openpyxl
 from datetime import datetime as datetime2
-from ..output.outputcsvtoinputexcel import *
-from ..output.fonts import *
+from ncdes.data_export.outputcsvtoinputexcel import *
+from ncdes.data_export.fonts import *
 from openpyxl.styles import Border, Side
+import shutil
+from pathlib import PurePath
+import os
+import logging
 
 def set_border(ws, df, end_col):
     df_length = len(df)
@@ -28,7 +32,8 @@ def main_to_excel(NCDes_main_df: pd.DataFrame, output_directory, root_directory 
     """
     sub_icb_df, icb_df, region_df, ach_date = produce_processed_csv(NCDes_main_df, root_directory, server, database)
 
-    Control_File_NCDes = pd.read_csv(f"{root_directory}\\templates\\Control_File_NCDes.csv")
+    Control_File_filepath = PurePath(root_directory, 'templates','Control_File_NCDes.csv')
+    Control_File_NCDes = pd.read_csv(Control_File_filepath)
     URL = Control_File_NCDes.at[0, "Friendly URL"]
 
     Copyright_date = Control_File_NCDes.at[0, "PubDate"]
@@ -52,12 +57,15 @@ def main_to_excel(NCDes_main_df: pd.DataFrame, output_directory, root_directory 
     LDHC_title = "NCDES LDHC Ethnicity recording (NCDES LDHC) {}".format(Fyear)
     date_object = datetime2.strptime(ach_date, "%d/%m/%Y")
     MMMYYYY = date_object.strftime('%b %Y')
-    print(f"MMMYYYY is {MMMYYYY}")
+    logging.info(f"MMMYYYY is {MMMYYYY}")
     Datasheetsname = ["Sub ICB", "ICB", "Region"]
 
-    output_folder = f"{output_directory}\\Output\\{service_year}"
-    file_name = f"\\NCDES LDHC Ethnicity Recording - {MMMYYYY}.xlsx"
-    output_path = f"{output_folder}{file_name}"
+    # set output folder
+    output_path = PurePath(output_directory, service_year, 'LDHC Ethnicity Reports', f"NCDES LDHC Ethnicity Recording - {MMMYYYY}.xlsx")
+
+
+    # set output path and create parent directories if necessary
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     def write_title(wb):
         """
@@ -112,25 +120,39 @@ def main_to_excel(NCDes_main_df: pd.DataFrame, output_directory, root_directory 
             T1_XX_list[i]["I3"].font = BOLD_FONT
             
     
-
-
-    with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
-        wb = openpyxl.load_workbook(f"{root_directory}\\templates\\template NCDES LDHC Ethnicity Recording MMM YYYY.xlsx")
+    
+    #Create a copy of the template file and move to the LDHC ouputs folder
+    src_dest = PurePath(root_directory, 'templates', "template NCDES LDHC Ethnicity Recording MMM YYYY.xlsx")
+    new_temp_dest = PurePath(root_directory, 'Output', "template NCDES LDHC Ethnicity Recording.xlsx")
+    shutil.copyfile(src_dest, new_temp_dest)
+    
+    #open the new file as a workbook
+    wb = openpyxl.load_workbook(new_temp_dest)
+    with pd.ExcelWriter(new_temp_dest, engine="openpyxl", mode="a", if_sheet_exists="overlay") as writer:
+        
+        #add additional summary to the front page and leading rows for each of the dataframe sheet
         write_title(wb)
         T1_SUB = wb["Sub ICB"]
         T1_ICB = wb["ICB"]
         T1_REG = wb["Region"]
         write_datasheets(wb, [T1_SUB, T1_ICB, T1_REG], [len(sub_icb_df), len(icb_df), len(region_df)])
 
+        #changes must be saved to a different file in order to cement the changes made - otherwise remains the same
+        wb.save(output_path) 
+
+    #write to new MmmYY LDHC file and append aggregate dataframes to additional sheets
+    with pd.ExcelWriter(output_path, engine="openpyxl", mode="a", if_sheet_exists="overlay") as writer:
         
-        writer.book = wb
-        writer.sheets = dict((ws.title, ws) for ws in wb.worksheets)
         sub_icb_df.to_excel(writer, sheet_name= "Sub ICB" ,index=False, header = False,startrow=7)
         icb_df.to_excel(writer, sheet_name= "ICB" ,index=False, header = False,startrow=7)
         region_df.to_excel(writer, sheet_name= "Region" ,index=False, header = False,startrow=9)
 
+        #add an excel formatting border to columns to mark the end of the tables
         set_border(T1_SUB, sub_icb_df, "L")
         set_border(T1_ICB, icb_df, "J")
+
+        
+
 
 
         

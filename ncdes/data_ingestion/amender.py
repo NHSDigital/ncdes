@@ -2,14 +2,16 @@ import pandas as pd
 from datetime import datetime as datetime2
 import pyodbc as dbc
 import os
-from ncdes.data.practice_maps import *
-from ncdes.output.outputs import *
+from pathlib import PurePath
+from ncdes.data_ingestion.practice_maps import *
+from ncdes.data_export.outputs import *
+import logging
 
 
 def measure_and_indicator_mappings(root: str) -> pd.DataFrame:
     """Gets the measure and indicator mappings from proposed metadata"""
-
-    df = pd.read_csv(f"{root}\\Input\\CQRS_files\\NCD_metadata.csv", encoding='unicode_escape')
+    df_filepath = PurePath(root, 'Input', 'CQRS_files', 'NCD_metadata.csv')
+    df = pd.read_csv(df_filepath, encoding='unicode_escape')
     df = df.sort_values("INDICATOR_ID", ascending=True)
     
     #Indicator mappings
@@ -18,7 +20,7 @@ def measure_and_indicator_mappings(root: str) -> pd.DataFrame:
     ind_dict["Payment or Management Information (MI)"] = "MI"
 
     ind_dict.loc[(ind_dict["INDICATOR_ID"] == "HI03") |
-                (ind_dict["INDICATOR_ID"] == "CAN02"), "Payment or Management Information (MI)"] = "Payment"
+                (ind_dict["INDICATOR_ID"] == "CAN04"), "Payment or Management Information (MI)"] = "Payment"
 
     ind_dict = ind_dict.rename(columns={"INDICATOR_ID": "Indicator ID",
                                         "INDICATOR_DESCRIPTION":"Indicator Description",
@@ -57,12 +59,13 @@ def update_dataframe(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     
     #If data is imported as the original version, pass through function
     if list(df_cols) == req_cols:
-        print("Old format data recieved, skipping amender")
+        logging.warning("Old format data recieved, skipping amender")
         return df
 
-    #print(os.getcwd())
+    #logging.info(os.getcwd())
     root = config['Filepaths']["root_directory"]
-    field_map = pd.read_csv(f"{root}\\Input\\CQRS_files\\NCD_CQRS_Metadata_Mapping.csv")
+    field_map_filepath = PurePath(root, 'Input', 'CQRS_files', 'NCD_CQRS_Metadata_Mapping.csv')
+    field_map = pd.read_csv(field_map_filepath)
 
     #Drop all U codes
     df = remove_codes(df, config)
@@ -80,7 +83,8 @@ def update_dataframe(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     df = df.rename(columns={"SHORT_NAME":"FIELD_NAME"})
 
     #check if year folder exists, if not create one 
-    check_and_create_folder(f"{root}\\Output\\CQRS_omitted_tracker\\")
+    CQRS_omitted_folderpath = PurePath(root, 'Output', 'CQRS_omitted_tracker')
+    check_and_create_folder(CQRS_omitted_folderpath)
 
     #Duplicated rows, logged
     not_last_sub = df[df["LAST_SUBMISSION"] == "N"]
@@ -88,7 +92,9 @@ def update_dataframe(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     not_last_sub = not_last_sub.fillna("Unknown")
     root_directory = config['Filepaths']["root_directory"]
     not_last_sub = not_last_sub.drop_duplicates()
-    not_last_sub.to_csv(f"{root_directory}\\Output\\CQRS_omitted_tracker\\CQRS_omits.csv", index=False)
+    
+    not_last_sub_filepath = PurePath(CQRS_omitted_folderpath, "CQRS_omits.csv")
+    not_last_sub.to_csv(not_last_sub_filepath, index=False)
 
     #Finishing off cleaning the data
     df = df[df["LAST_SUBMISSION"] == "Y"].reset_index()

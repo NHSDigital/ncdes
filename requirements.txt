@@ -1,0 +1,5 @@
+pandas == 1.4.4
+numpy == 1.21.5
+openpyxl == 3.0.10
+pyodbc == 4.0.34
+tomli == 2.0.1

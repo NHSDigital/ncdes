@@ -23,7 +23,7 @@ def get_practice_map(server, database):
             
     conn = connect(conn_string)
     
-    ach_date_query = "SELECT MAX(EXTRACT_DATE) AS ACHIEVEMENT_DATE FROM dbo.GP_PATIENT_LIST"
+    ach_date_query = "SELECT MAX(EXTRACT_DATE) AS ACHIEVEMENT_DATE FROM dbo.GP_PATIENT_LIST_PDS"
     
     
     df = pd.read_sql_query(ach_date_query,conn)
@@ -41,7 +41,7 @@ def get_practice_map(server, database):
                                 AND (a.CLOSE_DATE IS NULL OR a.CLOSE_DATE >= ?)
                                 AND a.DSS_RECORD_START_DATE <= ?
                                 AND (a.DSS_RECORD_END_DATE IS NULL OR a.DSS_RECORD_END_DATE >= ?)
-                                AND a.CODE IN (SELECT DISTINCT PRACTICE_CODE FROM [GP_PATIENT_LIST] WHERE EXTRACT_DATE = ?)
+                                AND a.CODE IN (SELECT DISTINCT PRACTICE FROM [GP_PATIENT_LIST_PDS] WHERE EXTRACT_DATE = ?)
                                 ORDER BY a.CODE"""
     
     practice_mapping = pd.read_sql_query(practice_mapping_query, conn, params=(ach_date,)*5)
