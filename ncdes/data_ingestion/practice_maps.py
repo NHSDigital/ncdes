@@ -4,30 +4,6 @@ from datetime import datetime as datetime2
 import pyodbc as dbc
 import os
 
-def practice_supplier_map(server : str, database : str) -> pd.DataFrame:
-    """
-    Uses SQL tables to get most up to date practice to supplier mapping, and returns it as a dataframe.
-    """
-    conn_string = ("Driver=SQL Server;"
-                   f"Server={server};" 
-                   f"Database={database};" 
-                   "Trusted_Connection=yes;")
-    
-    def connect(conn_str):
-        try:
-            conn = dbc.connect (conn_str)
-        except:
-            raise Exception("Database Connection unsuccessful")
-            conn = None
-        return conn
-    
-    conn = connect(conn_string)
-    ach_date_query = "SELECT GP_Code, Supplier FROM ic.PRIM_POMI_GP_DIM"
-
-    df = pd.read_sql_query(ach_date_query,conn)
-    df = df.drop_duplicates()
-
-    return df
 
 def code_map(server : str, database : str) -> pd.DataFrame:
     """

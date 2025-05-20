@@ -2,7 +2,6 @@
 # def get_achievment_date(ncdTable):
 import pandas as pd
 from datetime import datetime
-from ncdes.data_ingestion import data_load
 import logging
 from collections import Counter
 
@@ -38,85 +37,6 @@ def get_formatted_reporting_end_date_from_ncdes_data(ncdes_clean):
     parsed_date = datetime.strptime(Date, "%d/%m/%Y")
 
     return parsed_date.strftime("%Y%m%d")
-
-
-def sql_df_cols_to_upper_case(geo_ccg_df, geo_reg_df, stp_df):
-    """
-    Formats the relevant SQL dataframes. Making pre-defined columns
-    values uppercased.
-    """
-    geo_ccg_df["CCG_NAME"] = geo_ccg_df["CCG_NAME"].str.upper()
-    geo_reg_df["REGION_NAME"] = geo_reg_df["REGION_NAME"].str.upper()
-    stp_df["STP_NAME"] = stp_df["STP_NAME"].str.upper()
-
-    return geo_ccg_df, geo_reg_df, stp_df
-
-
-def epcn_transform(epcn_table):
-    """
-    Description:
-        Applies transforms to the raw epcn file
-
-    Input:
-        Raw epcn file
-
-    Output:
-        transformed epcn table
-    """
-    new_cols = ["PRACTICE_CODE", "PCN_ODS_CODE", "PCN_NAME", "START_DATE", "END_DATE"]
-    epcn_table.columns = new_cols
-
-    epcn_table = epcn_table.loc[epcn_table.END_DATE.isnull()]
-    epcn_table = epcn_table.drop(columns=["END_DATE"])
-
-    epcn_prac_table = epcn_table.groupby(["PRACTICE_CODE"], sort=True)[
-        "START_DATE"
-    ].max()
-    epcn_table_filtered = epcn_table.merge(
-        epcn_prac_table, on=["PRACTICE_CODE", "START_DATE"], how="inner"
-    )
-    epcn_df = epcn_table_filtered.drop(columns=["START_DATE"])
-
-    return epcn_df
-
-
-def create_mapping_table(
-    geo_ccg_df,
-    geo_reg_df,
-    stp_df,
-    prac_df,
-    epcn_df,
-    includeCols = ["PRACTICE_CODE", "PRACTICE_NAME"],
-):
-    """
-    Creates a super mapping table by merging all input mapping tables
-    """
-    superTable = (
-        prac_df.merge(geo_ccg_df, on="CCG_ODS_CODE", how="inner")
-        .merge(epcn_df, on="PRACTICE_CODE", how="left")
-        .merge(stp_df, on="CCG_ODS_CODE", how="inner")
-        .merge(geo_reg_df, on="REGION_ODS_CODE", how="inner")[
-            [
-                "PRACTICE_CODE",
-                "PRACTICE_NAME",
-                "PCN_ODS_CODE",
-                "PCN_NAME",
-                "CCG_ONS_CODE",
-                "CCG_ODS_CODE",
-                "CCG_NAME",
-                "STP_ONS_CODE",
-                "STP_ODS_CODE",
-                "STP_NAME",
-                "REGION_ONS_CODE",
-                "REGION_ODS_CODE",
-                "REGION_NAME",
-            ]
-        ]
-        .sort_values(by="PRACTICE_CODE")[includeCols]
-        .drop_duplicates()
-    )
-
-    return superTable
 
 
 def merge_tables_fill_Na_reorder_cols(mapping_df, ncdes_df_cleaned, CORRECT_COLUMN_ORDER_NCDes_with_geogs):
@@ -318,8 +238,6 @@ def suppress_2_plus_PCA(
     main_table_prac_code_col_name,
     main_table_ind_code_col_name,
     measure_dict_meas_type_col_name,
-    measure_dict_meas_col_name,
-    measure_dict_meas_description_col_name,
     main_table_value_col_name
 ):
     """
@@ -337,7 +255,7 @@ def suppress_2_plus_PCA(
     merged_df_2_plus_PCA[main_table_value_col_name] = merged_df_2_plus_PCA[main_table_value_col_name].astype(str) 
 
     merged_df_2_plus_PCA.loc[indexes_to_suppress, main_table_value_col_name] = '*'    
-    return merged_df_2_plus_PCA.drop(columns=[measure_dict_meas_col_name, measure_dict_meas_description_col_name, measure_dict_meas_type_col_name])
+    return merged_df_2_plus_PCA
 
 def get_indexes_to_suppress(
     prac_ind_to_suppress,
@@ -367,7 +285,7 @@ def get_indexes_to_suppress(
 
 def suppress_output(
     main_table,
-    root_directory,
+    measure_dict,
     measure_dict_meas_col_name='MEASURE ID',
     measure_dict_meas_type_col_name='MEASURE_TYPE',
     measure_dict_meas_description_col_name='MEASURE_DESCRIPTION',
@@ -379,24 +297,21 @@ def suppress_output(
     """
     Applies the following rules to the fully processed dataframe:
 
-    1. For all fractional indicators: omit exclusion counts from publications (this is already implemented for LDHC, but would be a change for all other publications e.g. QOF, NCDES, INLIQ...)
+    1. For fractional indicators with 1 PCA specified: where denominator <2 and PCA > 0, suppress the PCA and the denominator for that indicator
 
-    2. For fractional indicators with 1 PCA specified: where denominator <2 and PCA > 0, suppress the PCA and the denominator for that indicator
+    2. For fractional indicators with >1 PCA specified: where denominator = 0 and the sum of all PCAs is equal to the value of any one PCA, suppress all the PCAs for that indicator
 
-    3. For fractional indicators with >1 PCA specified: where denominator = 0 and the sum of all PCAs is equal to the value of any one PCA, suppress all the PCAs for that indicator
+    3. For all fractional indicators: omit exclusion counts from publications
     
     
     Function can be broken down into 4 main parts:
     
     a. Ingestion/pre-processing 
-    b. Dealing with suppression relating to point '2.' above
-    c. Dealing with suppression realting to point '3.' above
+    b. Dealing with suppression relating to point '1.' above
+    c. Dealing with suppression realting to point '2.' above
     d. Recombining dataframes
     """
     # -------------------------------------------------- a -------------------------------------------------------- #
-    # Load in measure dictionary
-    measure_dict = data_load.load_indicator_and_measure_data_dictionaries(root_directory)[1]
-
     
     # Merge in measure type data to main table
     merged_table = pd.merge(
@@ -406,10 +321,8 @@ def suppress_output(
         right_on=measure_dict_meas_col_name, 
         how='left'
     )
-    
     # Split dataframe so different suppression rules can be applied to each split
     merged_df_1_PCA, merged_df_2_plus_PCA, merged_df_0_PCA = split_dataframe(merged_table)
-    
     # -------------------------------------------------- b -------------------------------------------------------- #
     # filter relevant merged df according to denominator condition for indicators with one PCA 
     denom_condition_met_1_PCA = denom_condition_1_PCA(merged_df_1_PCA)
@@ -424,7 +337,6 @@ def suppress_output(
         main_table_meas_col_name
     )
 
-    
     
     # -------------------------------------------------- c -------------------------------------------------------- #
     # filter relevant merged df according to denominator condition for indicators with 2 or more PCAs
@@ -463,26 +375,18 @@ def suppress_output(
         main_table_prac_code_col_name,
         main_table_ind_code_col_name,
         measure_dict_meas_type_col_name,
-        measure_dict_meas_col_name,
-        measure_dict_meas_description_col_name,
         main_table_value_col_name
     )
     
     # -------------------------------------------------- d -------------------------------------------------------- #
+    #Recombes dataframes
     re_merged_df = pd.concat(
         [PCA_1_out, PCA_2_plus_out, merged_df_0_PCA]
-    ).drop(
-        columns=[measure_dict_meas_col_name, measure_dict_meas_description_col_name, measure_dict_meas_type_col_name]
     )
-    # Remerge in measure dictionary data so that we can drop exclusions
-    re_merged_df_typed = pd.merge(
-        re_merged_df, 
-        measure_dict, 
-        left_on=main_table_meas_col_name, 
-        right_on=measure_dict_meas_col_name, 
-        how='left'
-    )
-    exclusions_dropped = re_merged_df_typed[re_merged_df_typed[measure_dict_meas_type_col_name] != 'Exclusion']
+    
+    #Remove Exclusions
+    exclusions_dropped = re_merged_df[re_merged_df[measure_dict_meas_type_col_name] != 'Exclusion']
+
     # Drop columns from final output
     fully_suppressed_df = exclusions_dropped.drop(
         columns=[measure_dict_meas_col_name, measure_dict_meas_description_col_name,measure_dict_meas_type_col_name]
@@ -497,10 +401,8 @@ def suppress_output(
 
 #--------------------------------------------------- Suppression logic end -----------------------------------------------------------------#
 
-def merge_data_with_ruleset_id(NCDes_problem_ind_rem, root_directory):
+def merge_data_with_ruleset_id(NCDes_problem_ind_rem, indicator_dictionary):
 
-    # Load in measure dictionary
-    indicator_dictionary = data_load.load_indicator_and_measure_data_dictionaries(root_directory)[0]
     # Join ruleset ID onto data
     ncdes_with_rulesets = pd.merge(
         NCDes_problem_ind_rem, 

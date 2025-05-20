@@ -6,14 +6,8 @@ import os
 import logging
 from pathlib import PurePath
 
-from ncdes.data_ingestion import data_load
 
-
-def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_directory):
-    (
-        indicator_dict,
-        measure_dict,
-    ) = data_load.load_indicator_and_measure_data_dictionaries(root_directory)
+def run_all_column_has_expected_values_validations(NCDes_with_geogs, root_directory, indicator_dict, measure_dict):
 
     Automated_Checks_folderpath = PurePath(root_directory, "Output", "Automated Checks")
 

@@ -2,25 +2,19 @@ import pandas as pd
 from datetime import datetime as datetime2
 import os
 import zipfile
-from ncdes.data_export.outputexcel import *
-from ncdes.data_export.trendmonitor import *
 from ncdes.data_ingestion.data_load import *
 import subprocess
 import shutil
+from pathlib import PurePath
+import logging
 
-def get_data_month(NCDes_problem_ind_rem):
-        ach_date = NCDes_problem_ind_rem["ACH_DATE"].unique()[0]
-        ach_date = str(ach_date)
-        date_object = datetime2.strptime(ach_date, "%d/%m/%Y")
-        data_month = date_object.strftime('%B')
-        return data_month
-
-def get_data_month_and_year(NCDes_problem_ind_rem):
-        ach_date = NCDes_problem_ind_rem["ACH_DATE"].unique()[0]
-        ach_date = str(ach_date)
-        date_object = datetime2.strptime(ach_date, "%d/%m/%Y")
-        data_month_year = date_object.strftime('%B%y')
-        return data_month_year
+def output_file_name_components(NCDes_df):
+    dates_table = get_date_for_name(NCDes_df)
+    file_name = get_file_name(dates_table)
+    file_folder = get_file_folder(dates_table)
+    data_month = get_data_month(NCDes_df)
+    data_month_year = get_data_month_and_year(NCDes_df)
+    return file_name, file_folder, data_month, data_month_year
 
 def get_data_month(NCDes_problem_ind_rem):
         ach_date = NCDes_problem_ind_rem["ACH_DATE"].unique()[0]
@@ -54,19 +48,13 @@ def check_and_create_folder(folder_path):
         logging.info(f'{folder_path}: Folder already exists')
     return folder_path
 
-def save_NCDes_main_to_csv(NCDes_problem_ind_rem, output_directory):
-    dates_table = get_date_for_name(NCDes_problem_ind_rem)
-    file_name = get_file_name(dates_table)
-    file_folder = get_file_folder(dates_table)
-
-
+def save_NCDes_main_to_csv(NCDes_problem_ind_rem, output_directory, file_name, file_folder, data_month):
     #check if year folder exists, if not create one 
     save_filepath1 = PurePath(output_directory, file_folder, "CSV_archive")
 
     check_and_create_folder(save_filepath1)
 
     #check if month folder exists, if not create one
-    data_month = get_data_month(NCDes_problem_ind_rem)
     logging.info(f"data month is {data_month}")
 
     save_filepath2 = PurePath(save_filepath1, data_month)
@@ -78,22 +66,13 @@ def save_NCDes_main_to_csv(NCDes_problem_ind_rem, output_directory):
     NCDes_problem_ind_rem.to_csv(save_filepath3, index=False)
     
 
-def open_outputs(NCDes_problem_ind_rem, output_directory):
+def open_outputs(output_directory, file_folder, data_month):
     """opens the output folder"""
-    dates_table = get_date_for_name(NCDes_problem_ind_rem)
-    file_name = get_file_name(dates_table)
-    file_folder = get_file_folder(dates_table)
-    data_month = get_data_month(NCDes_problem_ind_rem)
     outputs_path = PurePath(output_directory, file_folder, 'Zip_archive', data_month)
     subprocess.Popen(["explorer", os.path.realpath(f'{outputs_path}')])
 
     
-def save_NCDes_main_to_zip(NCDes_problem_ind_rem, output_directory):
-    dates_table = get_date_for_name(NCDes_problem_ind_rem)
-    file_name = get_file_name(dates_table)
-    file_folder = get_file_folder(dates_table)
-    data_month = get_data_month(NCDes_problem_ind_rem)  
-
+def save_NCDes_main_to_zip(output_directory, file_name, file_folder, data_month):
     #check if year folder exists, if not create one 
     outputs_path = PurePath(output_directory, file_folder, 'Zip_archive', data_month)
     check_and_create_folder(outputs_path)
@@ -104,24 +83,8 @@ def save_NCDes_main_to_zip(NCDes_problem_ind_rem, output_directory):
             logging.info(f"File name is {filenamecsv}")
             file = PurePath(output_directory, file_folder, 'CSV_archive', data_month, filenamecsv)
             zipMe.write(file, arcname=filenamecsv, compress_type=zipfile.ZIP_DEFLATED)
-    
 
-def save_NCDes_main_to_excel(NCDes_problem_ind_rem, root_directory, server, database, test_run):
-    dates_table = get_date_for_name(NCDes_problem_ind_rem)
-    file_folder = get_file_folder(dates_table) 
-    output_directory = test_run_change_outputs_fldr(test_run, root_directory)
-    main_to_excel(NCDes_problem_ind_rem, output_directory, root_directory, server, database, file_folder)
-
-def save_trendmonitor(NCDes_problem_ind_rem, root_directory):
-    data_month = get_data_month(NCDes_problem_ind_rem)   
-    write_trend_monitor(NCDes_problem_ind_rem, root_directory,data_month)
-
-def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, output_directory):
-    dates_table = get_date_for_name(NCDes_with_rulesets)
-    file_name = get_file_name(dates_table)
-    file_folder = get_file_folder(dates_table)
-    data_month = get_data_month(NCDes_with_rulesets)
-
+def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, output_directory, file_name, file_folder, data_month):
     #check if year folder exists, if not create one 
     CSV_archive_folderpath = PurePath(output_directory, file_folder,'CSV_archive', data_month) 
     check_and_create_folder(CSV_archive_folderpath)
@@ -132,14 +95,8 @@ def save_NCDes_by_ruleset_to_csvs(NCDes_with_rulesets, output_directory):
         ncdes_data_ruleset_filepath = PurePath(CSV_archive_folderpath, f"{file_name}_{RULESET_ID}.csv")
         ncdes_data_ruleset.to_csv(ncdes_data_ruleset_filepath, index=False)
 
-def save_NCDes_by_ruleset_to_zip(NCDes_with_rulesets, output_directory):
-    dates_table = get_date_for_name(NCDes_with_rulesets)
-    file_name = get_file_name(dates_table)
-    file_folder = get_file_folder(dates_table) 
-    data_month = get_data_month(NCDes_with_rulesets) 
-    data_month_year = get_data_month_and_year(NCDes_with_rulesets)
+def save_NCDes_by_ruleset_to_zip(NCDes_with_rulesets, output_directory, file_name, file_folder, data_month, data_month_year):
     #to zip
-
     csv_filepath1 = PurePath(output_directory, file_folder, 'Zip_archive', data_month, f"NCDes{data_month_year}_By_Ruleset.zip")
     with zipfile.ZipFile(csv_filepath1, 'w') as zipMe:
         for RULESET_ID in NCDes_with_rulesets['Ruleset ID'].unique():
@@ -204,7 +161,7 @@ def archive_input(root_directory):
     from os import walk
     
     #set folderpaths
-    ncdes_raw_filepath = PurePath(root_directory, 'Input', 'Current')
+    ncdes_raw_filepath = PurePath(root_directory, 'Input', 'Current') 
     ncdes_archive_filepath = PurePath(root_directory, 'Input', 'Archive')
     today_suffix = (datetime2.today()).strftime("%Y%m%d")
 

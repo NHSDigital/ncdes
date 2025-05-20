@@ -9,14 +9,11 @@ Publication_date = "MMM_YYYY"    #MMM_YYYY
 
 [Filepaths]
 root_directory  = "insert path to your root directory here"
-epcn_path       = "insert absolute path to your ePCN file here"
 
 
 [Connections]
 server          = "server name"
 database        = "database name"
-map_server      = "server name for mapping data"
-map_database    = "database name for mapping data"
 
 
 [Indicators]
@@ -26,7 +23,5 @@ removal_indicator_list = []
 bad_measure_list =  []
 
 [Pairs]
-remove_ind_pair.EHCH01 = "Denominator"
-remove_meas_pair.EHCH04 = "Numerator"
 
 

@@ -4,7 +4,7 @@
 
 Repository owner: General Practice Data, Extracts, Specifications and Analysis (GPDESA) Team
 
-Email: gpses@nhs.net
+Email: england.gpses@nhs.net
 
 To contact us raise an issue on Github or via email and we will respond promptly.
 
@@ -42,18 +42,7 @@ root
 |   |   |---Unexpected Indicators History.csv
 |   |   |---Unexpected Measures History.csv
 |   |---NCD_yy_yy
-|   |---Opt Out Tracking
-|   |   |---Archive
-|   |   |   |---NCD_Opt_Out_Tracking_month.xlsx
-|   |   |---NCD_Opt_Out_Tracking.xlsx
-|   |---CQRS_omitted_tracker
-|   |   |---CQRS_omits.csv
-| 
-|---templates
-|   |---CONTROL_FILE_NCDes.csv
-|   |---template NCDES LDHC Ethnicity Recording MMM YYYY.xlsx
-|
-|---ePCN.xlsx
+
 ```
 
 <p>&nbsp;</p>
@@ -63,13 +52,11 @@ After the above set up steps have been completed you can follow the below instru
 
 1) Review the config file and edit the paramaters as necessary e.g. edit the root directory value so that it matches the root of the directory that you set up. Make use of escape characters and end path with a double "\\\\" e.g. "\\\\\\\example\\\root\\\directory\\\\".
 
-2) Download the epcn excel file from this [webpage](https://digital.nhs.uk/services/organisation-data-service/file-downloads/gp-and-gp-practice-related-data). Move it to the location specified in the above diagram. Copy the absolute path of this file and use it as the "epcn_path" in the config.json.
+2) Move the 'ncdes_synthetic_data.csv' from the 'public_meta_data' folder into your '{root_directory}\Input\Current' folder.
 
-3) Move the 'ncdes_synthetic_data.csv' from the 'public_meta_data' folder into your '{root_directory}\Input\Current' folder.
+3) Next you will need to ensure that any files within the public metadata folder are populated appropriately and moved to the appropriate location as per the file structure above.
 
-4) Next you will need to ensure that any files within the public metadata folder are populated appropriately and moved to the appropriate location as per the file structure above.
-
-5) Double click "run_ncdes.bat" to run the job. The job will begin by downloading the relevant python packages into a virtual environment and then running the job. The output of the job can then be found in the '{root_directory}\Output\YY_YY' folder. This will open automatically once the job is complete. 
+4) Double click "run_ncdes.bat" to run the job. The job will begin by downloading the relevant python packages into a virtual environment and then running the job. The output of the job can then be found in the '{root_directory}\Output\YY_YY' folder. This will open automatically once the job is complete. 
 
 > WARNING: Please note that python uses the '\\' character as an escape character. To ensure your inserted paths work insert an additional '\\' each time it appears in your defined path. E.g.  'C:\Python25\Test scripts' becomes 'C:\\\Python25\\\Test scripts'  
 

@@ -2,4 +2,4 @@
 * @NHSDigital/data-services/analytics-service/GPDESA-code-owners
 
 # You can also contact the GPDESA team via email:
-* gpses@nhs.net
+* england.gpses@nhs.net
