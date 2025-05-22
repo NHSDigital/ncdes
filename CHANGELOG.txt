@@ -1,5 +1,33 @@
 NCDes new CQRS data update.
 
+Change log v1.3
+--------------------------------------------------------------
+The following changes have been made:
+•	Removed the creation of the CQRS_omits.csv file (file not used)
+•	Removed the creation of the LDHS Ethnicity monitoring file (indicators this file is based on are no longer in the NCD service (HI01))
+•	Removed the creation of the Opt Out Tracking file (indicators this file is based on are no longer in the NCD service (HI04& HI08))
+•	Simplified geography mapping as only Practice Name needs to be mapped.
+•	Minor changes to improve efficiency
+
+As a result of the changes the following python files have been updated:
+config.toml
+create_publication.py
+data_export/outputs.py
+data_ingestion/amender.py
+data_ingestion/data_load.py
+data_ingestion/practice_maps.py
+processing/processing_steps.py
+processing/validation_check.py
+utils/adhoc_fix/remove_problem_measure_pairs.py
+
+As a result of the changes the following python files have been removed: 
+data_export/fonts.py
+data_export/outputcsvtoinputexcel.py
+data_export/outputexcel.py
+data_export/practice_map_from_sql.py
+data_export/trendmonitor.py
+
+
 Changelog V1.2
 ------------------------------------------------------------------
 Updated metadata files

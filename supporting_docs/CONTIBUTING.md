@@ -10,7 +10,7 @@ If you're new to Github and/or Markdown, Github's own [contributor's guide](http
 
 ## Using issues
 
-If you have a change (or a new page) to raise, please create an [issue](https://nhsd-git.digital.nhs.uk/data-services/analytics-service/GPDESA/Dementia_Data_Publication/-/issues) first, and reference it in your commits. Before raising a new issue, have a look through the existing ones in case it's already been raised (GPDESA owners will strive to keep the list small enough).
+If you have a change (or a new page) to raise, please create an [issue](https://github.com/NHSDigital/ncdes/issues) first, and reference it in your commits. Before raising a new issue, have a look through the existing ones in case it's already been raised (GPDESA owners will strive to keep the list small enough).
 
 If you raise an issue against this repository, please include as much information as possible to reproduce any bugs, or specific locations in the case of content errors.
 
